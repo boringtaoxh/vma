@@ -1,6 +1,12 @@
-#user(ng-controller='userCtrl')
-  include user-topbar
-  #loves
-    #products(ng-controller='productsCtrl')
-      ul(masonry)
-        li.masonry-brick.col-xs-3.product(list-products ng-repeat='product in userFlaggedProducts')
+.wrap-content(ng-controller='productsCtrl')
+  .preload(ng-hide='ready')
+    img(src='/assets/img/ui/spinner.gif')
+    h4 Please give us some time to collect lovely things...
+  #user(ng-controller='userCtrl')
+    include user-topbar
+    #loves
+      #products(ng-controller='productsCtrl')
+        ul(masonry)
+          li.masonry-brick.col-xs-3.product(list-products ng-repeat='product in userFlaggedProducts')
+  footer
+    include ../../navs/nav-bottom

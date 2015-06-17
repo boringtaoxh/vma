@@ -2,7 +2,7 @@
   .menu
     .menu-block.col-xs-4
       span.explore
-        a(ng-href='/explore/man/all') Explore
+        a(ng-href='/explore/man&woman/all') Explore
       span.search
         a(ng-href='/search') Search
     .menu-block.col-xs-4.text-center(ng-controller='authCtrl')
@@ -18,7 +18,7 @@
       span.info
         a(ng-href='/info/about') Info
       span.language
-        a.chinese(ng-href='#') 中文
+        a.chinese(ng-href='http://cn.a-lovely-thing.com') 中文
 #follow(ng-show="showFollow")
   img.close.img-responsive(ng-click='showFollow=false' src='/assets/img/ui/follow_cross.png')
   .wrapper

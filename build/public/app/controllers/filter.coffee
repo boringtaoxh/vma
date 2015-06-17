@@ -14,7 +14,7 @@ alt.controller 'filterCtrl', ($scope, $location, $route, $routeParams, $filter, 
   $scope.ifCategory = (category) ->
     if category == $routeParams.category then return true else return false
 
-  ### Explore data ###
+  ### Explore category filtering ###
   products.getExploreProducts(gender, 'All').then (data) ->
     categoryAvailable = []
     _.forEach data, (snapshot) ->
@@ -24,7 +24,7 @@ alt.controller 'filterCtrl', ($scope, $location, $route, $routeParams, $filter, 
       if categoryAvailable.indexOf(category) > -1 then return true else return false
     $scope.ready = true
 
-  ### Explore data ###
+  ### Explore colour filtering ###
   products.getExploreProducts(gender, category).then (data) ->
     colourAvailable = []
     _.forEach data, (snapshot) ->

@@ -6,7 +6,7 @@
   <div ng-show="product.priceRange == true" class="price col-xs-3 pull-right text-right">From {{product.price | currency: "£"}}</div>
   <div ng-show="!product.price" class="price col-xs-3 pull-right text-right">TBC</div>
   <div class="brand col-xs-12">by <a href="/brand/{{product.brand | charactersRemove}}/products">{{product.brand}}</a></div>
-  <div ng-controller="flagsCtrl" class="col-xs-12"><a href="{{product.purchase}}" ng-show="product.purchase" target="_blank">
+  <div ng-controller="flagsCtrl" class="col-xs-12"><a href="{{product.purchase}}" ng-show="product.purchase" target="_blank" ng-click="lastBought(product.$id)">
       <button class="purchase btn">Buy</button></a>
     <div ng-hide="product.purchase" class="reserve">
       <button ng-hide="ifReserved(product.$id)" ng-click="flagProduct(&quot;reserve&quot;, product.$id)" class="btn">Reserve</button>

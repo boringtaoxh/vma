@@ -1,6 +1,7 @@
 alt.controller 'productsCtrl', ($scope, $window, $location, $route, $routeParams, $rootScope, $timeout, auth, products, toaster) ->
-  currentRoute = $location.path().split('/')
+  
   $scope.ready = false
+
   products.getRandomProducts().then (data) ->
     $scope.randomProducts = data
     $scope.ready = true
@@ -8,6 +9,7 @@ alt.controller 'productsCtrl', ($scope, $window, $location, $route, $routeParams
   products.getPreferProducts().then (data) ->
     $scope.preferProducts = data
 
+  currentRoute = $location.path().split('/')
   if $routeParams.userID
     products.getUserFlaggedProducts(currentRoute[4], $routeParams.userID).then (data) ->
       $scope.userFlaggedProducts = data

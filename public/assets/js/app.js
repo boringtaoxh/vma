@@ -266,7 +266,7 @@ alt.controller('filterCtrl', function($scope, $location, $route, $routeParams, $
     }
   };
 
-  /* Explore data */
+  /* Explore category filtering */
   products.getExploreProducts(gender, 'All').then(function(data) {
     var categoryAvailable;
     categoryAvailable = [];
@@ -285,7 +285,7 @@ alt.controller('filterCtrl', function($scope, $location, $route, $routeParams, $
     return $scope.ready = true;
   });
 
-  /* Explore data */
+  /* Explore colour filtering */
   return products.getExploreProducts(gender, category).then(function(data) {
     var colourAvailable;
     colourAvailable = [];
@@ -350,7 +350,6 @@ alt.controller('infoCtrl', function($scope, $timeout, $location, $routeParams, $
 
 alt.controller('productsCtrl', function($scope, $window, $location, $route, $routeParams, $rootScope, $timeout, auth, products, toaster) {
   var currentRoute, productID;
-  currentRoute = $location.path().split('/');
   $scope.ready = false;
   products.getRandomProducts().then(function(data) {
     $scope.randomProducts = data;
@@ -359,6 +358,7 @@ alt.controller('productsCtrl', function($scope, $window, $location, $route, $rou
   products.getPreferProducts().then(function(data) {
     return $scope.preferProducts = data;
   });
+  currentRoute = $location.path().split('/');
   if ($routeParams.userID) {
     products.getUserFlaggedProducts(currentRoute[4], $routeParams.userID).then(function(data) {
       return $scope.userFlaggedProducts = data;

@@ -1,0 +1,73 @@
+
+<html ng-app="alt">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width user-scalable=no"/>
+    <link rel="stylesheet" href="/assets/css/jquery.fancybox.css"/>
+    <link rel="stylesheet" href="/assets/css/styles.css"/>
+    <base href="/"/>
+  </head>
+  <body>
+    <toaster-container toaster-options="{'time-out': 5000, 'close-button':true}"></toaster-container>
+    <header>
+      <div id="nav-top"><a href="/"><img src="/assets/img/ui/logo.png"/></a></div>
+    </header>
+    <section id="main" ng-cloak="ng-cloak">
+      <div ng-view="ng-view" autoscroll="autoscroll"></div>
+    </section>
+    <footer>
+      <div id="nav-bottom">
+        <div class="menu">
+          <div class="menu-block col-xs-4"><span class="explore"><a ng-href="/explore/man/all">Explore</a></span><span class="search"><a ng-href="/search">Search</a></span></div>
+          <div ng-controller="authCtrl" class="menu-block col-xs-4 text-center"><span ng-hide="currentUser" class="login"><a ng-href="/signup">Log in / Join</a></span><span ng-show="currentUser" class="user"><a href="/user/{{currentUser.$id}}/love/loves">{{currentUser.firstname}} {{currentUser.lastname}}</a></span><span ng-show="currentUser" class="logout"><a ng-href="/logout" ng-click="logout()">Log out</a></span></div>
+          <div class="menu-block col-xs-4 text-right"><span class="follow"><a href="" ng-model="showFollow" ng-init="showFollow=false" ng-click="showFollow=true">Follow</a></span><span class="info"><a ng-href="/info/about">Info</a></span><span class="language"><a ng-href="#" class="chinese">中文</a></span></div>
+        </div>
+      </div>
+      <div id="follow" ng-show="showFollow"><img ng-click="showFollow=false" src="/assets/img/ui/follow_cross.png" class="close img-responsive"/>
+        <div class="wrapper">
+          <div class="row">
+            <h4>FOLLOW US ON</h4>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 text-center"><a href="https://twitter.com/alovelything" target="_blank" style="display:inline-block;" class="text-center"><img id="twitter" src="/assets/img/ui/twitter.png" class="social_icon img-responsive"/></a></div>
+            <div class="col-xs-6 text-center"><a href="https://www.facebook.com/a.lovely.thing" target="_blank" style="display:inline-block;" class="text-center"><img id="facebook" src="/assets/img/ui/facebook.png" class="social_icon img-responsive"/></a></div>
+          </div>
+          <div class="row">     
+            <div class="col-xs-6 text-center"><a href="http://www.weibo.com/u/3076262942" target="_blank" style="display:inline-block;" class="text-center"><img id="weibo" src="/assets/img/ui/sina-weibo.png" class="social_icon img-responsive"/></a></div>
+            <div class="col-xs-6 text-center"><a href="https://instagram.com/alt.alovelything" target="_blank" style="display:inline-block;" class="text-center"><img id="instagram" src="/assets/img/ui/instagram.png" class="social_icon img-responsive"/></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/vendor/angular/angular.js"></script>
+    <script src="/vendor/firebase/firebase.js"></script>
+    <script src="/vendor/angularfire/dist/angularfire.js"></script>
+    <script src="/vendor/angular-resource/angular-resource.js"></script>
+    <script src="/vendor/angular-route/angular-route.js"></script>
+    <script src="/vendor/get-style-property/get-style-property.js"></script>
+    <script src="/vendor/get-size/get-size.js"></script>
+    <script src="/vendor/eventEmitter/EventEmitter.js"></script>
+    <script src="/vendor/eventie/eventie.js"></script>
+    <script src="/vendor/doc-ready/doc-ready.js"></script>
+    <script src="/vendor/matches-selector/matches-selector.js"></script>
+    <script src="/vendor/fizzy-ui-utils/utils.js"></script>
+    <script src="/vendor/outlayer/item.js"></script>
+    <script src="/vendor/outlayer/outlayer.js"></script>
+    <script src="/vendor/masonry/dist/masonry.pkgd.min.js"></script>
+    <script src="/vendor/imagesloaded/imagesloaded.js"></script>
+    <script src="/vendor/angular-masonry/angular-masonry.js"></script>
+    <script src="/vendor/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/vendor/videogular/videogular.js"></script>
+    <script src="/vendor/videogular-controls/vg-controls.js"></script>
+    <script src="/vendor/videogular-poster/vg-poster.js"></script>
+    <script src="/vendor/angularjs-toaster/toaster.js"></script>
+    <script src="/vendor/angular-animate/angular-animate.js"></script>
+    <script src="/vendor/angular-preload-image/angular-preload-image.js"></script>
+    <script src="/vendor/lodash/lodash.js"></script>
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/vendor/fancybox/source/jquery.fancybox.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5566edc765f4f256" async="async"></script>
+  </body>
+</html>

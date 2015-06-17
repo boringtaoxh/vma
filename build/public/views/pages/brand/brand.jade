@@ -1,0 +1,20 @@
+#brandStory(ng-controller='brandCtrl')
+  .preload(ng-hide='ready')
+    img(src='/assets/img/ui/spinner.gif')
+    h4 Please give us some time to collect lovely things...
+  .wrap(ng-show='ready')
+    .col-xs-3
+      include brand-sidebar
+    .col-xs-9
+      .videogular-container
+        .video(video-player)
+      .article-container
+        .col-xs-12
+          .col-xs-9
+            h4 {{brandTitle}}
+          .col-xs-3
+            .addthis_toolbox.addthis_default_style.addthis_20x20_style(addthis-toolbox='' style="float:right;margin-top:10px;")
+              a.addthis_button_facebook
+              a.addthis_button_twitter
+              a.addthis_button_compact
+        #story(ng-bind-html='brandStory')

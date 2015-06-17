@@ -1,0 +1,106 @@
+#products li {
+  position: relative;
+}
+#products li:hover .product-cover {
+  transition: all 0.5s ease;
+  opacity: 0.7;
+}
+#products li:hover .product-details {
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+#products li .product-cover {
+  width: 100%;
+  opacity: 1;
+}
+#products li .product-cover img {
+  width: 100%;
+}
+#products li .product-details {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  width: calc(100% - 30px);
+  float: right;
+  color: #000;
+  padding: 15px;
+  font: 700 1em/1.2 'PT Sans';
+  line-height: 1.6;
+  z-index: 10;
+  opacity: 0;
+}
+#products li .product-details a {
+  color: #000;
+  font: 700 1em/1.2 'PT Sans';
+  text-decoration: underline;
+}
+#products li .product-details .brand {
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+#products li .product-details .remove {
+  background-color: #cdcdcd;
+  width: 20px;
+  height: 20px;
+  border: none;
+  font-size: 10px;
+}
+#products li .product-details .btn {
+  background-color: #b3b3b3;
+  border-radius: 3px;
+  padding: 3px 20px;
+  float: left;
+  color: #fff;
+  display: block;
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.38;
+  text-align: center;
+  border: none;
+  margin-right: 10px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+#products li .product-details .btn:hover {
+  transition: all 0.6s ease;
+  background-color: #000;
+}
+#products li .product-details .btn.purchase {
+  background-color: #000;
+}
+#products li .product-details .btn img {
+  margin-top: 8px;
+  margin-left: 10px;
+  height: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+#products li .product-details .btn img:hover {
+  transition: all 0.6s ease;
+  opacity: 1;
+}
+#products li .product-details .btn .reserve {
+  margin-bottom: 5px;
+}
+#products li .addthis_toolbox {
+  padding-top: 1px;
+}
+#products li .love-count {
+  position: absolute;
+  z-index: 11;
+  width: 26px;
+  font-size: 11px;
+  height: 21px;
+  bottom: 30px;
+  right: 30px;
+  font-family: 'PT Sans';
+  padding: 1px;
+  color: #a3a3a3;
+  background: url("/assets/img/ui/lovely_icon.png") center center no-repeat;
+  background-size: cover;
+  border: none;
+}

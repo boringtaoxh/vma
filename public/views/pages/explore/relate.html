@@ -1,0 +1,147 @@
+
+<div id="explore" ng-controller="exploreCtrl">
+  <div id="filters" filter-products="filter-products" class="col-xs-3">
+    <div id="gender" class="row col-xs-12">
+      <form>
+        <div class="col-xs-6"><a href="/explore/man/all">
+            <label ng-class="{true: 'active'}[ifGender('man')]" class="filter-button gender">Man</label></a></div>
+        <div class="col-xs-6"><a href="/explore/woman/all">
+            <label ng-class="{true: 'active'}[ifGender('woman')]" class="filter-button gender">Woman</label></a></div>
+      </form>
+    </div>
+    <div id="category" class="row col-xs-12">
+      <form>
+        <div ng-show="ifCategoryAvailable('Shoes')" class="col-xs-6"><a href="/explore/{{gender}}/shoes">
+            <label ng-class="{true: 'active'}[ifCategory('shoes')]" class="filter-button category">Shoes</label></a></div>
+        <div ng-show="ifCategoryAvailable('Accessories')" class="col-xs-6"><a href="/explore/{{gender}}/accessories">
+            <label ng-class="{true: 'active'}[ifCategory('accessories')]" class="filter-button category">Accessories</label></a></div>
+        <div ng-show="ifCategoryAvailable('Bags')" class="col-xs-6"><a href="/explore/{{gender}}/bags">
+            <label ng-class="{true: 'active'}[ifCategory('bags')]" class="filter-button category">Bags</label></a></div>
+        <div ng-show="ifCategoryAvailable('Jewellery')" class="col-xs-6"><a href="/explore/{{gender}}/jewellery">
+            <label ng-class="{true: 'active'}[ifCategory('jewellery')]" class="filter-button category">Jewellery</label></a></div>
+        <div ng-show="ifCategoryAvailable('Apparel')" class="col-xs-6"><a href="/explore/{{gender}}/apparel">
+            <label ng-class="{true: 'active'}[ifCategory('apparel')]" class="filter-button category">Apparel</label></a></div>
+        <div ng-show="ifCategoryAvailable('Lifestyle')" class="col-xs-6"><a href="/explore/{{gender}}/lifestyle">
+            <label ng-class="{true: 'active'}[ifCategory('lifestyle')]" class="filter-button category">Lifestyle</label></a></div>
+      </form>
+    </div>
+    <div id="colour" class="row col-xs-12">
+      <form>
+        <div ng-show="ifColourAvailable('Black')" class="col-xs-3">
+          <label style="background: #000" ng-class="ifColourActive('Black')" class="filter-button colour">
+            <input type="checkbox" value="Black" ng-checked="colourIncludes.indexOf('Black') != -1" ng-click="includeColour('Black')"/>
+          </label>
+        </div>
+        <div ng-show="ifColourAvailable('White')" class="col-xs-3">
+          <label style="background: #fff" ng-class="ifColourActive('White')" class="filter-button colour">
+            <input type="checkbox" value="White" ng-checked="colourIncludes.indexOf('White') != -1" ng-click="includeColour('White')"/>
+          </label>
+        </div>
+        <div ng-show="ifColourAvailable('Grey')" class="col-xs-3">
+          <label style="background: #B6B7B8" ng-class="ifColourActive('Grey')" class="filter-button colour">
+            <input type="checkbox" value="Grey" ng-checked="colourIncludes.indexOf('Grey') != -1" ng-click="includeColour('Grey')"/>
+          </label>
+        </div>
+        <div ng-show="ifColourAvailable('Red')" class="col-xs-3">
+          <label style="background: #F77071" ng-class="ifColourActive('Red')" class="filter-button colour">
+            <input type="checkbox" value="Red" ng-checked="colourIncludes.indexOf('Red') != -1" ng-click="includeColour('Red')"/>
+          </label>
+        </div>
+        <div ng-show="ifColourAvailable('Blue')" class="col-xs-3">
+          <label style="background: #87A8FA" ng-class="ifColourActive('Blue')" class="filter-button colour">
+            <input type="checkbox" value="Blue" ng-checked="colourIncludes.indexOf('Blue') != -1" ng-click="includeColour('Blue')"/>
+          </label>
+        </div>
+        <div ng-show="ifColourAvailable('Yellow')" class="col-xs-3">
+          <label style="background: #FBFA76" ng-class="ifColourActive('Yellow')" class="filter-button colour">
+            <input type="checkbox" value="Yellow" ng-checked="colourIncludes.indexOf('Yellow') != -1" ng-click="includeColour('Yellow')"/>
+          </label>
+        </div>
+        <div ng-show="ifColourAvailable('Green')" class="col-xs-3">
+          <label style="background: #76D08C" ng-class="ifColourActive('Green')" class="filter-button colour">
+            <input type="checkbox" value="Green" ng-checked="colourIncludes.indexOf('Green') != -1" ng-click="includeColour('Green')"/>
+          </label>
+        </div>
+        <div ng-show="ifColourAvailable('Brown')" class="col-xs-3">
+          <label style="background: #A28D76" ng-class="ifColourActive('Brown')" class="filter-button colour">
+            <input type="checkbox" value="Brown" ng-checked="colourIncludes.indexOf('Brown') != -1" ng-click="includeColour('Brown')"/>
+          </label>
+        </div>
+        <div ng-show="ifColourAvailable('Orange')" class="col-xs-3">
+          <label style="background: #F8B573" ng-class="ifColourActive('Orange')" class="filter-button colour">
+            <input type="checkbox" value="Orange" ng-checked="colourIncludes.indexOf('Orange') != -1" ng-click="includeColour('Orange')"/>
+          </label>
+        </div>
+        <div ng-show="ifColourAvailable('Purple')" class="col-xs-3">
+          <label style="background: #A575B7" ng-class="ifColourActive('Purple')" class="filter-button colour">
+            <input type="checkbox" value="Purple" ng-checked="colourIncludes.indexOf('Purple') != -1" ng-click="includeColour('Purple')"/>
+          </label>
+        </div>
+        <div ng-show="ifColourAvailable('Pink')" class="col-xs-3">
+          <label style="background: #F4B9F5" ng-class="ifColourActive('Pink')" class="filter-button colour">
+            <input type="checkbox" value="Pink" ng-checked="colourIncludes.indexOf('Pink') != -1" ng-click="includeColour('Pink')"/>
+          </label>
+        </div>
+        <div ng-show="ifColourAvailable('Neutral')" class="col-xs-3">
+          <label style="background: #F3ECCE" ng-class="ifColourActive('Neutral')" class="filter-button colour">
+            <input type="checkbox" value="Neutral" ng-checked="colourIncludes.indexOf('Neutral') != -1" ng-click="includeColour('Neutral')"/>
+          </label>
+        </div>
+        <div ng-show="ifColourAvailable('Clear')" class="col-xs-3">
+          <label style="background: url('../assets/img/ui/clear.jpg') no-repeat center center;" ng-class="ifColourActive('Clear')" class="filter-button colour">
+            <input type="checkbox" value="Clear" ng-checked="colourIncludes.indexOf('Clear') != -1" ng-click="includeColour('Clear')"/>
+          </label>
+        </div>
+        <div ng-show="ifColourAvailable('Metallic')" class="col-xs-3">
+          <label style="background: url('../assets/img/ui/metallic.jpg') no-repeat center center;" ng-class="ifColourActive('Metallic')" class="filter-button colour">
+            <input type="checkbox" value="Metallic" ng-checked="colourIncludes.indexOf('Metallic') != -1" ng-click="includeColour('Metallic')"/>
+          </label>
+        </div>
+        <div ng-show="ifColourAvailable('Pattern')" class="col-xs-3">
+          <label style="background: url('../assets/img/ui/pattern.jpg') no-repeat center center;" ng-class="ifColourActive('Pattern')" class="filter-button colour">
+            <input type="checkbox" value="Pattern" ng-checked="colourIncludes.indexOf('Pattern') != -1" ng-click="includeColour('Pattern')"/>
+          </label>
+        </div>
+        <div ng-show="ifColourAvailable('Multicolour')" class="col-xs-3">
+          <label style="background: url('../assets/img/ui/reflective.jpg') no-repeat center center;" ng-class="ifColourActive('Multicolour')" class="filter-button colour">
+            <input type="checkbox" value="Multicolour" ng-checked="colourIncludes.indexOf('Multicolour') != -1" ng-click="includeColour('Multicolour')"/>
+          </label>
+        </div>
+      </form>
+    </div>
+    <div id="order" class="row col-xs-12">
+      <form>
+        <div class="col-xs-6">
+          <label ng-class="ifOrderActive('lastBought')" class="filter-button order">
+            <input type="radio" value="lastBought" ng-checked="orderSet == lastBought" ng-click="setOrder('lastBought')"/>Last bought
+          </label>
+        </div>
+        <div class="col-xs-6">
+          <label ng-class="ifOrderActive('lovesCount')" class="filter-button order">
+            <input type="radio" value="lovesCount" ng-checked="orderSet == lovesCount" ng-click="setOrder('lovesCount')"/>Most loved
+          </label>
+        </div>
+        <div class="col-xs-6">
+          <label ng-class="ifOrderActive('priceHigh')" class="filter-button order">
+            <input type="radio" value="priceHigh" ng-checked="orderSet == priceHigh" ng-click="setOrder('priceHigh')"/>Price high
+          </label>
+        </div>
+        <div class="col-xs-6">
+          <label ng-class="ifOrderActive('priceLow')" class="filter-button order">
+            <input type="radio" value="priceLow" ng-checked="orderSet == priceLow" ng-click="setOrder('priceLow')"/>Price low
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="filterProducts" class="col-xs-9">
+    <div ng-hide="ready" class="preload"><img src="/assets/img/ui/spinner.gif"/>
+      <h4>Please give us some time to collect lovely things...</h4>
+    </div>
+    <div id="products" ng-show="ready" ng-controller="productsCtrl">
+      <ul masonry="masonry">
+        <li list-products="list-products" ng-repeat="product in relateProducts | orderBy: order | colourFilter: this" class="masonry-brick col-xs-6 col-md-6 col-lg-4 product"></li>
+      </ul>
+    </div>
+  </div>
+</div>

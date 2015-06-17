@@ -1,0 +1,15 @@
+#brandSidebar(ng-controller="brandCtrl")
+  h1.brand-title.col-xs-12 {{brandName}}
+  #brandFollow.col-xs-12
+    button.follow.btn(ng-click='followBrand(brand)' ng-hide='ifFollowed(brand)') Follow
+    button.unfollow.btn(ng-click='unfollowBrand(brand)' ng-show='ifFollowed(brand)') Unfollow
+    .addthis_toolbox.addthis_default_style.addthis_20x20_style(addthis-toolbox)
+      a.addthis_button_facebook
+      a.addthis_button_twitter
+      a.addthis_button_compact
+  #intro.col-xs-12(ng-bind-html='brandIntro')
+  br.clearfix
+  #chapters
+    ul.text-right
+      li(ng-repeat="chapter in brandChapters" )
+        a(href='/brand/{{brand}}/{{chapter}}' style="text-transform: capitalize" ng-class='{active: chapterActive(chapter)}') {{chapter}}

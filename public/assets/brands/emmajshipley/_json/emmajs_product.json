@@ -1,0 +1,390 @@
+{
+  "emmajshipley01" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "Aesop Modal Blend Scarf",
+    "image" : "emmajshipley/img/emmajs_product_1.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_1_thumb.jpg",
+    "price" : 280,
+    "gender" : [ "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Scarves",
+    "color" : [ "Red", "Magenta", "Black", "White" ], 
+    "material" : [ "Modal", "Cashmere" ],
+    "season" : [ "autumn", "winter" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "made in italy", "fox", "sky", "grape", "fairy tale", "winged helmet", "myth", "Aesop Fable", "eyelash fringe" ],
+    "purchase" : "http://shop.emmajshipley.com/collections/all/products/aesop-modal-blend-scarf"
+    
+  },
+
+    "emmajshipley02" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "Expedition Modal Blend Scarf",
+    "image" : "emmajshipley/img/emmajs_product_2.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_2_thumb.jpg",
+    "price" : 280,
+    "gender" : [ "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Scarves",
+    "color" : [ "Blue", "White", "Purple" ], 
+    "material" : [ "Modal", "Cashmere" ],
+    "season" : [ "autumn", "winter" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "made in italy", "polar", "penguin", "hot air balloon", "antarctic", "explorer", "winter lanscape", "festive season" ],
+    "purchase" : "http://shop.emmajshipley.com/collections/all/products/expedition-modal-blend-scarf"
+    
+  },
+
+    "emmajshipley03" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "Aurora Modal Blend Scarf",
+    "image" : "emmajshipley/img/emmajs_product_3.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_3_thumb.jpg",
+    "price" : 280,
+    "gender" : [ "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Scarves",
+    "color" : [ "Purple", "Blue", "Black" ], 
+    "material" : [ "Modal", "Cashmere" ],
+    "season" : [ "autumn", "winter" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "made in italy", "polar bear", "artic landscape", "explorer", "aurora borealis", "winter lanscape", "festive season" ],
+    "purchase" : "http://shop.emmajshipley.com/collections/scarves/products/aurora-modal-blend-scarf"
+    
+  },
+
+    "emmajshipley04" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "Odin Silk Peau D'Ange Scarf",
+    "image" : "emmajshipley/img/emmajs_product_4.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_4_thumb.jpg",
+    "price" : 265,
+    "gender" : [ "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Scarves",
+    "color" : [ "Black", "Blue" ], 
+    "material" : [ "Silk" ],
+    "season" : [ "autumn", "winter" ],
+    "relate" : "",
+    "feature" : true,
+    "keywords" : [ "luxurious", "made in italy", "fox", "sky", "sheer silk", "crack ice backdrop", "Odin", "ancient myth", "Norse King", "roll hem" ],
+    "purchase" : "http://shop.emmajshipley.com/collections/all/products/odin-silk-peau-dange-scarf"
+    
+  },
+
+    "emmajshipley05" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "The Tigris Long Kaftan in Flame",
+    "image" : "emmajshipley/img/emmajs_product_1.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_5_thumb.jpg",
+    "price" : 395,
+    "gender" : [ "y" ],
+    "category" : "Apparel",
+    "subCategory" : "Dress",
+    "color" : [ "Orange", "White", "Red" ], 
+    "material" : [ "Silk" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "feature" : true,
+    "keywords" : [ "kaftan", "print", "semi-sheer", "silk", "classic geek", "roman myth", "deep-v neck", "flattering", "tiger", "wild" ],
+    "purchase" : "http://shop.emmajshipley.com/collections/all/products/pre-order-long-kaftan-tigris-flame"
+    
+  },
+
+    "emmajshipley06" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "The Kruger Oversize Shirt in Pink",
+    "image" : "emmajshipley/img/emmajs_product_6.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_6_thumb.jpg",
+    "price" : 299,
+    "gender" : [ "y" ],
+    "category" : "Apparel",
+    "subCategory" : "Shirt",
+    "color" : [ "Pink", "Grey" ], 
+    "material" : [ "Cotton", "Silk" ],
+    "season" : [ "srping", "summer" ],
+    "relate" : "",
+    "keywords" : [ "beautiful", "semi-sheer", "safari inspired", "kruger", "animals", "unicorn zebra", "spotted giraff", "humming bird", "tropical", "relaxed", "oversized", "button tied" ],
+    "purchase" : "http://shop.emmajshipley.com/collections/all/products/pre-order-oversize-shirt-kruger-pink"
+    
+  },
+
+    "emmajshipley07" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "Aesop Modal Blend Scarf",
+    "image" : "emmajshipley/img/emmajs_product_7.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_7_thumb.jpg",
+    "price" : 280,
+    "gender" : [ "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Scarves",
+    "color" : [ "Red", "Magenta", "Black", "White" ], 
+    "material" : [ "Modal", "Cashmere" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "look1",
+    "keywords" : [ "luxurious", "made in italy", "fox", "sky", "grapes", "fairy tale", "winged helmet", "myth", "Aesop Fable", "eyelash fringe" ],
+    "purchase" : "http://shop.emmajshipley.com/collections/all/products/aesop-modal-blend-scarf"
+    
+  },
+
+    "emmajshipley08" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "The Audubon Oversize Shirt in Indigo",
+    "image" : "emmajshipley/img/emmajs_product_8.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_8_thumb.jpg",
+    "price" : 299,
+    "gender" : [ "y" ],
+    "category" : "Apparel",
+    "subCategory" : "Shirt",
+    "color" : [ "White", "Blue" ], 
+    "material" : [ "Cotton", "Silk" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "look2",
+    "feature" : true,
+    "keywords" : [ "modern", "3d print", "ball", "jointed", "simple" ],
+    "purchase" : "http://shop.emmajshipley.com/collections/all/products/pre-order-oversize-shirt-audubon-indigo"
+    
+  },
+
+    "emmajshipley09" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "The Audubon Kaftan in Turquoise",
+    "image" : "emmajshipley/img/emmajs_product_9.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_9_thumb.jpg",
+    "price" : 345,
+    "gender" : [ "y" ],
+    "category" : "Apparel",
+    "subCategory" : "Dress",
+    "color" : [ "Blue", "Red" ], 
+    "material" : [ "Silk" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "keywords" : [ "kaftan", "made in italy", "audubon print", "semi-sheer", "silk", "parrot", "hornbill", "bird", "knee length", "botanical", "john james audubon" ],
+    "purchase" : "http://shop.emmajshipley.com/collections/womenswear/products/pre-order-short-kaftan-audubon-turquoise"
+    
+  },
+
+    "emmajshipley10" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "Disney Tinker Bell Silk Chiffon Scarf",
+    "image" : "emmajshipley/img/emmajs_product_10.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_10_thumb.jpg",
+    "price" : 280,
+    "gender" : [ "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Scarves",
+    "color" : [ "Blue", "Green", "Yellow" ], 
+    "material" : [ "Silk" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "keywords" : [ "modern", "3d print", "ball", "jointed", "simple" ],
+    "purchase" : "http://shop.emmajshipley.com/collections/scarves/products/disney-tinker-bell-silk-peau-dange-scarf"
+    
+  },
+
+    "emmajshipley11" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "Frith Modal Blend Scarf",
+    "image" : "emmajshipley/img/emmajs_product_11.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_11_thumb.jpg",
+    "price" : 280,
+    "gender" : [ "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Scarves",
+    "color" : [ "Blue", "Green" ], 
+    "material" : [ "Modal", "Cashmere" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "made in italy", "owl", "rabbit", "fairy tale", "plant", "myth", "grimm's", "eyelash fringe", "Watership Down" ],
+    "purchase" : "http://shop.emmajshipley.com/collections/all/products/frith-modal-blend-scarf"
+    
+  },
+
+    "emmajshipley12" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "Frith Classic Silk Scarf",
+    "image" : "emmajshipley/img/emmajs_product_12.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_12_thumb.jpg",
+    "price" : 180,
+    "gender" : [ "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Scarves",
+    "color" : [ "Blue", "Red" ], 
+    "material" : [ "Silk" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "feature" : true,
+    "keywords" : [ "luxurious", "made in italy", "owl", "rabbit", "fairy tale", "plant", "myth", "grimm's", "eyelash fringe", "Watership Down"],
+    "purchase" : "http://shop.emmajshipley.com/collections/all/products/frith-classic-silk-scarf"
+    
+  },
+
+    "emmajshipley13" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "Himalaya Modal Blend Scarf - Atelier Swarovski",
+    "image" : "emmajshipley/img/emmajs_product_13.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_13_thumb.jpg",
+    "price" : 280,
+    "gender" : [ "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Scarves",
+    "color" : [ "Grey", "Yellow", "White" ], 
+    "material" : [ "Modal", "Cashmere" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "made in italy", "atelier swarovski", "snow leopard", "ice", "geometric crystal" ],
+    "purchase" : "http://shop.emmajshipley.com/collections/all/products/himalaya-modal-blend-scarf"
+    
+  },
+
+    "emmajshipley14" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "Kruger Modal Blend Shawl",
+    "image" : "emmajshipley/img/emmajs_product_14.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_14_thumb.jpg",
+    "price" : 355,
+    "gender" : [ "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Scarves",
+    "color" : [ "Green", "Yellow" ], 
+    "material" : [ "Modal", "Cashmere" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "feature" : true,
+    "keywords" : [ "luxurious", "made in italy", "south african", "safari inspired", "kruger", "animals", "unicorn zebra", "spotted giraff", "humming bird", "tropical", "palm tree" ],
+    "purchase" : "http://shop.emmajshipley.com/collections/all/products/kruger-modal-blend-shawl"
+  },
+
+    "emmajshipley15" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "Pegasus Silk Peau D'Ange Scarf",
+    "image" : "emmajshipley/img/emmajs_product_15.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_15_thumb.jpg",
+    "price" : 265,
+    "gender" : [ "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Scarves",
+    "color" : [ "Blue", "Green", "White" ], 
+    "material" : [ "Silk" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "made in italy", "winged pegasus", "abstract", "floral", "Fritz Kahn", "horse", "miniature" ],
+    "purchase" : "http://shop.emmajshipley.com/collections/all/products/pegasus-silk-peau-dange-scarf"
+    
+  },
+
+    "emmajshipley16" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "Silverback Modal Blend Scarf",
+    "image" : "emmajshipley/img/emmajs_product_16.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_16_thumb.jpg",
+    "price" : 280,
+    "gender" : [ "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Scarves",
+    "color" : [ "Black", "Blue" ], 
+    "material" : [ "Modal", "Silk" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "made in italy",  "gorilla", "abstract", "pencil drawing", "eyelash fringe" ],
+    "purchase" : "http://shop.emmajshipley.com/collections/all/products/silverback-modal-blend-scarf"
+    
+  },
+
+    "emmajshipley17" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "Tigris Modal Blend Shawl",
+    "image" : "emmajshipley/img/emmajs_product_17.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_17_thumb.jpg",
+    "price" : 355,
+    "gender" : [ "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Scarves",
+    "color" : [ "Red", "Orange", "White" ], 
+    "material" : [ "Modal", "Cashmere" ],
+    "season" : [ "autumn", "winter" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "made in italy", "fighting tigers", "abstract", "classic geek myth", "eyelash fringe" ],
+    "purchase" : "http://shop.emmajshipley.com/collections/all/products/tigris-modal-blend-shawl"
+    
+  },
+
+    "emmajshipley18" : {
+    "brand" : "Emma J Shipley",
+    "designer" : "Emma J Shipley",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "Disney Tinker Bell Classic Silk Neckerchief",
+    "image" : "emmajshipley/img/emmajs_product_18.jpg",
+    "imageThumb" : "emmajsipley/img/thumb/emmajs_product_18_thumb.jpg",
+    "price" : 90,
+    "gender" : [ "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Scarves",
+    "color" : [ "Blue" ], 
+    "material" : [ "Silk" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "keywords" : [ "neckchief", "disney", "never never land", "skull rock", "indian camp", "mermaids", "Big Ben", "imaginative", "fairy tale", "tinker bell", "playful", "feisty", "magical"  ],
+    "purchase" : "http://shop.emmajshipley.com/collections/all/products/disney-tinker-bell-classic-silk-neckerchief"  
+  }
+
+}
+
+
+
+
+
+
+  

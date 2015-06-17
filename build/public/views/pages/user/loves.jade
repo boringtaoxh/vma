@@ -1,0 +1,6 @@
+#user(ng-controller='userCtrl')
+  include user-topbar
+  #loves
+    #products(ng-controller='productsCtrl')
+      ul(masonry)
+        li.masonry-brick.col-xs-3.product(list-products ng-repeat='product in userFlaggedProducts')

@@ -1,0 +1,6 @@
+
+<ul masonry="masonry">
+  <li ng-repeat="item in itemsInit" class="masonry-brick col-xs-4 inspiration"><a href="{{dataURL}}/assets/brands/{{item.image}}" rel="gallery" title="{{item.text}}" fancybox="fancybox" class="fancybox"><img ng-src="{{dataURL}}/assets/brands/{{item.image}}" class="img-responsive"/></a></li>
+  <li ng-repeat="item in itemsLoad" class="masonry-brick col-xs-4 inspiration"><a href="{{dataURL}}/assets/brands/{{item.image}}" rel="gallery" title="{{item.text}}" fancybox="fancybox" class="fancybox"><img ng-src="{{dataURL}}/assets/brands/{{item.image}}" class="img-responsive"/></a></li>
+  <li scroll-trigger="loadMore()" threshold="100"></li>
+</ul>

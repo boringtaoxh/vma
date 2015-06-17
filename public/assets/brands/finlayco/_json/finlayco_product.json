@@ -1,0 +1,371 @@
+{
+  "finlayco01" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "THURLOE",
+    "image" : "finlayco/img/finlayco_product_1.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_1_thumb.jpg",
+    "price" : 205,
+    "gender" : [ "x", "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Brown" ], 
+    "material" : [ "Hardwood", "Gold metal" ],
+    "season" : [ "all" ],
+    "relate" : "",
+    "feature" : true,
+    "keywords" : [ "luxurious", "handcraft", "hardwood", "durable", "lightweight", "unique", "distinctive", "classic" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/thurloe"
+    
+  },
+
+    "finlayco02" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "CARNABY",
+    "image" : "finlayco/img/finlayco_product_2.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_2_thumb.jpg",
+    "price" : 120,
+    "gender" : [ "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Brown" ], 
+    "material" : [ "Maplewood" ],
+    "season" : [ "all" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "handcrafted", "natrual", "lightweight", "canaby street", "unique", "distinctive", "timeless" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/carnaby-sunglasses"
+    
+  },
+
+    "finlayco03" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "BEAUMONT",
+    "image" : "finlayco/img/finlayco_product_3.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_3_thumb.jpg",
+    "price" : 170,
+    "gender" : [ "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Brown" ], 
+    "material" : [ "Hardwood", "Gold metal" ],
+    "season" : [ "all" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "handcrafted", "hardwood", "durable", "lightweight", "unique", "distinctive", "classic" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/beaumont"
+    
+  },
+
+    "finlayco04" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "DRAYCOTT",
+    "image" : "finlayco/img/finlayco_product_4.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_4_thumb.jpg",
+    "price" : 220,
+    "gender" : [ "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Blue", "Black" ], 
+    "material" : [ "Acetate" ],
+    "season" : [ "all" ],
+    "relate" : "",
+    "feature" : true,
+    "keywords" : [ "luxurious", "handcrafted", "iconic", "lightweight", "unique", "distinctive", "timeless", "italy technique" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/draycott"
+    
+  },
+
+    "finlayco05" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "LEDBURY EBONY",
+    "image" : "finlayco/img/finlayco_product_5.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_5_thumb.jpg",
+    "price" : 160,
+    "gender" : [ "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Brown", "Black" ], 
+    "material" : [ "Ebony wood" ],
+    "season" : [ "all" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "handcrafted", "natrual", "lightweight", "unique", "distinctive", "timeless" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/ledbury-ebony"
+    
+  },
+
+    "finlayco06" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "LEDBURY LUXE",
+    "image" : "finlayco/img/finlayco_product_6.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_6_thumb.jpg",
+    "price" : 160,
+    "gender" : [ "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Brown" ], 
+    "material" : [ "Wood" ],
+    "season" : [ "all" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "handcrafted", "natrual", "lightweight", "unique", "distinctive", "timeless" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/ledbury-luxe-93"
+    
+  },
+
+    "finlayco07" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "THURLOE",
+    "image" : "finlayco/img/finlayco_product_7.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_7_thumb.jpg",
+    "price" : 160,
+    "gender" : [ "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Brown" ], 
+    "material" : [ "Hardwood", "Gold metal" ],
+    "season" : [ "all" ],
+    "relate" : "",
+    "feature" : true,
+    "keywords" : [ "luxurious", "handcrafted", "hardwood", "durable", "lightweight", "unique", "distinctive", "classic" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/thurloe"
+    
+  },
+
+    "finlayco08" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "BEAUMONT",
+    "image" : "finlayco/img/finlayco_product_8.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_8_thumb.jpg",
+    "price" : 170,
+    "gender" : [ "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Brown" ], 
+    "material" : [ "Hardwood", "Gold metal" ],
+    "season" : [ "all" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "handcrafted", "hardwood", "durable", "lightweight", "unique", "distinctive", "classic" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/beaumont"
+    
+  },
+
+    "finlayco09" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "BOSWORTH LUXE",
+    "image" : "finlayco/img/finlayco_product_9.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_9_thumb.jpg",
+    "price" : 160,
+    "gender" : [ "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Brown" ], 
+    "material" : [ "Hardwood" ],
+    "season" : [ "all" ],
+    "relate" : "",
+    "feature" : true,
+    "keywords" : [ "luxurious", "handcrafted", "hardwood", "natrual wood grain", "lightweight", "unique", "distinctive", "classic" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/bosworth-luxe"
+    
+  },
+
+    "finlayco10" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "BEAUMONT",
+    "image" : "finlayco/img/finlayco_product_10.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_10_thumb.jpg",
+    "price" : 170,
+    "gender" : [ "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Brown" ], 
+    "material" : [ "Hardwood", "Gold metal" ],
+    "season" : [ "all" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "handcrafted", "hardwood", "durable", "lightweight", "unique", "distinctive", "classic" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/beaumont"
+    
+  },
+
+    "finlayco11" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "CARNABY",
+    "image" : "finlayco/img/finlayco_product_11.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_11_thumb.jpg",
+    "price" : 120,
+    "gender" : [ "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Brown" ], 
+    "material" : [ "Maplewood" ],
+    "season" : [ "all" ],
+    "relate" : "",
+	"keywords" : [ "luxurious", "handcrafted", "natrual", "lightweight", "canaby street", "unique", "distinctive", "timeless" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/carnaby-sunglasses"
+    
+  }, 
+
+    "finlayco12" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "DRAYCOTT",
+    "image" : "finlayco/img/finlayco_product_12.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_12_thumb.jpg",
+    "price" : 220,
+    "gender" : [ "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Blue", "Black" ], 
+    "material" : [ "Acetate" ],
+    "season" : [ "all" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "handcrafted", "iconic", "lightweight", "unique", "distinctive", "timeless", "italy technique" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/draycott"
+    
+  },
+
+    "finlayco13" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "HUDSON",
+    "image" : "finlayco/img/finlayco_product_13.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_13_thumb.jpg",
+    "price" : 190,
+    "gender" : [ "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Brown" ], 
+    "material" : [ "Acetate" ],
+    "season" : [ "all" ],
+    "relate" : "",
+    "keywords" : [ "versatile", "iconic", "lightweight", "unique", "distinctive", "timeless", "italy technique" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/hudson"
+    
+  },
+
+    "finlayco14" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "CARNABY",
+    "image" : "finlayco/img/finlayco_product_14.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_14_thumb.jpg",
+    "price" : 120,
+    "gender" : [ "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Brown" ], 
+    "material" : [ "Maplewood" ],
+    "season" : [ "all" ],
+    "relate" : "",
+    "feature" : true,
+	"keywords" : [ "luxurious", "handcrafted", "natrual", "lightweight", "canaby street", "unique", "distinctive", "timeless" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/carnaby-sunglasses"
+    
+  },
+
+    "finlayco15" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "THURLOE",
+    "image" : "finlayco/img/finlayco_product_15.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_15_thumb.jpg",
+    "price" : 160,
+    "gender" : [ "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Brown" ], 
+    "material" : [ "Hardwood", "Gold metal" ],
+    "season" : [ "all" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "handcrafted", "hardwood", "durable", "lightweight", "unique", "distinctive", "classic" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/thurloe"
+    
+  },
+
+    "finlayco16" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "DRAYCOTT",
+    "image" : "finlayco/img/finlayco_product_16.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_16_thumb.jpg",
+    "price" : 220,
+    "gender" : [ "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Blue", "Black" ], 
+    "material" : [ "Acetate" ],
+    "season" : [ "all" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "handcrafted", "iconic", "lightweight", "unique", "distinctive", "timeless", "italy technique" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/draycott"
+    
+  },
+
+    "finlayco17" : {
+    "brand" : "Finlay & Co.",
+    "designer" : "Finlay & Co.",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "LEDBURY LUXE",
+    "image" : "finlayco/img/finlayco_product_17.jpg",
+    "imageThumb" : "finlayco/img/thumb/finlayco_product_17_thumb.jpg",
+    "price" : 160,
+    "gender" : [ "x", "y" ],
+    "category" : "Accessories",
+    "subCategory" : "Eyewear",
+    "color" : [ "Brown" ], 
+    "material" : [ "Wood" ],
+    "season" : [ "all" ],
+    "relate" : "",
+    "keywords" : [ "luxurious", "handcrafted", "natrual", "lightweight", "unique", "distinctive", "timeless" ],
+    "purchase" : "http://www.finlayandco.com/shop/view-all-sunglasses/ledbury-luxe-93"
+    
+  }
+    
+}
+
+
+
+
+
+
+  

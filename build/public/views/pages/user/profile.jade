@@ -1,0 +1,101 @@
+#profile(ng-controller='userCtrl')
+  include user-topbar
+  #accountProfile.col-xs-12
+    .user-info.profile-cell.col-xs-6
+      .profile-header.col-xs-11
+        h4 User info
+      .profile-item.col-xs-11
+        .name 
+          strong Name:  
+          | {{user.firstname}} {{user.lastname}}
+        .username
+          strong User name: 
+          | {{user.username}}
+        .email
+          strong Email: 
+          | {{user.email}}
+        .address 
+          strong Address: 
+          | {{user.address}}
+    .user-preference.profile-cell.col-xs-6
+      .profile-header.col-xs-11
+        h4 User preferences
+      .profile-item.col-xs-11
+        .fashion
+          strong Interested in: 
+          | {{fashion}}
+        .category 
+          strong Category: 
+          | {{categories}}
+        .colour 
+          strong Colour: 
+          | {{colours}}
+        .brand 
+          strong Brands: 
+          | {{brands}}
+        .subscription 
+          strong Subscription: 
+          | {{newsletter}}
+  #edit
+    button.btn(ng-model='showEdit' ng-click='showEdit=true' ng-show='userID == currentUser.$id') Edit my profile
+  #edit-form(ng-controller='userCtrl' ng-if="showEdit")
+    form(name='userInfo' ng-submit='userInfoUpdate()' novalidate='')
+      .edit-name.col-xs-12
+        .col-xs-6
+          .col-xs-11
+            h5 First name
+        .col-xs-6
+          .col-xs-12
+            h5 Last name
+        .col-xs-6
+          input.col-xs-11(type='text' placeholder='{{user.firstname}}' ng-model='user.firstname')
+        .col-xs-6
+          input.col-xs-12(type='text' placeholder='{{user.lastname}}' ng-model='user.lastname')
+      .edit-username
+        h5 User name
+        input.col-xs-12(type='text' placeholder='{{user.username}}' ng-model='user.username')
+      .edit-address
+        h5 Address
+        input.col-xs-12(type='text' placeholder='{{user.address}}' ng-model='user.address')
+      br.clearfix
+      .edit-fashion.col-xs-12
+        .edit-title
+          h5 Interested in
+        .col-xs-3
+          input(type='radio' ng-model='user.fashion' value='x')
+          label Man's fashion
+        .col-xs-3
+          input(type='radio' ng-model='user.fashion' value='y')
+          label Woman's fashion
+      .edit-colour.col-xs-12
+        .edit-title
+          h5 Colour
+        - var colourOptions = [{value: "Black"}, {value: "White"}, {value: "Grey"}, {value: "Red"}, {value: "Blue"}, {value: "Yellow"}, {value: "Green"}, {value: "Brown"}, {value: "Orange"},{value: "Purple"},{value: "Pink"},{value: "Neutral"}, {value: "Clear"}, {value: "Metallic"}, {value: "Pattern"}, {value: "Multicolour"}]
+        each val in colourOptions
+          .col-xs-3
+            label.colour
+              input(type="checkbox" ng-model='user.colour.#{val.value}' value="#{val.value}")
+              | #{val.value}
+      .edit-category.col-xs-12
+        .edit-title
+          h5 Category
+        - var categoryOptions = [{value: "Shoes"}, {value: "Accessories"}, {value: "Bags"}, {value: "Jewellery"}, {value: "Apparel"}, {value: "Lifestyle"}]
+          each val in categoryOptions
+            .col-xs-4
+              label
+                input(type="checkbox" ng-model='user.category.#{val.value}' value="#{val.value}")
+                | #{val.value}
+      .edit-brand.col-xs-12
+        .edit-title
+          h5 Most favourite 3 brands
+        .col-xs-4
+          input.col-xs-11(type='text' placeholder='{{user.brand.first}}' ng-model='user.brand.first')
+        .col-xs-4
+          input.col-xs-11(type='text' placeholder='{{user.brand.second}}' ng-model='user.brand.second')
+        .col-xs-4
+          input.col-xs-11(type='text' placeholder='{{user.brand.third}}' ng-model='user.brand.third')
+      .edit-submit.col-xs-4
+        button.btn(type='submit') Save
+      .edit-subscription.col-xs-8
+        input(type='checkbox' ng-model='user.newsletter' value='true' )
+        label Receive our newsletter and recommendation?

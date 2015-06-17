@@ -1,0 +1,8 @@
+ul(masonry)
+  li.masonry-brick.col-xs-4.inspiration(ng-repeat='item in itemsInit')
+    a.fancybox(href="{{dataURL}}/assets/brands/{{item.image}}" rel="gallery" title="{{item.text}}" fancybox)
+      img.img-responsive(ng-src="{{dataURL}}/assets/brands/{{item.image}}")
+  li.masonry-brick.col-xs-4.inspiration(ng-repeat='item in itemsLoad')
+    a.fancybox(href="{{dataURL}}/assets/brands/{{item.image}}" rel="gallery" title="{{item.text}}" fancybox)
+      img.img-responsive(ng-src="{{dataURL}}/assets/brands/{{item.image}}")
+  li(scroll-trigger="loadMore()" threshold="100")

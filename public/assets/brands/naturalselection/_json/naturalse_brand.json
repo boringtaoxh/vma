@@ -1,0 +1,14 @@
+{
+  "Natural Selection" : {
+    "designer" : "John Park",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "intro" : "naturalselection/text/naturalse_intro_en.html",
+    "title" : "Natural Selection",
+    "article" : "naturalselection/text/naturalse_brand.html",
+    "videoFile" : "naturalselection/video/naturalse_denim_evolution.mp4",
+    "videoPoster" : "naturalselection/video/poster.jpg",
+    "imageThumb" : "natrualselection/img/thumb/naturalse_brand_thumb.jpg"
+
+    }
+}

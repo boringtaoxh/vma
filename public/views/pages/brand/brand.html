@@ -1,0 +1,40 @@
+
+<div id="brandStory" ng-controller="brandCtrl">
+  <div ng-hide="ready" class="preload"><img src="/assets/img/ui/spinner.gif"/>
+    <h4>Please give us some time to collect lovely things...</h4>
+  </div>
+  <div ng-show="ready" class="wrap">
+    <div class="col-xs-3">
+      <div id="brandSidebar" ng-controller="brandCtrl">
+        <h1 class="brand-title col-xs-12">{{brandName}}</h1>
+        <div id="brandFollow" class="col-xs-12">
+          <button ng-click="followBrand(brand)" ng-hide="ifFollowed(brand)" class="follow btn">Follow</button>
+          <button ng-click="unfollowBrand(brand)" ng-show="ifFollowed(brand)" class="unfollow btn">Unfollow</button>
+          <div addthis-toolbox="addthis-toolbox" class="addthis_toolbox addthis_default_style addthis_20x20_style"><a class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><a class="addthis_button_compact"></a></div>
+        </div>
+        <div id="intro" ng-bind-html="brandIntro" class="col-xs-12"></div><br class="clearfix"/>
+        <div id="chapters">
+          <ul class="text-right">
+            <li ng-repeat="chapter in brandChapters"><a href="/brand/{{brand}}/{{chapter}}" style="text-transform: capitalize" ng-class="{active: chapterActive(chapter)}">{{chapter}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-9">
+      <div class="videogular-container">
+        <div video-player="video-player" class="video"></div>
+      </div>
+      <div class="article-container">
+        <div class="col-xs-12">
+          <div class="col-xs-9">
+            <h4>{{brandTitle}}</h4>
+          </div>
+          <div class="col-xs-3">
+            <div addthis-toolbox="" style="float:right;margin-top:10px;" class="addthis_toolbox addthis_default_style addthis_20x20_style"><a class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><a class="addthis_button_compact"></a></div>
+          </div>
+        </div>
+        <div id="story" ng-bind-html="brandStory"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+#explore(ng-controller='exploreCtrl')
+  .preload(ng-hide='ready')
+    img(src='/assets/img/ui/spinner.gif')
+    h4 Please give us some time to collect lovely things...
+  .wrap(ng-show='ready')
+    #filters.col-xs-3(ng-controller='filterCtrl')
+      include filter
+    #filterProducts.col-xs-9(ng-controller='productsCtrl')      
+      #products
+        wrap-big-products(products='exploreProducts')

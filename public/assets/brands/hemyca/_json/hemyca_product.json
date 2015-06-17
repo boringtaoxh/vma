@@ -1,0 +1,155 @@
+{
+  "hemyca01" : {
+    "brand" : "Hemyca",
+    "designer" : "Helen CLinch, Myra Nigris",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "KATE DRESS",
+    "image" : "hemyca/img/hemyca_product_1.jpg",
+    "imageThumb" : "hemyca/img/hemyca_product_1_thumb.jpg",
+    "price" : 750,
+    "gender" : [ "y" ],
+    "category" : "Apparel",
+    "subCategory" : "Dress",
+    "color" : [ "White" ], 
+    "material" : [ "Jacquard" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "feature" : true,
+    "keywords" : [ "textured", "jacquard", "tailored", "metal trim" ],
+    "purchase" : "http://www.hemyca.com/content/ss15-kate-dress"
+  },
+
+    "hemyca02" : {
+    "brand" : "Hemyca",
+    "designer" : "Helen CLinch, Myra Nigris",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "CARRIE JACKET",
+    "image" : "hemyca/img/hemyca_product_2.jpg",
+    "imageThumb" : "hemyca/img/hemyca_product_2_thumb.jpg",
+    "price" : 650,
+    "gender" : [ "y" ],
+    "category" : "Apparel",
+    "subCategory" : "Outwear",
+    "color" : [ "Black", "White" ], 
+    "material" : [ "Woven jacquard" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "keywords" : [ "woven jacquard", "sleeveless", "Cut-out detail", "leather binding" ],
+    "purchase" : "http://www.hemyca.com/content/ss15carrie-jacket"
+  },
+
+    "hemyca03" : {
+    "brand" : "Hemyca",
+    "designer" : "Helen CLinch, Myra Nigris",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "MARY COAT",
+    "image" : "hemyca/img/hemyca_product_3.jpg",
+    "imageThumb" : "hemyca/img/hemyca_product_3_thumb.jpg",
+    "price" : 990,
+    "gender" : [ "y" ],
+    "category" : "Apparel",
+    "subCategory" : "Outwear",
+    "color" : [ "Black", "White" ], 
+    "material" : [ "Woven jacquard " ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "feature" : true,
+    "keywords" : [ "" ],
+    "purchase" : "http://www.hemyca.com/content/ss15-mary-coat"
+  },
+
+    "hemyca04" : {
+    "brand" : "Hemyca",
+    "designer" : "Helen CLinch, Myra Nigris",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "SELENA JACKET",
+    "image" : "hemyca/img/hemyca_product_4.jpg",
+    "imageThumb" : "hemyca/img/hemyca_product_4_thumb.jpg",
+    "price" : 690,
+    "gender" : [ "y" ],
+    "category" : "Apparel",
+    "subCategory" : "Outwear",
+    "color" : [ "White" ], 
+    "material" : [ "Jacquard" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "keywords" : [ "textured jacquard", "asymmetrical", "metal trim" ],
+    "purchase" : "http://www.hemyca.com/content/ss15-selena-jacket"
+  },
+
+    "hemyca05" : {
+    "brand" : "Hemyca",
+    "designer" : "Helen CLinch, Myra Nigris",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "JORDAN TOP",
+    "image" : "hemyca/img/hemyca_product_5.jpg",
+    "imageThumb" : "hemyca/img/hemyca_product_5_thumb.jpg",
+    "price" : 390,
+    "gender" : [ "y" ],
+    "category" : "Apparel",
+    "subCategory" : "Top",
+    "color" : [ "Black" ], 
+    "material" : [ "Woven" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "feature" : true,
+    "keywords" : [ "woven check",  "seam" ],
+    "purchase" : "http://www.hemyca.com/content/ss15jordan-top"
+  },
+
+    "hemyca06" : {
+    "brand" : "Hemyca",
+    "designer" : "Helen CLinch, Myra Nigris",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "GUILDA TROUSERS",
+    "image" : "hemyca/img/hemyca_product_6.jpg",
+    "imageThumb" : "hemyca/img/hemyca_product_6_thumb.jpg",
+    "price" : 525,
+    "gender" : [ "y" ],
+    "category" : "Apparel",
+    "subCategory" : "Bottom",
+    "color" : [ "Black" ], 
+    "material" : [ "Jacquard" ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "feature" : true,
+    "keywords" : [ "metallic jacquard", "tailored" ],
+    "purchase" : "http://www.hemyca.com/content/ss15-kate-dress-neon-0"
+  },
+
+    "hemyca07" : {
+    "brand" : "Hemyca",
+    "designer" : "Helen CLinch, Myra Nigris",
+    "country" : "United Kingdom",
+    "city" : "London",
+    "name" : "BESS SKIRT",
+    "image" : "hemyca/img/hemyca_product_7.jpg",
+    "imageThumb" : "hemyca/img/hemyca_product_7_thumb.jpg",
+    "price" : 590,
+    "gender" : [ "y" ],
+    "category" : "Apparel",
+    "subCategory" : "Bottom",
+    "color" : [ "Black", "White" ], 
+    "material" : [ "Woven jacquard " ],
+    "season" : [ "spring", "summer" ],
+    "relate" : "",
+    "feature" : true,
+    "keywords" : [ "woven jacquard", "layered", "leather binding" ],
+    "purchase" : "http://www.hemyca.com/content/ss15bess-skirt"
+  }
+
+
+}
+
+
+
+
+
+
+  

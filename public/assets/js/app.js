@@ -122,7 +122,7 @@ alt.controller('brandCtrl', function($scope, $timeout, $location, $route, $route
       }), 0);
     });
   }
-  if ($rootScope.currentUser.$id !== void 0) {
+  if ($rootScope.currentUser !== void 0) {
     $scope.followBrand = function(brandID) {
       return brand.followBrand(brandID);
     };
@@ -144,7 +144,7 @@ alt.controller('brandCtrl', function($scope, $timeout, $location, $route, $route
       return $scope.followedBrands = data;
     });
   }
-  if ($rootScope.currentUser.$id !== void 0) {
+  if ($rootScope.currentUser !== void 0) {
     brand.currentUserFollowedBrands().$loaded().then(function(data) {
       return $scope.ifFollowed = function(brandID) {
         var ifFollowed;

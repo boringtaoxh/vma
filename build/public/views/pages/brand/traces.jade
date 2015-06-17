@@ -1,9 +1,12 @@
-#brandTraces(ng-controller='brandCtrl')
+.wrap-content(ng-controller='productsCtrl')
   .preload(ng-hide='ready')
     img(src='/assets/img/ui/spinner.gif')
     h4 Please give us some time to collect lovely things...
-  .wrap(ng-show='ready')
-    .col-xs-3
-      include brand-sidebar
-    .col-xs-9
-      list-items(items='brandTraces')
+  #brandTraces(ng-controller='brandCtrl' ng-show='ready' ng-cloak)
+    .wrap
+      .col-xs-3
+        include brand-sidebar
+      .col-xs-9
+        list-items(items='brandTraces')
+    footer
+      include ../../navs/nav-bottom

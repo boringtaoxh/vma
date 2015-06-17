@@ -17,8 +17,8 @@ alt.controller 'brandCtrl', ($scope, $timeout, $location, $route, $routeParams, 
         $scope.brandTraces = brand.getBrandTraces($scope.brandName)
         $scope.ready = true
       ), 0
-    
-  if $rootScope.currentUser.$id != undefined
+  
+  if $rootScope.currentUser != undefined
     $scope.followBrand = (brandID) ->
       brand.followBrand brandID
   else
@@ -36,7 +36,7 @@ alt.controller 'brandCtrl', ($scope, $timeout, $location, $route, $routeParams, 
       console.log data
       $scope.followedBrands = data
 
-  if $rootScope.currentUser.$id != undefined
+  if $rootScope.currentUser != undefined
     brand.currentUserFollowedBrands().$loaded().then (data) ->
       $scope.ifFollowed = (brandID) ->
         ifFollowed = data.$getRecord(brandID)

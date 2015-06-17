@@ -6,10 +6,10 @@
     a(href='/product/{{product.$id}}') {{product.name | wordsTrunc: 10}}
   .brand
     | by 
-    a(href='/brand/{{product.brand}}/products') {{product.brand}}
+    a(href='/brand/{{product.brand | charactersRemove}}/products') {{product.brand}}
 .col-xs-12
   .col-xs-6(ng-controller='flagsCtrl')
-    a(href='{{product.purchase}}' ng-show='product.purchase' target='_blank')
+    a(href='{{product.purchase}}' ng-show='product.purchase' target='_blank' ng-click='lastBought(product.$id)')
       button.purchase.btn Buy
     .reserve(ng-hide='product.purchase')
       button.btn(ng-hide='ifReserved(product.$id)' ng-click='flagProduct("reserve", product.$id)') Reserve

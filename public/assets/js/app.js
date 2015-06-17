@@ -719,12 +719,15 @@ alt.directive('scrollTrigger', function($window) {
   };
 });
 
-alt.directive('searchResults', function() {
+alt.directive('searchResults', function($route, $location, $rootScope, products, toaster) {
   return {
     restrict: 'A',
     templateUrl: '/views/directives/search-results.html',
     controller: function($scope) {
-      return $scope.dataURL = $rootScope.dataURL;
+      $scope.dataURL = $rootScope.dataURL;
+      return $scope.lastBought = function(productID) {
+        return products.lastBought(productID);
+      };
     }
   };
 });

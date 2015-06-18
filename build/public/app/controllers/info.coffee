@@ -5,7 +5,10 @@ alt.controller 'infoCtrl', ($scope, $timeout, $location, $routeParams, $rootScop
   info.getInfoSection($scope.section).child('/title').on 'value', (title) ->
     $timeout (->
       $scope.infoTitle = title.val();
-      $scope.infoBody = '/views/pages/info/' + $scope.section + '.html'
+    ), 0
+  info.getInfoSection($scope.section).child('/content').on 'value', (content) ->
+    $timeout (->
+      $scope.infoContent = $sce.trustAsHtml content.val();
     ), 0
 
   $scope.sectionActive = (section) ->

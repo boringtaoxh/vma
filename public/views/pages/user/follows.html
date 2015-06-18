@@ -17,11 +17,10 @@
   <div id="brands" ng-controller="brandCtrl">
     <ul masonry="masonry">
       <li ng-repeat="brand in followedBrands" class="masonry-brick col-xs-2 brand">
-        <div class="product-cover"><a href="/brand/{{brand.$id}}/products"><img ng-src="/assets/brands/{{brand.imageThumb}}" class="img-responsive"/></a></div>
+        <div class="product-cover"><a href="/brand/{{brand.$id}}/products"><img ng-src="{{dataURL}}/assets/brands/{{brand.imageThumb}}" class="img-responsive"/></a></div>
         <div class="product-details"><a href="/brand/{{brand.$id}}/products" class="brand col-xs-12">{{brand.title}}</a>
           <div id="followBrand" class="col-xs-6 pull-right">
-            <button ng-click="followBrand(brand.$id)" ng-hide="ifFollowed(brand.$id)" class="follow btn">Follow</button>
-            <button ng-click="unfollowBrand(brand.$id)" ng-show="ifFollowed(brand.$id)" class="unfollow btn">Unfollow</button>
+            <button ng-click="unfollowBrand(brand.$id)" class="unfollow btn">Unfollow</button>
           </div>
         </div>
       </li>

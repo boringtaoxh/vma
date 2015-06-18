@@ -1,4 +1,6 @@
 alt.controller 'userCtrl', ($scope, $route, $location, $routeParams, $rootScope, auth, products, user) ->
+  $scope.dataURL = $rootScope.dataURL
+
   currentRoute = $location.path().split('/')
   $scope.sectionActive = (section) ->
     section == currentRoute[3] ? 'active' : ''

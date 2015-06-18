@@ -2,7 +2,6 @@
   .top-bar
     include info-topbar
   .infos
-    h1 {{infoTitle}}
-    #body(ng-include='infoBody')
+    #body(ng-bind-html='infoContent')
   footer
     include ../../navs/nav-bottom

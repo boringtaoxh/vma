@@ -166,7 +166,7 @@ alt.controller('brandCtrl', function($scope, $timeout, $location, $route, $route
   };
 });
 
-alt.controller('exploreCtrl', function($scope, $location, $route, $routeParams, $filter, products) {
+alt.controller('exploreCtrl', function($scope, $location, $route, $routeParams, $filter, $timeout, products) {
   var category, gender;
   $scope.ready = false;
 
@@ -202,7 +202,7 @@ alt.controller('exploreCtrl', function($scope, $location, $route, $routeParams, 
   if ($location.search().order) {
     $scope.orderSet = $location.search().order;
   } else {
-    $scope.orderSet = 'lovesCount';
+    $scope.orderSet = 'random';
   }
   $scope.setOrder = function(order) {
     $scope.orderSet = order;
@@ -218,8 +218,10 @@ alt.controller('exploreCtrl', function($scope, $location, $route, $routeParams, 
         return _.sortByOrder(data, ['price'], [false]);
       case 'lastBought':
         return _.sortByOrder(data, ['lastBought'], [false]);
-      default:
+      case 'lovesCount':
         return _.sortByOrder(data, ['lovesCount'], [false]);
+      default:
+        return _.shuffle(data);
     }
   };
 
@@ -231,9 +233,11 @@ alt.controller('exploreCtrl', function($scope, $location, $route, $routeParams, 
       });
     } else {
       $scope.exploreProducts = data;
+      $scope.exploreProducts = $scope.sortData($scope.exploreProducts, $scope.orderSet);
     }
-    $scope.exploreProducts = $scope.sortData($scope.exploreProducts, $scope.orderSet);
-    $scope.ready = true;
+    $timeout((function() {
+      return $scope.ready = true;
+    }), 300);
 
     /* Explore category filtering */
     products.getExploreProducts(gender, 'All').then(function(data) {
@@ -244,14 +248,13 @@ alt.controller('exploreCtrl', function($scope, $location, $route, $routeParams, 
           return categoryAvailable = _.union(categoryAvailable, [snapshot.category]);
         }
       });
-      $scope.ifCategoryAvailable = function(category) {
+      return $scope.ifCategoryAvailable = function(category) {
         if (categoryAvailable.indexOf(category) > -1) {
           return true;
         } else {
           return false;
         }
       };
-      return $scope.ready = true;
     });
 
     /* Explore colour filtering */
@@ -277,7 +280,7 @@ alt.controller('exploreCtrl', function($scope, $location, $route, $routeParams, 
           }
         }
       };
-      $scope.ifOrderActive = function(order) {
+      return $scope.ifOrderActive = function(order) {
         if ($location.search().order) {
           if ($location.search().order === order) {
             return 'active';
@@ -286,7 +289,6 @@ alt.controller('exploreCtrl', function($scope, $location, $route, $routeParams, 
           }
         }
       };
-      return $scope.ready = true;
     });
   });
 });
@@ -335,8 +337,12 @@ alt.controller('infoCtrl', function($scope, $timeout, $location, $routeParams, $
   $scope.info = info.getInfo();
   info.getInfoSection($scope.section).child('/title').on('value', function(title) {
     return $timeout((function() {
-      $scope.infoTitle = title.val();
-      return $scope.infoBody = '/views/pages/info/' + $scope.section + '.html';
+      return $scope.infoTitle = title.val();
+    }), 0);
+  });
+  info.getInfoSection($scope.section).child('/content').on('value', function(content) {
+    return $timeout((function() {
+      return $scope.infoContent = $sce.trustAsHtml(content.val());
     }), 0);
   });
   return $scope.sectionActive = function(section) {
@@ -391,7 +397,8 @@ alt.controller('productsCtrl', function($scope, $window, $location, $route, $rou
 
 alt.controller('searchCtrl', function($scope, $routeParams, $location, products) {
   var searchSections;
-  products.getProducts().then(function(data) {
+  products.getExploreProducts('xy', 'All').then(function(data) {
+    console.log(data);
     return $scope.products = data;
   });
   $scope.section = $routeParams.section;
@@ -404,8 +411,8 @@ alt.controller('searchCtrl', function($scope, $routeParams, $location, products)
       value: "name",
       text: "Name"
     }, {
-      value: "id",
-      text: "Recents"
+      value: "-lovesCount",
+      text: "Loved"
     }, {
       value: "price",
       text: "Price"
@@ -422,6 +429,7 @@ alt.controller('searchCtrl', function($scope, $routeParams, $location, products)
 
 alt.controller('userCtrl', function($scope, $route, $location, $routeParams, $rootScope, auth, products, user) {
   var currentRoute, getInfo, userID;
+  $scope.dataURL = $rootScope.dataURL;
   currentRoute = $location.path().split('/');
   $scope.sectionActive = function(section) {
     var ref;
@@ -1030,7 +1038,7 @@ alt.factory('info', function($rootScope, FIREBASE_URL, $firebaseArray, $firebase
   infoRef = new Firebase(FIREBASE_URL + '/info');
   output = {
     getInfo: function() {
-      return $firebaseArray(infoRef);
+      return $firebaseArray(infoRef.orderByChild('order'));
     },
     getInfoSection: function(section) {
       return infoRef.child(section);

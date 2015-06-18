@@ -8,8 +8,7 @@
     </div>
   </div>
   <div class="infos">
-    <h1>{{infoTitle}}</h1>
-    <div id="body" ng-include="infoBody"></div>
+    <div id="body" ng-bind-html="infoContent"></div>
   </div>
   <footer>
     <div id="nav-bottom">

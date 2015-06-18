@@ -3,7 +3,7 @@ alt.factory 'info', ($rootScope, FIREBASE_URL, $firebaseArray, $firebaseObject) 
   
   output =
   	getInfo: ->
-      $firebaseArray infoRef
+      $firebaseArray infoRef.orderByChild('order')
 
     getInfoSection: (section) ->
       infoRef.child(section)

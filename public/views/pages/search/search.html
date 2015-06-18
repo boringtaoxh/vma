@@ -33,15 +33,15 @@
     <div class="clearfix"></div>
     <div ng-if="filtered.length &gt; 0 &amp;&amp; query.length &gt;= 1" class="section col-xs-12">
       <div class="header col-xs-6">
-        <h2>Recents</h2>
+        <h2>Loved</h2>
       </div>
       <div class="col-xs-6 text-right">
-        <h4 class="more"><a ng-href="/search/id?target={{query}}">More</a></h4>
+        <h4 class="more"><a ng-href="/search/-lovesCount?target={{query}}">More</a></h4>
       </div>
     </div>
     <div class="section-results">
       <ul>
-        <li search-results="search-results" ng-repeat="product in filtered = ( products | filter: query ) | limitTo: 6 | orderBy: &quot;id&quot;" ng-show="query.length &gt;= 1" class="col-xs-2"></li>
+        <li search-results="search-results" ng-repeat="product in filtered = ( products | filter: query ) | limitTo: 6 | orderBy: &quot;-lovesCount&quot;" ng-show="query.length &gt;= 1" class="col-xs-2"></li>
       </ul>
     </div>
     <div class="clearfix"></div>

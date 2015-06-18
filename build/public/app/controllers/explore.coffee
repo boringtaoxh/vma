@@ -1,4 +1,4 @@
-alt.controller 'exploreCtrl', ($scope, $location, $route, $routeParams, $filter, products) ->
+alt.controller 'exploreCtrl', ($scope, $location, $route, $routeParams, $filter, $timeout, products) ->
 
   $scope.ready = false
 
@@ -27,7 +27,7 @@ alt.controller 'exploreCtrl', ($scope, $location, $route, $routeParams, $filter,
   if $location.search().order
     $scope.orderSet = $location.search().order
   else
-    $scope.orderSet = 'lovesCount'
+    $scope.orderSet = 'random'
   $scope.setOrder = (order) ->
     $scope.orderSet = order
     $scope.$watch 'orderSet', ((newVal, oldVal) ->
@@ -42,8 +42,10 @@ alt.controller 'exploreCtrl', ($scope, $location, $route, $routeParams, $filter,
         return _.sortByOrder data, ['price'], [false]
       when 'lastBought'
         return _.sortByOrder data, ['lastBought'], [false]
-      else
+      when 'lovesCount'
         return _.sortByOrder data, ['lovesCount'], [false]
+      else
+        return _.shuffle data
 
   ### Explore data ###
   products.getExploreProducts(gender, category).then (data) ->
@@ -52,8 +54,12 @@ alt.controller 'exploreCtrl', ($scope, $location, $route, $routeParams, $filter,
         _.intersection(product.color, $scope.colourIncludes).length > 0
     else
       $scope.exploreProducts = data
-    $scope.exploreProducts = $scope.sortData $scope.exploreProducts, $scope.orderSet
-    $scope.ready = true
+      $scope.exploreProducts = $scope.sortData $scope.exploreProducts, $scope.orderSet
+    
+    $timeout (->
+      $scope.ready = true
+    ), 300
+
     ### Explore category filtering ###
     products.getExploreProducts(gender, 'All').then (data) ->
       categoryAvailable = []
@@ -62,7 +68,6 @@ alt.controller 'exploreCtrl', ($scope, $location, $route, $routeParams, $filter,
           categoryAvailable = _.union categoryAvailable, [snapshot.category]
       $scope.ifCategoryAvailable = (category) ->
         if categoryAvailable.indexOf(category) > -1 then return true else return false
-      $scope.ready = true
 
     ### Explore colour filtering ###
     products.getExploreProducts(gender, category).then (data) ->
@@ -77,6 +82,4 @@ alt.controller 'exploreCtrl', ($scope, $location, $route, $routeParams, $filter,
       $scope.ifOrderActive = (order) ->
         if $location.search().order
           if $location.search().order == order then return 'active' else return 'inactive'
-      $scope.ready = true
-
 

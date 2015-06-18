@@ -4,11 +4,12 @@ alt = angular.module('alt', ['ngResource', 'ngRoute', 'toaster', 'firebase', 'ng
 
 alt.constant('FIREBASE_URL', 'https://alovelything.firebaseio.com');
 
-alt.run(function($rootScope, $location) {
+alt.run(function($rootScope, $location, toaster) {
   $rootScope.dataURL = 'http://data.a-lovely-thing.com';
   return $rootScope.$on('$routeChangeError', function(event, next, previous, error) {
     if (error === 'AUTH_REQUIRED') {
-      return $rootScope.message = '';
+      toaster.pop('warning', 'Please login or signup first');
+      return $location.path('/signup');
     }
   });
 });
@@ -31,7 +32,12 @@ alt.config(function($sceDelegateProvider, $routeProvider, $locationProvider) {
   }).when('/user/:userID/profile', {
     templateUrl: 'views/pages/user/profile.html'
   }).when('/brand/:brand/products', {
-    templateUrl: 'views/pages/brand/products.html'
+    templateUrl: 'views/pages/brand/products.html',
+    resolve: {
+      currentAuth: function(auth) {
+        return auth.requireAuth();
+      }
+    }
   }).when('/brand/:brand/brand', {
     templateUrl: 'views/pages/brand/brand.html'
   }).when('/brand/:brand/inspirations', {
@@ -48,13 +54,6 @@ alt.config(function($sceDelegateProvider, $routeProvider, $locationProvider) {
     templateUrl: 'views/pages/explore/relate.html'
   }).when('/product/:productID', {
     templateUrl: 'views/pages/product/product.html'
-  }).when('/admin/products', {
-    templateUrl: 'views/pages/admin/products.html',
-    resolve: {
-      currentAuth: function(auth) {
-        return auth.requireAuth();
-      }
-    }
   }).otherwise({
     redirectTo: '/'
   });
@@ -105,6 +104,7 @@ alt.controller('brandCtrl', function($scope, $timeout, $location, $route, $route
   var currentRoute;
   currentRoute = $location.path().split('/');
   $scope.brand = $routeParams.brand;
+  console.log($scope.brand);
   $scope.brandChapters = ['products', 'brand', 'inspirations', 'traces'];
   $scope.ready = false;
   if ($scope.brand) {
@@ -581,14 +581,14 @@ alt.directive('listItems', function($location, $rootScope, products, toaster, $w
       $window.scrollTo(0, 0);
       return $scope.$watch('items', (function(newVal, oldVal) {
         var itemsLoad, itemsRest;
-        $scope.itemsInit = _.slice($scope.items, 0, 15);
-        itemsRest = _.slice($scope.items, 15);
+        $scope.itemsInit = _.slice($scope.items, 0, 12);
+        itemsRest = _.slice($scope.items, 12);
         itemsLoad = [];
         return $scope.loadMore = function() {
           var i, last;
           last = itemsLoad.length - 1;
           i = 1;
-          while (i <= 15 && (i + last) < itemsRest.length) {
+          while (i <= 12 && (i + last) < itemsRest.length) {
             itemsLoad.push(itemsRest[last + i]);
             i++;
           }
@@ -751,7 +751,8 @@ alt.directive('videoPlayer', function($rootScope) {
     restrict: 'A',
     templateUrl: '/views/directives/video-player.html',
     scope: 'true',
-    controller: function($scope, $sce, brand, $rootScope) {
+    controller: function($scope, $sce, brand, $rootScope, $routeParams) {
+      $scope.brand = $routeParams.brand;
       return brand.getBrand($scope.brand).child('videoFile').on('value', function(video) {
         $scope.brandVideo = video.val();
         return brand.getBrand($scope.brand).child('videoPoster').on('value', function(poster) {
@@ -790,14 +791,14 @@ alt.directive('wrapBigProducts', function($location, $rootScope, products, toast
       $window.scrollTo(0, 0);
       return $scope.$watch('products', (function(newVal, oldVal) {
         var productsLoad, productsRest;
-        $scope.productsInit = _.slice($scope.products, 0, 15);
-        productsRest = _.slice($scope.products, 15);
+        $scope.productsInit = _.slice($scope.products, 0, 9);
+        productsRest = _.slice($scope.products, 9);
         productsLoad = [];
         return $scope.loadMore = function() {
           var i, last;
           last = productsLoad.length - 1;
           i = 1;
-          while (i <= 15 && (i + last) < productsRest.length) {
+          while (i <= 9 && (i + last) < productsRest.length) {
             productsLoad.push(productsRest[last + i]);
             i++;
           }
@@ -820,14 +821,14 @@ alt.directive('wrapProducts', function($location, $rootScope, products, toaster,
       $window.scrollTo(0, 0);
       return $scope.$watch('products', (function(newVal, oldVal) {
         var productsLoad, productsRest;
-        $scope.productsInit = _.slice($scope.products, 0, 15);
-        productsRest = _.slice($scope.products, 15);
+        $scope.productsInit = _.slice($scope.products, 0, 12);
+        productsRest = _.slice($scope.products, 12);
         productsLoad = [];
         return $scope.loadMore = function() {
           var i, last;
           last = productsLoad.length - 1;
           i = 1;
-          while (i <= 15 && (i + last) < productsRest.length) {
+          while (i <= 12 && (i + last) < productsRest.length) {
             productsLoad.push(productsRest[last + i]);
             i++;
           }

@@ -3,7 +3,8 @@ alt.directive 'videoPlayer', ($rootScope) ->
     restrict: 'A',
     templateUrl: '/views/directives/video-player.html',
     scope: 'true',
-    controller: ($scope, $sce, brand, $rootScope) ->
+    controller: ($scope, $sce, brand, $rootScope, $routeParams) ->
+      $scope.brand = $routeParams.brand
       brand.getBrand($scope.brand).child('videoFile').on 'value', (video) ->
         $scope.brandVideo = video.val()
         brand.getBrand($scope.brand).child('videoPoster').on 'value', (poster) ->

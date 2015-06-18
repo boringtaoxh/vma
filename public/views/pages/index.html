@@ -1,36 +1,11 @@
 
-<div ng-controller="productsCtrl" class="wrap-content">
-  <div ng-hide="ready" class="preload"><img src="/assets/img/ui/spinner.gif"/>
-    <h4>Please give us some time to collect lovely things...</h4>
-  </div>
-  <div id="home">
-    <div id="products" ng-show="ready">
-      <wrap-products products="randomProducts" ng-if="!currentUser"></wrap-products>
-      <wrap-products products="preferProducts" ng-if="currentUser"></wrap-products>
+<div ng-controller="productsCtrl">
+  <preload>
+    <div id="home">
+      <div id="products" ng-show="ready">
+        <wrap-products products="randomProducts" ng-if="!currentUser"></wrap-products>
+        <wrap-products products="preferProducts" ng-if="currentUser"></wrap-products>
+      </div>
     </div>
-    <footer>
-      <div id="nav-bottom">
-        <div class="menu">
-          <div class="menu-block col-xs-4"><span class="explore"><a ng-href="/explore/man&amp;woman/all">Explore</a></span><span class="search"><a ng-href="/search">Search</a></span></div>
-          <div ng-controller="authCtrl" class="menu-block col-xs-4 text-center"><span ng-hide="currentUser" class="login"><a ng-href="/signup">Log in / Join</a></span><span ng-show="currentUser" class="user"><a href="/user/{{currentUser.$id}}/love/loves">{{currentUser.firstname}} {{currentUser.lastname}}</a></span><span ng-show="currentUser" class="logout"><a ng-href="/logout" ng-click="logout()">Log out</a></span></div>
-          <div class="menu-block col-xs-4 text-right"><span class="follow"><a href="" ng-model="showFollow" ng-init="showFollow=false" ng-click="showFollow=true">Follow</a></span><span class="info"><a ng-href="/info/about">Info</a></span><span class="language"><a ng-href="http://cn.a-lovely-thing.com" class="chinese">中文</a></span></div>
-        </div>
-      </div>
-      <div id="follow" ng-show="showFollow"><img ng-click="showFollow=false" src="/assets/img/ui/follow_cross.png" class="close img-responsive"/>
-        <div class="wrapper">
-          <div class="row">
-            <h4>FOLLOW US ON</h4>
-          </div>
-          <div class="row">
-            <div class="col-xs-6 text-center"><a href="https://twitter.com/alovelything" target="_blank" style="display:inline-block;" class="text-center"><img id="twitter" src="/assets/img/ui/twitter.png" class="social_icon img-responsive"/></a></div>
-            <div class="col-xs-6 text-center"><a href="https://www.facebook.com/a.lovely.thing" target="_blank" style="display:inline-block;" class="text-center"><img id="facebook" src="/assets/img/ui/facebook.png" class="social_icon img-responsive"/></a></div>
-          </div>
-          <div class="row">     
-            <div class="col-xs-6 text-center"><a href="http://www.weibo.com/u/3076262942" target="_blank" style="display:inline-block;" class="text-center"><img id="weibo" src="/assets/img/ui/sina-weibo.png" class="social_icon img-responsive"/></a></div>
-            <div class="col-xs-6 text-center"><a href="https://instagram.com/alt.alovelything" target="_blank" style="display:inline-block;" class="text-center"><img id="instagram" src="/assets/img/ui/instagram.png" class="social_icon img-responsive"/></a></div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
+  </preload>
 </div>

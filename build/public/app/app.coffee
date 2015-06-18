@@ -28,7 +28,7 @@ alt.config ($sceDelegateProvider, $routeProvider, $locationProvider) ->
   .when '/brand/:brand/traces', { templateUrl: 'views/pages/brand/traces.html' }
   .when '/search', { templateUrl: 'views/pages/search/search.html' }
   .when '/search/:section', { templateUrl: 'views/pages/search/search-section.html' }
-  .when '/explore/:gender/:category', { templateUrl: 'views/pages/explore/explore.html'}
+  .when '/explore/:gender/:category', { templateUrl: 'views/pages/explore/explore.html' }
   .when '/relate', { templateUrl: 'views/pages/explore/relate.html'}
   .when '/product/:productID', { templateUrl: 'views/pages/product/product.html' }
   .when '/admin/products', { 

@@ -1,10 +1,6 @@
-.wrap-content(ng-controller='productsCtrl')
-  .preload(ng-hide='ready')
-    img(src='/assets/img/ui/spinner.gif')
-    h4 Please give us some time to collect lovely things...
-  #home
-    #products(ng-show='ready')
-      wrap-products(products='randomProducts' ng-if='!currentUser')
-      wrap-products(products='preferProducts' ng-if='currentUser')
-    footer
-      include ../navs/nav-bottom
+div(ng-controller='productsCtrl')
+  preload
+    #home
+      #products(ng-show='ready')
+        wrap-products(products='randomProducts' ng-if='!currentUser')
+        wrap-products(products='preferProducts' ng-if='currentUser')

@@ -1,9 +1,6 @@
-.wrap-content(ng-controller='productsCtrl')
-  .preload(ng-hide='ready')
-    img(src='/assets/img/ui/spinner.gif')
-    h4 Please give us some time to collect lovely things...
-  #brandStory(ng-controller='brandCtrl' ng-show='ready')
-    .wrap
+div(ng-controller='brandCtrl')
+  preload
+    #brandStory(ng-show='ready' ng-cloak)
       .col-xs-3
         include brand-sidebar
       .col-xs-9
@@ -24,5 +21,3 @@
                 script.
                   var addthis_config = { "data_track_clickback": true, "data_track_addressbar": true };
           #story(ng-bind-html='brandStory')
-    footer
-      include ../../navs/nav-bottom

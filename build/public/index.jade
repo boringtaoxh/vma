@@ -9,6 +9,6 @@ html(ng-app='alt')
     toaster-container(toaster-options="{'time-out': 5000, 'close-button':true}")
     header
       include views/navs/nav-top
-    section#main(ng-cloak)
+    section(ng-cloak)
       div(ng-view)
     include scripts

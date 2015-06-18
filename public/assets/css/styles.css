@@ -1573,7 +1573,6 @@ button.toast-close-button{padding:0;cursor:pointer;background:0 0;border:0;-webk
 #luckyProducts li .tag .tag-info img:hover{transition:all .6s ease;opacity:1}
 #luckyProducts li .tag .tag-info .shadow{width:60%;margin-top:-20px}
 #filterProducts{background-color:#eee gegeg;width:calc(100% - 300px);float:right;padding-bottom:20px;position:relative}
-#filterProducts li{background:#000}
 #filterProducts li:hover .product-cover{transition:all .5s ease;opacity:.7}
 #filterProducts li:hover .tag{transition:all .3s ease;opacity:1}
 #filterProducts li .product-cover{width:100%;opacity:1}

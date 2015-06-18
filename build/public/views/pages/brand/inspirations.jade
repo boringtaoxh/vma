@@ -1,12 +1,8 @@
-.wrap-content(ng-controller='productsCtrl')
-  .preload(ng-hide='ready')
-    img(src='/assets/img/ui/spinner.gif')
-    h4 Please give us some time to collect lovely things...
-  #brandInspirations(ng-controller='brandCtrl' ng-show='ready' ng-cloak)
-    .wrap
-      .col-xs-3
-        include brand-sidebar
-      .col-xs-9
-        list-items(items='brandInspirations')
-    footer
-      include ../../navs/nav-bottom
+div(ng-controller='brandCtrl')
+  preload
+    #brandInspirations(ng-show='ready' ng-cloak)
+      .wrap
+        .col-xs-3
+          include brand-sidebar
+        .col-xs-9
+          list-items(items='brandInspirations')

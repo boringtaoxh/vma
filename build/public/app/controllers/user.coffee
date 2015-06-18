@@ -17,7 +17,7 @@ alt.controller 'userCtrl', ($scope, $route, $location, $routeParams, $rootScope,
     _.forEach data, (snapshot) ->
       if snapshot.$value == true
         info.push(_.capitalize(snapshot.$id))
-    return _(info).toString()
+    return _(info).toString().replace(/,/g, ', ')
 
   user.getUserFashion(userID).on 'value', (data) ->
     if data.val() == 'x' then $scope.fashion = "Man's fashion" else $scope.fashion = "Woman's fashion"
@@ -30,7 +30,7 @@ alt.controller 'userCtrl', ($scope, $route, $location, $routeParams, $rootScope,
     _.forEach data, (snapshot) ->
       if snapshot.$value != ''
         brands.push(_.capitalize(snapshot.$value))
-    $scope.brands = _(brands).toString()
+    $scope.brands = _(brands).toString().replace(/,/g, ', ')
   user.getUserNewsletter(userID).on 'value', (data) ->
     if data.val() == true then $scope.newsletter = 'You have subscribbed to our newsletter and recommendation' else $scope.newsletter = 'You have not yet subscribbed to our newsletter and recommendation'
 

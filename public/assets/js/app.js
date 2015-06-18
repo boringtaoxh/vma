@@ -233,7 +233,61 @@ alt.controller('exploreCtrl', function($scope, $location, $route, $routeParams, 
       $scope.exploreProducts = data;
     }
     $scope.exploreProducts = $scope.sortData($scope.exploreProducts, $scope.orderSet);
-    return $scope.ready = true;
+    $scope.ready = true;
+
+    /* Explore category filtering */
+    products.getExploreProducts(gender, 'All').then(function(data) {
+      var categoryAvailable;
+      categoryAvailable = [];
+      _.forEach(data, function(snapshot) {
+        if (snapshot.category !== void 0) {
+          return categoryAvailable = _.union(categoryAvailable, [snapshot.category]);
+        }
+      });
+      $scope.ifCategoryAvailable = function(category) {
+        if (categoryAvailable.indexOf(category) > -1) {
+          return true;
+        } else {
+          return false;
+        }
+      };
+      return $scope.ready = true;
+    });
+
+    /* Explore colour filtering */
+    return products.getExploreProducts(gender, category).then(function(data) {
+      var colourAvailable;
+      colourAvailable = [];
+      _.forEach(data, function(snapshot) {
+        return colourAvailable = _.union(colourAvailable, snapshot.color);
+      });
+      $scope.ifColourAvailable = function(colour) {
+        if (colourAvailable.indexOf(colour) > -1) {
+          return true;
+        } else {
+          return false;
+        }
+      };
+      $scope.ifColourActive = function(colour) {
+        if ($location.search().colour) {
+          if ($location.search().colour.indexOf(colour) > -1) {
+            return 'active';
+          } else {
+            return 'inactive';
+          }
+        }
+      };
+      $scope.ifOrderActive = function(order) {
+        if ($location.search().order) {
+          if ($location.search().order === order) {
+            return 'active';
+          } else {
+            return 'inactive';
+          }
+        }
+      };
+      return $scope.ready = true;
+    });
   });
 });
 
@@ -258,67 +312,13 @@ alt.controller('filterCtrl', function($scope, $location, $route, $routeParams, $
       return false;
     }
   };
-  $scope.ifCategory = function(category) {
+  return $scope.ifCategory = function(category) {
     if (category === $routeParams.category) {
       return true;
     } else {
       return false;
     }
   };
-
-  /* Explore category filtering */
-  products.getExploreProducts(gender, 'All').then(function(data) {
-    var categoryAvailable;
-    categoryAvailable = [];
-    _.forEach(data, function(snapshot) {
-      if (snapshot.category !== void 0) {
-        return categoryAvailable = _.union(categoryAvailable, [snapshot.category]);
-      }
-    });
-    $scope.ifCategoryAvailable = function(category) {
-      if (categoryAvailable.indexOf(category) > -1) {
-        return true;
-      } else {
-        return false;
-      }
-    };
-    return $scope.ready = true;
-  });
-
-  /* Explore colour filtering */
-  return products.getExploreProducts(gender, category).then(function(data) {
-    var colourAvailable;
-    colourAvailable = [];
-    _.forEach(data, function(snapshot) {
-      return colourAvailable = _.union(colourAvailable, snapshot.color);
-    });
-    $scope.ifColourAvailable = function(colour) {
-      if (colourAvailable.indexOf(colour) > -1) {
-        return true;
-      } else {
-        return false;
-      }
-    };
-    $scope.ifColourActive = function(colour) {
-      if ($location.search().colour) {
-        if ($location.search().colour.indexOf(colour) > -1) {
-          return 'active';
-        } else {
-          return 'inactive';
-        }
-      }
-    };
-    $scope.ifOrderActive = function(order) {
-      if ($location.search().order) {
-        if ($location.search().order === order) {
-          return 'active';
-        } else {
-          return 'inactive';
-        }
-      }
-    };
-    return $scope.ready = true;
-  });
 });
 
 alt.controller('flagsCtrl', function($scope, $routeParams, $location, $route, $rootScope, $timeout, products, toaster) {
@@ -455,7 +455,7 @@ alt.controller('userCtrl', function($scope, $route, $location, $routeParams, $ro
         return info.push(_.capitalize(snapshot.$id));
       }
     });
-    return _(info).toString();
+    return _(info).toString().replace(/,/g, ', ');
   };
   user.getUserFashion(userID).on('value', function(data) {
     if (data.val() === 'x') {
@@ -478,7 +478,7 @@ alt.controller('userCtrl', function($scope, $route, $location, $routeParams, $ro
         return brands.push(_.capitalize(snapshot.$value));
       }
     });
-    return $scope.brands = _(brands).toString();
+    return $scope.brands = _(brands).toString().replace(/,/g, ', ');
   });
   user.getUserNewsletter(userID).on('value', function(data) {
     if (data.val() === true) {
@@ -501,7 +501,7 @@ alt.directive('addthisToolbox', function() {
     template: '<div ng-transclude></div>',
     link: function($scope, element, attrs) {
       addthis.init();
-      addthis.toolbox($(element).get());
+      return addthis.toolbox($(element).get());
     }
   };
 });
@@ -699,6 +699,20 @@ alt.directive('masonry', function($location, $rootScope, products, toaster) {
           return $scope.productsLoad = productsLoad;
         };
       }), true);
+    }
+  };
+});
+
+alt.directive('preload', function() {
+  return {
+    restrict: 'AE',
+    transclude: true,
+    replace: true,
+    templateUrl: '/views/directives/preload.html',
+    link: function(scope, element, attrs, ctrl, transclude) {
+      return transclude(scope.$parent, function(clone, scope) {
+        return element.append(clone);
+      });
     }
   };
 });

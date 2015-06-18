@@ -1,12 +1,7 @@
-.wrap-content(ng-controller='productsCtrl')
-  .preload(ng-hide='ready')
-    img(src='/assets/img/ui/spinner.gif')
-    h4 Please give us some time to collect lovely things...
-  #brandProducts(ng-controller='brandCtrl' ng-show='ready' ng-cloak)
-    .wrap
+div(ng-controller='brandCtrl')
+  preload
+    #brandProducts(ng-show='ready' ng-cloak)
       .col-xs-3
         include brand-sidebar
       #products.col-xs-9(ng-controller='productsCtrl')
         wrap-big-products(products='brandProducts')
-    footer
-      include ../../navs/nav-bottom

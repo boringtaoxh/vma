@@ -1,19 +1,19 @@
-#search(ng-controller='searchCtrl')
-  .close.text-right
-    a(ng-href='/search')
-      img.img-responsive(src='/assets/img/ui/follow_cross.png')
-  .title
-    | Please type here for a lovely thing...
-  input(type='text' ng-model='query' autofocus)
-  .results
-    .section.col-xs-12
-      .header
-        h2 {{sectionText}}
-    .section-results.col-xs-12
-      ul(masonry)
-        li.masonry-brick.col-xs-2(search-results ng-repeat='product in filtered = ( products | filter: query ) | limitTo: 30 | orderBy: section')
-  .no-result(ng-if='filtered.length == 0 && query.length >= 1')
-    h2 No result found :(
-    p Your Search did not return any results, please try again!
-  footer
-    include ../../navs/nav-bottom
+div(ng-controller='searchCtrl')
+  preload
+    #search(ng-show='ready')
+      .close.text-right
+        a(ng-href='/search')
+          img.img-responsive(src='/assets/img/ui/follow_cross.png')
+      .title
+        | Please type here for a lovely thing...
+      input(type='text' ng-model='query' autofocus)
+      .results
+        .section.col-xs-12
+          .header
+            h2 {{sectionText}}
+        .section-results.col-xs-12
+          ul(masonry)
+            li.masonry-brick.col-xs-2(search-results ng-repeat='product in filtered = ( products | filter: query ) | limitTo: 30 | orderBy: section')
+      .no-result(ng-if='filtered.length == 0 && query.length >= 1')
+        h2 No result found :(
+        p Your Search did not return any results, please try again!

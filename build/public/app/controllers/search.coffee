@@ -1,9 +1,13 @@
-alt.controller 'searchCtrl', ($scope, $routeParams, $location, products) ->
+alt.controller 'searchCtrl', ($scope, $routeParams, $location, $timeout, products) ->
+
+  $scope.ready = false
+
   products.getExploreProducts('xy', 'All').then (data) ->
-
-    console.log data
-
     $scope.products = data
+
+    $timeout (->
+      $scope.ready = true
+    ), 300
 
   $scope.section = $routeParams.section
   console.log $scope.section

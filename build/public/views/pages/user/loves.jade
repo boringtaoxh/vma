@@ -1,9 +1,9 @@
-.wrap-content(ng-controller='productsCtrl')
-  #user(ng-controller='userCtrl')
-    include user-topbar
-    #loves
-      #products(ng-controller='productsCtrl')
-        ul(masonry)
-          li.masonry-brick.col-xs-3.product(list-products ng-repeat='product in userFlaggedProducts')
+
+#user(ng-controller='userCtrl')
+  include user-topbar
+  #loves(ng-controller='productsCtrl')
+    #products
+      ul(masonry)
+        li.masonry-brick.col-xs-3.product(list-products ng-repeat='product in userFlaggedProducts')
   footer
     include ../../navs/nav-bottom

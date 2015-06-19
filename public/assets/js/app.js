@@ -359,7 +359,9 @@ alt.controller('productsCtrl', function($scope, $window, $location, $route, $rou
   $scope.ready = false;
   products.getRandomProducts().then(function(data) {
     $scope.randomProducts = data;
-    return $scope.ready = true;
+    return $timeout((function() {
+      return $scope.ready = true;
+    }), 300);
   });
   products.getPreferProducts().then(function(data) {
     return $scope.preferProducts = data;
@@ -395,11 +397,14 @@ alt.controller('productsCtrl', function($scope, $window, $location, $route, $rou
   };
 });
 
-alt.controller('searchCtrl', function($scope, $routeParams, $location, products) {
+alt.controller('searchCtrl', function($scope, $routeParams, $location, $timeout, products) {
   var searchSections;
+  $scope.ready = false;
   products.getExploreProducts('xy', 'All').then(function(data) {
-    console.log(data);
-    return $scope.products = data;
+    $scope.products = data;
+    return $timeout((function() {
+      return $scope.ready = true;
+    }), 300);
   });
   $scope.section = $routeParams.section;
   console.log($scope.section);

@@ -4,7 +4,9 @@ alt.controller 'productsCtrl', ($scope, $window, $location, $route, $routeParams
 
   products.getRandomProducts().then (data) ->
     $scope.randomProducts = data
-    $scope.ready = true
+    $timeout (->
+      $scope.ready = true
+    ), 300
   
   products.getPreferProducts().then (data) ->
     $scope.preferProducts = data

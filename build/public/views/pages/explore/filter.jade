@@ -2,10 +2,10 @@
   form
     .col-xs-6
       a(href='/explore/man/all')
-        label.filter-button.gender(ng-class="{true: 'active'}[ifGender('man')]") Man
+        label.filter-button.gender(ng-class="{true: 'active'}[ifGender('man')]") Men
     .col-xs-6
       a(href='/explore/woman/all')
-        label.filter-button.gender(ng-class="{true: 'active'}[ifGender('woman')]") Woman
+        label.filter-button.gender(ng-class="{true: 'active'}[ifGender('woman')]") Women
 #category.row.col-xs-12
   form
     - var filterCategoryOptions = [{value: "Shoes", text: "shoes"}, {value: "Accessories", text: "accessories"}, {value: "Bags", text: "bags"}, {value: "Jewellery", text: "jewellery"}, {value: "Apparel", text: "apparel"}, {value: "Lifestyle", text: "lifestyle"}]

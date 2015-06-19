@@ -10,7 +10,7 @@
             h2 #{val.text}
           .col-xs-6.text-right
             h4.more
-              a(ng-href="/search/#{val.value}?target={{query}}") More
+              a(ng-href="/search/#{val.value}?target={{query}}" target='_self') More
         .section-results
           ul
             li.col-xs-2(search-results ng-repeat='product in filtered = ( products | filter: query ) | limitTo: 6 | orderBy: "#{val.value}"' ng-show="query.length >= 1")

@@ -54,7 +54,7 @@ alt.controller 'exploreCtrl', ($scope, $location, $route, $routeParams, $filter,
         _.intersection(product.color, $scope.colourIncludes).length > 0
     else
       $scope.exploreProducts = data
-      $scope.exploreProducts = $scope.sortData $scope.exploreProducts, $scope.orderSet
+    $scope.exploreProducts = $scope.sortData $scope.exploreProducts, $scope.orderSet
     
     $scope.ready = true
 

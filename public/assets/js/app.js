@@ -233,8 +233,8 @@ alt.controller('exploreCtrl', function($scope, $location, $route, $routeParams, 
       });
     } else {
       $scope.exploreProducts = data;
-      $scope.exploreProducts = $scope.sortData($scope.exploreProducts, $scope.orderSet);
     }
+    $scope.exploreProducts = $scope.sortData($scope.exploreProducts, $scope.orderSet);
     return $scope.ready = true;
   });
 
@@ -497,6 +497,352 @@ alt.controller('userCtrl', function($scope, $route, $location, $routeParams, $ro
   return $scope.userInfoUpdate = function() {
     user.updateUserInfo($scope.user);
     return $route.reload();
+  };
+});
+
+alt.directive('addthisToolbox', function() {
+  return {
+    restrict: 'A',
+    transclude: true,
+    replace: true,
+    template: '<div ng-transclude></div>',
+    link: function($scope, element, attrs) {
+      addthis.init();
+      return addthis.toolbox($(element).get());
+    }
+  };
+});
+
+alt.directive('adminProducts', function() {
+  return {
+    restrict: 'A',
+    templateUrl: '/views/directives/admin-products.html',
+    scope: true,
+    controller: function($scope) {
+      $scope.deleting = false;
+      $scope.startDelete = function() {
+        return $scope.deleting = true;
+      };
+      return $scope.cancelDelete = function() {
+        return $scope.deleting = false;
+      };
+    }
+  };
+});
+
+alt.directive('fancybox', function() {
+  return {
+    restrict: 'A',
+    link: function(scope, element, attrs) {
+      $(element).fancybox();
+      if (scope.$last) {
+        return $(".fancybox").fancybox();
+      }
+    }
+  };
+});
+
+alt.directive('filterProducts', function($timeout, $route, $location) {
+  return {
+    restrict: 'A',
+    controller: function($scope) {
+      if ($location.search().colour) {
+        $scope.colourIncludes = _.isArray($location.search().colour) ? $location.search().colour : [$location.search().colour];
+      } else {
+        $scope.colourIncludes = [];
+      }
+      return $scope.includeColour = function(colour) {
+        var i;
+        i = _.indexOf($scope.colourIncludes, colour);
+        if (i > -1) {
+          $scope.colourIncludes.splice(i, 1);
+        } else {
+          $scope.colourIncludes.push(colour);
+        }
+        return $scope.$watch('colourIncludes', (function(newVal, oldVal) {
+          $scope.colourIncludes = _.union($scope.colourIncludes, $location.search().colour);
+          $location.search('colour', $scope.colourIncludes);
+          return console.log($scope.exploreProducts);
+        }), true);
+      };
+    },
+    link: function(scope, el, attrs) {
+      return $('.filter-button.order').click(function() {
+        $('.filter-button.order').removeClass('active');
+        return $(this).addClass('active');
+      });
+    }
+  };
+});
+
+alt.directive('listItems', function($location, $rootScope, products, toaster, $window) {
+  return {
+    restrict: 'E',
+    replace: true,
+    templateUrl: '/views/directives/list-items.html',
+    scope: {
+      items: '='
+    },
+    controller: function($scope) {
+      $scope.dataURL = $rootScope.dataURL;
+      $window.scrollTo(0, 0);
+      return $scope.$watch('items', (function(newVal, oldVal) {
+        var itemsLoad, itemsRest;
+        $scope.itemsInit = _.slice($scope.items, 0, 12);
+        itemsRest = _.slice($scope.items, 12);
+        itemsLoad = [];
+        return $scope.loadMore = function() {
+          var i, last;
+          last = itemsLoad.length - 1;
+          i = 1;
+          while (i <= 12 && (i + last) < itemsRest.length) {
+            itemsLoad.push(itemsRest[last + i]);
+            i++;
+          }
+          return $scope.itemsLoad = itemsLoad;
+        };
+      }), true);
+    }
+  };
+});
+
+alt.directive('listProducts', function($route, $location, $rootScope, products, toaster) {
+  return {
+    restrict: 'AE',
+    templateUrl: '/views/directives/list-products.html',
+    controller: function($scope) {
+      var currentRoute;
+      $scope.dataURL = $rootScope.dataURL;
+      currentRoute = $location.path().split('/');
+      $scope.flagProduct = function(flagType, productID) {
+        if ($rootScope.currentUser.$id !== void 0) {
+          return products.flagProduct(flagType, productID);
+        } else {
+          $location.path('/signup');
+          return toaster.pop('warning', 'Please register or log in first');
+        }
+      };
+      $scope.disflagProduct = function(flagType, productID) {
+        var flagSection;
+        products.disflagProduct(flagType, productID);
+        flagSection = currentRoute[4];
+        if (flagSection && flagSection === 'loves' || flagSection === 'reserves') {
+          return $route.reload();
+        }
+      };
+      if ($rootScope.currentUser.$id !== void 0) {
+        products.getCurrentUserFlaggedProducts('love').$loaded().then(function(data) {
+          return $scope.ifLoved = function(productID) {
+            var ifLoved;
+            ifLoved = data.$getRecord(productID);
+            if (ifLoved !== null) {
+              return true;
+            } else {
+              return false;
+            }
+          };
+        });
+        products.getCurrentUserFlaggedProducts('reserve').$loaded().then(function(data) {
+          return $scope.ifReserved = function(productID) {
+            var ifReserved;
+            ifReserved = data.$getRecord(productID);
+            if (ifReserved !== null) {
+              return true;
+            } else {
+              return false;
+            }
+          };
+        });
+      }
+      products.getFlagCount('love').$loaded().then(function(data) {
+        return $scope.lovesCount = function(productID) {
+          var lovesObj;
+          lovesObj = _.where(data, {
+            '$id': productID
+          });
+          if (lovesObj[0]) {
+            return lovesObj[0].$value;
+          } else {
+            return '0';
+          }
+        };
+      });
+      return $scope.lastBought = function(productID) {
+        return products.lastBought(productID);
+      };
+    }
+  };
+});
+
+alt.directive('masonry', function($location, $rootScope, products, toaster) {
+  return {
+    restrict: 'E',
+    replace: true,
+    templateUrl: '/views/directives/wrap-products.html',
+    scope: {
+      products: '='
+    },
+    controller: function($scope, $element) {
+      var currentRoute;
+      currentRoute = $location.path().split('/');
+      return $scope.$watch('products', (function(newVal, oldVal) {
+        var productsLoad, productsRest;
+        $scope.productsInit = _.slice($scope.products, 0, 15);
+        productsRest = _.slice($scope.products, 15);
+        productsLoad = [];
+        console.log($element);
+        $element.masonry({
+          itemSelector: '.masonry-brick',
+          isAnimated: true
+        });
+        return $scope.loadMore = function() {
+          var i, last;
+          last = productsLoad.length - 1;
+          i = 1;
+          while (i <= 15 && (i + last) < productsRest.length) {
+            productsLoad.push(productsRest[last + i]);
+            i++;
+          }
+          return $scope.productsLoad = productsLoad;
+        };
+      }), true);
+    }
+  };
+});
+
+alt.directive('preload', function() {
+  return {
+    restrict: 'AE',
+    transclude: true,
+    replace: true,
+    templateUrl: '/views/directives/preload.html',
+    link: function(scope, element, attrs, ctrl, transclude) {
+      return transclude(scope.$parent, function(clone, scope) {
+        return element.append(clone);
+      });
+    }
+  };
+});
+
+alt.directive('scrollTrigger', function($window) {
+  return {
+    link: function(scope, element, attrs) {
+      var doc, e, offset;
+      offset = parseInt(attrs.threshold);
+      e = jQuery(element[0]);
+      doc = jQuery(document);
+      return angular.element(document).bind('scroll', function() {
+        if (doc.scrollTop() > $(document).height() - $window.innerHeight - offset) {
+          return scope.$apply(attrs.scrollTrigger);
+        }
+      });
+    }
+  };
+});
+
+alt.directive('searchResults', function($route, $location, $rootScope, products, toaster) {
+  return {
+    restrict: 'A',
+    templateUrl: '/views/directives/search-results.html',
+    controller: function($scope) {
+      $scope.dataURL = $rootScope.dataURL;
+      return $scope.lastBought = function(productID) {
+        return products.lastBought(productID);
+      };
+    }
+  };
+});
+
+alt.directive('videoPlayer', function($rootScope) {
+  return {
+    restrict: 'A',
+    templateUrl: '/views/directives/video-player.html',
+    scope: 'true',
+    controller: function($scope, $sce, brand, $rootScope, $routeParams) {
+      $scope.brand = $routeParams.brand;
+      return brand.getBrand($scope.brand).child('videoFile').on('value', function(video) {
+        $scope.brandVideo = video.val();
+        return brand.getBrand($scope.brand).child('videoPoster').on('value', function(poster) {
+          $scope.brandVideoPoster = poster.val();
+          return $scope.config = {
+            autoHide: true,
+            preload: 'none',
+            sources: [
+              {
+                src: $sce.trustAsResourceUrl($rootScope.dataURL + '/assets/brands/' + $scope.brandVideo),
+                type: 'video/mp4'
+              }
+            ],
+            theme: {
+              url: '/assets/css/videogular.css'
+            },
+            plugins: {
+              poster: $rootScope.dataURL + '/assets/brands/' + $scope.brandVideoPoster
+            }
+          };
+        });
+      });
+    }
+  };
+});
+
+alt.directive('wrapBigProducts', function($location, $rootScope, products, toaster, $window) {
+  return {
+    restrict: 'E',
+    replace: true,
+    templateUrl: '/views/directives/wrap-big-products.html',
+    scope: {
+      products: '='
+    },
+    controller: function($scope) {
+      $window.scrollTo(0, 0);
+      return $scope.$watch('products', (function(newVal, oldVal) {
+        var productsLoad, productsRest;
+        $scope.productsInit = _.slice($scope.products, 0, 9);
+        productsRest = _.slice($scope.products, 9);
+        productsLoad = [];
+        return $scope.loadMore = function() {
+          var i, last;
+          last = productsLoad.length - 1;
+          i = 1;
+          while (i <= 9 && (i + last) < productsRest.length) {
+            productsLoad.push(productsRest[last + i]);
+            i++;
+          }
+          return $scope.productsLoad = productsLoad;
+        };
+      }), true);
+    }
+  };
+});
+
+alt.directive('wrapProducts', function($location, $rootScope, products, toaster, $window) {
+  return {
+    restrict: 'E',
+    replace: true,
+    templateUrl: '/views/directives/wrap-products.html',
+    scope: {
+      products: '='
+    },
+    controller: function($scope) {
+      $window.scrollTo(0, 0);
+      return $scope.$watch('products', (function(newVal, oldVal) {
+        var productsLoad, productsRest;
+        $scope.productsInit = _.slice($scope.products, 0, 12);
+        productsRest = _.slice($scope.products, 12);
+        productsLoad = [];
+        return $scope.loadMore = function() {
+          var i, last;
+          last = productsLoad.length - 1;
+          i = 1;
+          while (i <= 12 && (i + last) < productsRest.length) {
+            productsLoad.push(productsRest[last + i]);
+            i++;
+          }
+          return $scope.productsLoad = productsLoad;
+        };
+      }), true);
+    }
   };
 });
 
@@ -1031,349 +1377,3 @@ alt.factory('user', function($rootScope, FIREBASE_URL, $firebaseArray, $firebase
 });
 
 
-
-alt.directive('addthisToolbox', function() {
-  return {
-    restrict: 'A',
-    transclude: true,
-    replace: true,
-    template: '<div ng-transclude></div>',
-    link: function($scope, element, attrs) {
-      addthis.init();
-      return addthis.toolbox($(element).get());
-    }
-  };
-});
-
-alt.directive('adminProducts', function() {
-  return {
-    restrict: 'A',
-    templateUrl: '/views/directives/admin-products.html',
-    scope: true,
-    controller: function($scope) {
-      $scope.deleting = false;
-      $scope.startDelete = function() {
-        return $scope.deleting = true;
-      };
-      return $scope.cancelDelete = function() {
-        return $scope.deleting = false;
-      };
-    }
-  };
-});
-
-alt.directive('fancybox', function() {
-  return {
-    restrict: 'A',
-    link: function(scope, element, attrs) {
-      $(element).fancybox();
-      if (scope.$last) {
-        return $(".fancybox").fancybox();
-      }
-    }
-  };
-});
-
-alt.directive('filterProducts', function($timeout, $route, $location) {
-  return {
-    restrict: 'A',
-    controller: function($scope) {
-      if ($location.search().colour) {
-        $scope.colourIncludes = _.isArray($location.search().colour) ? $location.search().colour : [$location.search().colour];
-      } else {
-        $scope.colourIncludes = [];
-      }
-      return $scope.includeColour = function(colour) {
-        var i;
-        i = _.indexOf($scope.colourIncludes, colour);
-        if (i > -1) {
-          $scope.colourIncludes.splice(i, 1);
-        } else {
-          $scope.colourIncludes.push(colour);
-        }
-        return $scope.$watch('colourIncludes', (function(newVal, oldVal) {
-          $scope.colourIncludes = _.union($scope.colourIncludes, $location.search().colour);
-          $location.search('colour', $scope.colourIncludes);
-          return console.log($scope.exploreProducts);
-        }), true);
-      };
-    },
-    link: function(scope, el, attrs) {
-      return $('.filter-button.order').click(function() {
-        $('.filter-button.order').removeClass('active');
-        return $(this).addClass('active');
-      });
-    }
-  };
-});
-
-alt.directive('listItems', function($location, $rootScope, products, toaster, $window) {
-  return {
-    restrict: 'E',
-    replace: true,
-    templateUrl: '/views/directives/list-items.html',
-    scope: {
-      items: '='
-    },
-    controller: function($scope) {
-      $scope.dataURL = $rootScope.dataURL;
-      $window.scrollTo(0, 0);
-      return $scope.$watch('items', (function(newVal, oldVal) {
-        var itemsLoad, itemsRest;
-        $scope.itemsInit = _.slice($scope.items, 0, 12);
-        itemsRest = _.slice($scope.items, 12);
-        itemsLoad = [];
-        return $scope.loadMore = function() {
-          var i, last;
-          last = itemsLoad.length - 1;
-          i = 1;
-          while (i <= 12 && (i + last) < itemsRest.length) {
-            itemsLoad.push(itemsRest[last + i]);
-            i++;
-          }
-          return $scope.itemsLoad = itemsLoad;
-        };
-      }), true);
-    }
-  };
-});
-
-alt.directive('listProducts', function($route, $location, $rootScope, products, toaster) {
-  return {
-    restrict: 'AE',
-    templateUrl: '/views/directives/list-products.html',
-    controller: function($scope) {
-      var currentRoute;
-      $scope.dataURL = $rootScope.dataURL;
-      currentRoute = $location.path().split('/');
-      $scope.flagProduct = function(flagType, productID) {
-        if ($rootScope.currentUser.$id !== void 0) {
-          return products.flagProduct(flagType, productID);
-        } else {
-          $location.path('/signup');
-          return toaster.pop('warning', 'Please register or log in first');
-        }
-      };
-      $scope.disflagProduct = function(flagType, productID) {
-        var flagSection;
-        products.disflagProduct(flagType, productID);
-        flagSection = currentRoute[4];
-        if (flagSection && flagSection === 'loves' || flagSection === 'reserves') {
-          return $route.reload();
-        }
-      };
-      if ($rootScope.currentUser.$id !== void 0) {
-        products.getCurrentUserFlaggedProducts('love').$loaded().then(function(data) {
-          return $scope.ifLoved = function(productID) {
-            var ifLoved;
-            ifLoved = data.$getRecord(productID);
-            if (ifLoved !== null) {
-              return true;
-            } else {
-              return false;
-            }
-          };
-        });
-        products.getCurrentUserFlaggedProducts('reserve').$loaded().then(function(data) {
-          return $scope.ifReserved = function(productID) {
-            var ifReserved;
-            ifReserved = data.$getRecord(productID);
-            if (ifReserved !== null) {
-              return true;
-            } else {
-              return false;
-            }
-          };
-        });
-      }
-      products.getFlagCount('love').$loaded().then(function(data) {
-        return $scope.lovesCount = function(productID) {
-          var lovesObj;
-          lovesObj = _.where(data, {
-            '$id': productID
-          });
-          if (lovesObj[0]) {
-            return lovesObj[0].$value;
-          } else {
-            return '0';
-          }
-        };
-      });
-      return $scope.lastBought = function(productID) {
-        return products.lastBought(productID);
-      };
-    }
-  };
-});
-
-alt.directive('masonry', function($location, $rootScope, products, toaster) {
-  return {
-    restrict: 'E',
-    replace: true,
-    templateUrl: '/views/directives/wrap-products.html',
-    scope: {
-      products: '='
-    },
-    controller: function($scope, $element) {
-      var currentRoute;
-      currentRoute = $location.path().split('/');
-      return $scope.$watch('products', (function(newVal, oldVal) {
-        var productsLoad, productsRest;
-        $scope.productsInit = _.slice($scope.products, 0, 15);
-        productsRest = _.slice($scope.products, 15);
-        productsLoad = [];
-        console.log($element);
-        $element.masonry({
-          itemSelector: '.masonry-brick',
-          isAnimated: true
-        });
-        return $scope.loadMore = function() {
-          var i, last;
-          last = productsLoad.length - 1;
-          i = 1;
-          while (i <= 15 && (i + last) < productsRest.length) {
-            productsLoad.push(productsRest[last + i]);
-            i++;
-          }
-          return $scope.productsLoad = productsLoad;
-        };
-      }), true);
-    }
-  };
-});
-
-alt.directive('preload', function() {
-  return {
-    restrict: 'AE',
-    transclude: true,
-    replace: true,
-    templateUrl: '/views/directives/preload.html',
-    link: function(scope, element, attrs, ctrl, transclude) {
-      return transclude(scope.$parent, function(clone, scope) {
-        return element.append(clone);
-      });
-    }
-  };
-});
-
-alt.directive('scrollTrigger', function($window) {
-  return {
-    link: function(scope, element, attrs) {
-      var doc, e, offset;
-      offset = parseInt(attrs.threshold);
-      e = jQuery(element[0]);
-      doc = jQuery(document);
-      return angular.element(document).bind('scroll', function() {
-        if (doc.scrollTop() > $(document).height() - $window.innerHeight - offset) {
-          return scope.$apply(attrs.scrollTrigger);
-        }
-      });
-    }
-  };
-});
-
-alt.directive('searchResults', function($route, $location, $rootScope, products, toaster) {
-  return {
-    restrict: 'A',
-    templateUrl: '/views/directives/search-results.html',
-    controller: function($scope) {
-      $scope.dataURL = $rootScope.dataURL;
-      return $scope.lastBought = function(productID) {
-        return products.lastBought(productID);
-      };
-    }
-  };
-});
-
-alt.directive('videoPlayer', function($rootScope) {
-  return {
-    restrict: 'A',
-    templateUrl: '/views/directives/video-player.html',
-    scope: 'true',
-    controller: function($scope, $sce, brand, $rootScope, $routeParams) {
-      $scope.brand = $routeParams.brand;
-      return brand.getBrand($scope.brand).child('videoFile').on('value', function(video) {
-        $scope.brandVideo = video.val();
-        return brand.getBrand($scope.brand).child('videoPoster').on('value', function(poster) {
-          $scope.brandVideoPoster = poster.val();
-          return $scope.config = {
-            autoHide: true,
-            preload: 'none',
-            sources: [
-              {
-                src: $sce.trustAsResourceUrl($rootScope.dataURL + '/assets/brands/' + $scope.brandVideo),
-                type: 'video/mp4'
-              }
-            ],
-            theme: {
-              url: '/assets/css/videogular.css'
-            },
-            plugins: {
-              poster: $rootScope.dataURL + '/assets/brands/' + $scope.brandVideoPoster
-            }
-          };
-        });
-      });
-    }
-  };
-});
-
-alt.directive('wrapBigProducts', function($location, $rootScope, products, toaster, $window) {
-  return {
-    restrict: 'E',
-    replace: true,
-    templateUrl: '/views/directives/wrap-big-products.html',
-    scope: {
-      products: '='
-    },
-    controller: function($scope) {
-      $window.scrollTo(0, 0);
-      return $scope.$watch('products', (function(newVal, oldVal) {
-        var productsLoad, productsRest;
-        $scope.productsInit = _.slice($scope.products, 0, 9);
-        productsRest = _.slice($scope.products, 9);
-        productsLoad = [];
-        return $scope.loadMore = function() {
-          var i, last;
-          last = productsLoad.length - 1;
-          i = 1;
-          while (i <= 9 && (i + last) < productsRest.length) {
-            productsLoad.push(productsRest[last + i]);
-            i++;
-          }
-          return $scope.productsLoad = productsLoad;
-        };
-      }), true);
-    }
-  };
-});
-
-alt.directive('wrapProducts', function($location, $rootScope, products, toaster, $window) {
-  return {
-    restrict: 'E',
-    replace: true,
-    templateUrl: '/views/directives/wrap-products.html',
-    scope: {
-      products: '='
-    },
-    controller: function($scope) {
-      $window.scrollTo(0, 0);
-      return $scope.$watch('products', (function(newVal, oldVal) {
-        var productsLoad, productsRest;
-        $scope.productsInit = _.slice($scope.products, 0, 12);
-        productsRest = _.slice($scope.products, 12);
-        productsLoad = [];
-        return $scope.loadMore = function() {
-          var i, last;
-          last = productsLoad.length - 1;
-          i = 1;
-          while (i <= 12 && (i + last) < productsRest.length) {
-            productsLoad.push(productsRest[last + i]);
-            i++;
-          }
-          return $scope.productsLoad = productsLoad;
-        };
-      }), true);
-    }
-  };
-});

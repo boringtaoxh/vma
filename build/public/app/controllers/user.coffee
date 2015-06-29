@@ -22,7 +22,7 @@ alt.controller 'userCtrl', ($scope, $route, $location, $routeParams, $rootScope,
     return _(info).toString().replace(/,/g, ', ')
 
   user.getUserFashion(userID).on 'value', (data) ->
-    if data.val() == 'x' then $scope.fashion = "Man's fashion" else $scope.fashion = "Woman's fashion"
+    if data.val() == 'x' then $scope.fashion = "Men's fashion" else $scope.fashion = "Women's fashion"
   user.getUserColour(userID).then (data) ->
     $scope.colours = getInfo data
   user.getUserCategory(userID).then (data) ->

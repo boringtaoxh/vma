@@ -472,9 +472,9 @@ alt.controller('userCtrl', function($scope, $route, $location, $routeParams, $ro
   };
   user.getUserFashion(userID).on('value', function(data) {
     if (data.val() === 'x') {
-      return $scope.fashion = "Man's fashion";
+      return $scope.fashion = "Men's fashion";
     } else {
-      return $scope.fashion = "Woman's fashion";
+      return $scope.fashion = "Women's fashion";
     }
   });
   user.getUserColour(userID).then(function(data) {

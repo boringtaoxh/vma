@@ -1,6 +1,6 @@
 var alt;
 
-alt = angular.module('alt', ['ngResource', 'ngRoute', 'toaster', 'firebase', 'ngSanitize', 'wu.masonry', 'com.2fdevs.videogular', 'com.2fdevs.videogular.plugins.controls', 'com.2fdevs.videogular.plugins.poster', 'angular-preload-image']);
+alt = angular.module('alt', ['ngResource', 'ngRoute', 'toaster', 'firebase', 'ngSanitize', 'wu.masonry', 'com.2fdevs.videogular', 'com.2fdevs.videogular.plugins.controls', 'com.2fdevs.videogular.plugins.poster', 'ng.deviceDetector']);
 
 alt.constant('FIREBASE_URL', 'https://alovelything.firebaseio.com');
 
@@ -15,7 +15,6 @@ alt.run(function($rootScope, $location, toaster) {
 });
 
 alt.config(function($sceDelegateProvider, $routeProvider, $locationProvider) {
-  $sceDelegateProvider.resourceUrlWhitelist(['self', 'http://data.a-lovely-thing.com/**']);
   $locationProvider.html5Mode(true);
   return $routeProvider.when('/', {
     templateUrl: 'views/pages/index.html'
@@ -326,8 +325,15 @@ alt.controller('flagsCtrl', function($scope, $routeParams, $location, $route, $r
   return currentRoute = $location.path().split('/');
 });
 
-alt.controller('footerCtrl', function($scope, $route, $location, auth, toaster) {
-  return $scope.hideFollow = true;
+alt.controller('indexCtrl', function($scope, $location, $window, deviceDetector) {
+  if (deviceDetector.device === 'iphone' && window.screen.availWidth <= 414) {
+    $scope.mobileView = true;
+  } else {
+    $scope.mobileView = false;
+  }
+  if ($scope.mobileView) {
+    return $window.location.href = 'http://m-en.a-lovely-thing.com';
+  }
 });
 
 alt.controller('infoCtrl', function($scope, $timeout, $location, $routeParams, $rootScope, $sce, info) {
@@ -509,23 +515,6 @@ alt.directive('addthisToolbox', function() {
     link: function($scope, element, attrs) {
       addthis.init();
       return addthis.toolbox($(element).get());
-    }
-  };
-});
-
-alt.directive('adminProducts', function() {
-  return {
-    restrict: 'A',
-    templateUrl: '/views/directives/admin-products.html',
-    scope: true,
-    controller: function($scope) {
-      $scope.deleting = false;
-      $scope.startDelete = function() {
-        return $scope.deleting = true;
-      };
-      return $scope.cancelDelete = function() {
-        return $scope.deleting = false;
-      };
     }
   };
 });

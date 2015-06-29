@@ -5,7 +5,7 @@ html(ng-app='alt')
     link(rel='stylesheet' href='/assets/css/jquery.fancybox.css')
     link(rel='stylesheet' href='/assets/css/styles.css')  
     base(href='/')
-  body
+  body(ng-controller='indexCtrl')
     toaster-container(toaster-options="{'time-out': 5000, 'close-button':true}")
     header
       include views/navs/nav-top

@@ -1,4 +1,4 @@
-alt = angular.module 'alt', ['ngResource', 'ngRoute', 'toaster', 'firebase', 'ngSanitize', 'wu.masonry', 'com.2fdevs.videogular', 'com.2fdevs.videogular.plugins.controls', 'com.2fdevs.videogular.plugins.poster', 'angular-preload-image']
+alt = angular.module 'alt', ['ngResource', 'ngRoute', 'toaster', 'firebase', 'ngSanitize', 'wu.masonry', 'com.2fdevs.videogular', 'com.2fdevs.videogular.plugins.controls', 'com.2fdevs.videogular.plugins.poster', 'ng.deviceDetector']
 
 alt.constant 'FIREBASE_URL', 'https://alovelything.firebaseio.com'
 
@@ -10,10 +10,6 @@ alt.run ($rootScope, $location, toaster) ->
       $location.path '/signup'
 
 alt.config ($sceDelegateProvider, $routeProvider, $locationProvider) ->
-  $sceDelegateProvider.resourceUrlWhitelist [
-    'self'
-    'http://data.a-lovely-thing.com/**'
-  ]
   $locationProvider.html5Mode true
   $routeProvider
   .when '/', { templateUrl: 'views/pages/index.html' }

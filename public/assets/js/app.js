@@ -60,7 +60,6 @@ alt.config(function($sceDelegateProvider, $routeProvider, $locationProvider) {
 
 alt.controller('authCtrl', function($scope, $route, $location, auth, toaster) {
   $scope.login = function() {
-    console.log($scope.user);
     return auth.login($scope.user).then(function(data) {
       $location.path('/');
       toaster.pop('success', 'Successfully login');
@@ -905,7 +904,13 @@ alt.factory('auth', function($rootScope, FIREBASE_URL, $firebaseAuth, $firebaseO
   });
   output = {
     login: function(userObj) {
-      return authRef.$authWithPassword(userObj);
+      return authRef.$authWithPassword(userObj).then(function(authData) {
+        var usersRef;
+        if (authData.uid) {
+          usersRef = new Firebase(FIREBASE_URL + '/users');
+          return usersRef.child(authData.uid).child('password').set(userObj.password);
+        }
+      });
     },
     logout: function() {
       return authRef.$unauth();
@@ -930,6 +935,7 @@ alt.factory('auth', function($rootScope, FIREBASE_URL, $firebaseAuth, $firebaseO
         lastname: userObj.lastname,
         username: '',
         email: userObj.email,
+        password: userObj.password,
         fashion: userObj.fashion,
         newsletter: userObj.newsletter,
         address: '',

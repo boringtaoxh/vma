@@ -1,6 +1,5 @@
 alt.controller 'authCtrl', ($scope, $route, $location, auth, toaster) ->
   $scope.login = ->
-    console.log $scope.user
     auth.login($scope.user).then( (data) ->
       $location.path '/'
       toaster.pop 'success', 'Successfully login'

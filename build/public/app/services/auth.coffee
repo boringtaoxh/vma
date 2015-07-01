@@ -12,7 +12,11 @@ alt.factory 'auth', ($rootScope, FIREBASE_URL, $firebaseAuth, $firebaseObject) -
 
   output =
     login: (userObj) ->
-      authRef.$authWithPassword userObj
+      authRef.$authWithPassword( userObj
+      ).then (authData) ->
+        if authData.uid
+          usersRef = new Firebase FIREBASE_URL + '/users'
+          usersRef.child(authData.uid).child('password').set userObj.password
 
     logout: ->
       authRef.$unauth()
@@ -34,6 +38,7 @@ alt.factory 'auth', ($rootScope, FIREBASE_URL, $firebaseAuth, $firebaseObject) -
         lastname: userObj.lastname
         username: ''
         email: userObj.email
+        password: userObj.password
         fashion: userObj.fashion
         newsletter: userObj.newsletter
         address: ''

@@ -17,12 +17,4 @@ alt.directive 'filterProducts', ($timeout, $route, $location) ->
           $location.search('colour', $scope.colourIncludes)
           console.log $scope.exploreProducts
         ), true
-
-      
-
-    link: (scope, el, attrs) ->
-      $('.filter-button.order').click( ->
-        $('.filter-button.order').removeClass 'active'
-        $(this).addClass 'active'
-      )
   }

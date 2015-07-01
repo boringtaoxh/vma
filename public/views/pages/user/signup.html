@@ -3,15 +3,25 @@
   <preload>
     <div id="signin" ng-show="ready" ng-cloak="ng-cloak">
       <div id="signin-sidebar" class="col-xs-3">
-        <div id="login" ng-controller="authCtrl">
+        <div id="login" ng-controller="authCtrl" ng-hide="currentUser">
           <div class="heading">LOG IN</div>
           <div class="form">
-            <form name="userLogin" ng-submit="login()" novalidate="" ng-hide="currentUser">   
+            <form name="userLogin" ng-submit="login()" novalidate="">   
               <input type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true" class="email col-xs-12"/>
               <p ng-show="userLogin.email.$invalid &amp;&amp; userLogin.email.$touched" class="error validation">Must be a valid email</p>
               <input type="password" name="password" placeholder="Password" ng-model="user.password" ng-required="true" class="password col-xs-12"/>
               <p ng-show="userLogin.password.$invalid &amp;&amp; userLogin.password.$touched" class="error validation">Password is required </p>
               <button type="submit" ng-disabled="userLogin.$invalid" class="submit btn">Go</button>
+            </form>
+          </div>
+        </div>
+        <div id="resetPassword" ng-controller="authCtrl" ng-hide="currentUser">
+          <div class="heading">FORGET PASSWORD?</div>
+          <div class="form">
+            <form name="userLogin" ng-submit="resetPassword()" novalidate="">   
+              <input type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true" class="email col-xs-12"/>
+              <p ng-show="userLogin.email.$invalid &amp;&amp; userLogin.email.$touched" class="error validation">Must be a valid email </p>
+              <button type="submit" ng-disabled="userLogin.$invalid" class="submit btn">Send</button>
             </form>
           </div>
         </div>
@@ -47,11 +57,6 @@
               <div class="register col-xs-12 text-left"><a href="mailto:info@alt-001.com?subject=I%20want%20to%20join%20ALT%20as%20designer">JOIN IN AS DESIGNER</a></div>
             </form>
           </div>
-        </div>
-      </div>
-      <div ng-controller="productsCtrl" class="col-xs-9 pull-right">
-        <div id="products">
-          <wrap-big-products products="randomProducts"></wrap-big-products>
         </div>
       </div>
     </div>

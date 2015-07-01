@@ -60,6 +60,7 @@ alt.config(function($sceDelegateProvider, $routeProvider, $locationProvider) {
 
 alt.controller('authCtrl', function($scope, $route, $location, auth, toaster) {
   $scope.login = function() {
+    console.log($scope.user);
     return auth.login($scope.user).then(function(data) {
       $location.path('/');
       toaster.pop('success', 'Successfully login');
@@ -79,7 +80,7 @@ alt.controller('authCtrl', function($scope, $route, $location, auth, toaster) {
     auth.logout();
     toaster.pop('success', 'Successfully logout');
   };
-  return $scope.register = function() {
+  $scope.register = function() {
     auth.register($scope.user).then(function(data) {
       auth.storeUserInfo($scope.user, data);
       toaster.pop('success', 'Successfully registered');
@@ -97,13 +98,24 @@ alt.controller('authCtrl', function($scope, $route, $location, auth, toaster) {
       }
     });
   };
+  return $scope.resetPassword = function() {
+    return auth.resetPassword($scope.user.email).then(function(data) {
+      return toaster.pop('success', 'Please check your email');
+    })["catch"](function(error) {
+      switch (error.code) {
+        case 'INVALID_USER':
+          return toaster.pop('warning', 'Invalid user email');
+        default:
+          return toaster.pop('warning', error);
+      }
+    });
+  };
 });
 
 alt.controller('brandCtrl', function($scope, $timeout, $location, $route, $routeParams, $rootScope, $sce, auth, brand, products, toaster) {
   var currentRoute;
   currentRoute = $location.path().split('/');
   $scope.brand = $routeParams.brand;
-  console.log($scope.brand);
   $scope.brandChapters = ['products', 'brand', 'inspirations', 'traces'];
   $scope.ready = false;
   if ($scope.brand) {
@@ -139,7 +151,6 @@ alt.controller('brandCtrl', function($scope, $timeout, $location, $route, $route
   };
   if ($routeParams.userID) {
     brand.followedBrands($routeParams.userID).then(function(data) {
-      console.log(data);
       return $scope.followedBrands = data;
     });
   }
@@ -358,6 +369,12 @@ alt.controller('infoCtrl', function($scope, $timeout, $location, $routeParams, $
   };
 });
 
+alt.controller('passwordCtrl', function($scope, $route, $location, $routeParams, $rootScope, auth, products, user) {
+  return $scope.resetPassword = function() {
+    return console.log('resetPassword');
+  };
+});
+
 alt.controller('productsCtrl', function($scope, $window, $location, $route, $routeParams, $rootScope, $timeout, auth, products, toaster) {
   var currentRoute, productID;
   $scope.ready = false;
@@ -427,7 +444,6 @@ alt.controller('searchCtrl', function($scope, $routeParams, $location, $timeout,
     $scope.sectionText = _.where(searchSections, {
       'value': $scope.section
     })[0].text;
-    console.log($scope.sectionText);
   }
   return $scope.query = $location.search().target;
 });
@@ -457,8 +473,7 @@ alt.controller('userCtrl', function($scope, $route, $location, $routeParams, $ro
   };
   $scope.userID = userID = $routeParams.userID;
   user.getUser(userID).then(function(data) {
-    $scope.user = data;
-    return console.log($scope.user.category);
+    return $scope.user = data;
   });
   getInfo = function(data) {
     var info;
@@ -500,9 +515,12 @@ alt.controller('userCtrl', function($scope, $route, $location, $routeParams, $ro
       return $scope.newsletter = 'You have not yet subscribbed to our newsletter and recommendation';
     }
   });
-  return $scope.userInfoUpdate = function() {
+  $scope.userInfoUpdate = function() {
     user.updateUserInfo($scope.user);
     return $route.reload();
+  };
+  return $scope.resetPassword = function() {
+    return console.log('resetPassword');
   };
 });
 
@@ -554,12 +572,6 @@ alt.directive('filterProducts', function($timeout, $route, $location) {
           return console.log($scope.exploreProducts);
         }), true);
       };
-    },
-    link: function(scope, el, attrs) {
-      return $('.filter-button.order').click(function() {
-        $('.filter-button.order').removeClass('active');
-        return $(this).addClass('active');
-      });
     }
   };
 });
@@ -900,6 +912,11 @@ alt.factory('auth', function($rootScope, FIREBASE_URL, $firebaseAuth, $firebaseO
     },
     register: function(userObj) {
       return authRef.$createUser(userObj);
+    },
+    resetPassword: function(userEmail) {
+      return authRef.$resetPassword({
+        email: userEmail
+      });
     },
     storeUserInfo: function(userObj, regUser) {
       var userInfo, usersRef;

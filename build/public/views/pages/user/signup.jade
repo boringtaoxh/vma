@@ -2,15 +2,24 @@ div(ng-controller='productsCtrl')
   preload
     #signin(ng-show='ready' ng-cloak)
       #signin-sidebar.col-xs-3
-        #login(ng-controller='authCtrl')
+        #login(ng-controller='authCtrl' ng-hide='currentUser')
           .heading LOG IN
           .form
-            form(name='userLogin' ng-submit='login()' novalidate='' ng-hide='currentUser')    
+            form(name='userLogin' ng-submit='login()' novalidate='')    
               input.email.col-xs-12(type='email' name='email' placeholder='Email' ng-model='user.email' ng-required='true')
               p.error.validation(ng-show='userLogin.email.$invalid && userLogin.email.$touched') Must be a valid email
               input.password.col-xs-12(type='password' name='password' placeholder='Password' ng-model='user.password' ng-required='true')   
               p.error.validation(ng-show='userLogin.password.$invalid && userLogin.password.$touched') Password is required 
               button.submit.btn(type='submit' ng-disabled='userLogin.$invalid') Go
+          
+        #resetPassword(ng-controller='authCtrl' ng-hide='currentUser')
+          .heading FORGET PASSWORD?
+          .form
+            form(name='userLogin' ng-submit='resetPassword()' novalidate='')    
+              input.email.col-xs-12(type='email' name='email' placeholder='Email' ng-model='user.email' ng-required='true')
+              p.error.validation(ng-show='userLogin.email.$invalid && userLogin.email.$touched') Must be a valid email 
+              button.submit.btn(type='submit' ng-disabled='userLogin.$invalid') Send
+              
         #register(ng-controller='authCtrl')
           .heading JOIN THE COMMUNITY
           .form
@@ -38,7 +47,7 @@ div(ng-controller='productsCtrl')
                 button.btn.submit(type='submit' ng-disabled='userRegister.$invalid') Join
               .register.col-xs-12.text-left
                 a(href="mailto:info@alt-001.com?subject=I%20want%20to%20join%20ALT%20as%20designer") JOIN IN AS DESIGNER
-      .col-xs-9.pull-right(ng-controller='productsCtrl')
-        #products
-          wrap-big-products(products='randomProducts')
+      //- .col-xs-9.pull-right(ng-controller='productsCtrl')
+      //-   #products
+      //-     wrap-big-products(products='randomProducts')
 

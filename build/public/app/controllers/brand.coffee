@@ -1,7 +1,6 @@
 alt.controller 'brandCtrl', ($scope, $timeout, $location, $route, $routeParams, $rootScope, $sce, auth, brand, products, toaster) ->
   currentRoute = $location.path().split('/')
   $scope.brand = $routeParams.brand
-  console.log $scope.brand
   $scope.brandChapters = ['products', 'brand', 'inspirations', 'traces']
 
   $scope.ready = false
@@ -34,7 +33,6 @@ alt.controller 'brandCtrl', ($scope, $timeout, $location, $route, $routeParams, 
 
   if $routeParams.userID
     brand.followedBrands($routeParams.userID).then (data) ->
-      console.log data
       $scope.followedBrands = data
 
   if $rootScope.currentUser != undefined

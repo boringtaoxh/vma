@@ -1,5 +1,6 @@
 alt.controller 'authCtrl', ($scope, $route, $location, auth, toaster) ->
   $scope.login = ->
+    console.log $scope.user
     auth.login($scope.user).then( (data) ->
       $location.path '/'
       toaster.pop 'success', 'Successfully login'
@@ -26,3 +27,10 @@ alt.controller 'authCtrl', ($scope, $route, $location, auth, toaster) ->
         when 'EMAIL_TAKEN' then toaster.pop 'warning', 'Email has been taken'
         else toaster.pop 'warning', error
     return
+  $scope.resetPassword = ->
+    auth.resetPassword($scope.user.email).then( (data) ->
+      toaster.pop 'success', 'Please check your email'
+    ).catch (error) ->
+      switch error.code
+        when 'INVALID_USER' then toaster.pop 'warning', 'Invalid user email'
+        else toaster.pop 'warning', error

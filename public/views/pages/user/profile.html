@@ -35,15 +35,25 @@
         <div class="category"><strong>Category: </strong>{{categories}}</div>
         <div class="colour"><strong>Colour: </strong>{{colours}}</div>
         <div class="brand"><strong>Brands: </strong>{{brands}}</div>
-        <div class="subscription"><strong>Subscription: </strong>{{newsletter}}</div>
+        <div class="subscription"><strong>Subscription: </strong>{{newsletter}}    </div>
       </div>
     </div>
   </div>
   <div id="edit">
+    <button ng-model="showReset" ng-click="showReset=true" ng-show="userID == currentUser.$id" class="btn">Reset password </button>
     <button ng-model="showEdit" ng-click="showEdit=true" ng-show="userID == currentUser.$id" class="btn">Edit my profile</button>
   </div>
-  <div id="edit-form" ng-controller="userCtrl" ng-if="showEdit">
-    <form name="userInfo" ng-submit="userInfoUpdate()" novalidate="">
+  <div id="edit-form" ng-if="showReset || showEdit">
+    <form name="resetpass" ng-submit="resetPassword()" novalidate="" ng-if="showReset">
+      <h5>New password</h5>
+      <div style="margin-top: 4px" class="col-xs-9">
+        <input type="text" placeholder="{{user.password}}" ng-model="user.password" class="col-xs-11"/>
+      </div>
+      <div class="edit-submit text-center">
+        <button type="submit" class="btn">Save</button>
+      </div>
+    </form>
+    <form name="userInfo" ng-submit="userInfoUpdate()" novalidate="" ng-if="showEdit">
       <div class="edit-name col-xs-12">
         <div class="col-xs-6">
           <div class="col-xs-11">

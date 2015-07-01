@@ -20,6 +20,9 @@ alt.factory 'auth', ($rootScope, FIREBASE_URL, $firebaseAuth, $firebaseObject) -
     register: (userObj) ->
       authRef.$createUser userObj
 
+    resetPassword: (userEmail) ->
+      authRef.$resetPassword {email: userEmail}
+
     storeUserInfo: (userObj, regUser) ->
       usersRef = new Firebase FIREBASE_URL + '/users'
 

@@ -35,11 +35,18 @@
           | {{brands}}
         .subscription 
           strong Subscription: 
-          | {{newsletter}}
+          | {{newsletter}}    
   #edit
+    button.btn(ng-model='showReset' ng-click='showReset=true' ng-show='userID == currentUser.$id') Reset password 
     button.btn(ng-model='showEdit' ng-click='showEdit=true' ng-show='userID == currentUser.$id') Edit my profile
-  #edit-form(ng-controller='userCtrl' ng-if="showEdit")
-    form(name='userInfo' ng-submit='userInfoUpdate()' novalidate='')
+  #edit-form(ng-if="showReset || showEdit")
+    form(name='resetpass' ng-submit='resetPassword()' novalidate='' ng-if="showReset")
+      h5 New password
+      .col-xs-9(style='margin-top: 4px')
+        input.col-xs-11(type='text' placeholder='{{user.password}}' ng-model='user.password')
+      .edit-submit.text-center
+        button.btn(type='submit') Save
+    form(name='userInfo' ng-submit='userInfoUpdate()' novalidate='' ng-if="showEdit")
       .edit-name.col-xs-12
         .col-xs-6
           .col-xs-11

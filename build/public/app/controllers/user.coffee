@@ -12,7 +12,6 @@ alt.controller 'userCtrl', ($scope, $route, $location, $routeParams, $rootScope,
   $scope.userID = userID = $routeParams.userID
   user.getUser(userID).then (data) ->
     $scope.user = data
-    console.log $scope.user.category
 
   getInfo = (data) ->
     info = []
@@ -39,3 +38,6 @@ alt.controller 'userCtrl', ($scope, $route, $location, $routeParams, $rootScope,
   $scope.userInfoUpdate = ->
     user.updateUserInfo $scope.user
     $route.reload()
+    
+  $scope.resetPassword = ->
+    console.log 'resetPassword'

@@ -1510,7 +1510,7 @@ button.toast-close-button{padding:0;cursor:pointer;background:0 0;border:0;-webk
 #edit button{background:#e9ebe9;box-shadow:.16px 3px 0 0 rgba(87,87,87,.294)}
 #edit-form{position:fixed;width:100%;height:100%;top:0;left:0;z-index:999;background:rgba(230,230,230,.9);overflow:scroll}
 #brandSidebar,pre,textarea{overflow:auto}
-#edit-form form{position:absolute;width:70%;height:auto;top:0;left:0;right:0;margin:auto auto 60px;background:rgba(50,50,50,.9);padding:10px 20px 20px;color:#fff;border-radius:5px}
+#edit-form form{position:absolute;width:70%;height:auto;top:0;left:0;right:0;margin:60px auto 0;background:rgba(50,50,50,.9);padding:10px 20px 20px;color:#fff;border-radius:5px}
 #edit-form form h5{margin-bottom:10px;font-weight:700}
 #edit-form form .edit-title{border-bottom:1px solid #8e8e8e;margin-bottom:15px}
 #edit-form form .edit-submit{margin-top:10px}
@@ -1647,8 +1647,8 @@ button.toast-close-button{padding:0;cursor:pointer;background:0 0;border:0;-webk
 #follow .wrapper .row .social_icon:hover{opacity:1;transition:all .2s ease-in-out}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 #main{width:100%;height:100%}
-#main .preload{font-family:'PT Sans' 'Source Sans Pro';width:400px;height:300px;position:absolute;margin:auto;left:0;right:0;top:0;bottom:0;z-index:999;text-align:center}
-p{font-family:'Source Sans Pro';font-weight:100;font-size:14px}
+#main .preload{font-family:'PT Sans' 'Source Sans Pro' sans-serif;width:400px;height:300px;position:absolute;margin:auto;left:0;right:0;top:0;bottom:0;z-index:999;text-align:center}
+p{font-family:'Source Sans Pro' sans-serif;font-weight:100;font-size:14px}
 .modal-dialog,.nav-tabs,.panel-title{font-family:'PT Sans'}
 a:hover{color:grey}
 .clearfix{clear:both}
@@ -1713,7 +1713,7 @@ input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-web
 input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
 fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
 table{border-collapse:collapse;border-spacing:0}
-body{font-family:PT_Sans;margin-bottom:40px}
+body{font-family:PT_Sans sans-serif;margin-bottom:40px}
 ul{padding-left:0;margin-bottom:0}
 li{list-style:none}
 .col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{padding-right:0;padding-left:0}
@@ -1775,6 +1775,7 @@ li{list-style:none}
 .signup-wrapper #signup .close{background-image:url(/assets/img/ui/follow_cross.png);background-position:center center;left:125px;top:330px;width:40px;transition:all .5s ease}
 .signup-wrapper #signup .shadow{width:280px;top:394px;left:5px;background-image:url(/assets/img/ui/shadow.png);background-position:center}
 #nav-top{display:block;height:auto;left:0;overflow:hidden;position:fixed;top:-2px;width:170px;z-index:1000}
+#signin-sidebar #login .password-style:after,#signin-sidebar #login .password-style:before,#signin-sidebar #resetPassword .password-style:after,#signin-sidebar #resetPassword .password-style:before{top:148px}
 #nav-top a img{width:100%}
 #infoTopBar{font-family:'PT Sans';height:100px;width:100%;position:relative;background-color:#f3f3f3;padding:65px 40px 0;box-sizing:border-box}
 #infoTopBar ul li{font-size:18px;color:#000;display:inline-block;font-weight:700;margin-right:10px;line-height:1}
@@ -1823,11 +1824,16 @@ li{list-style:none}
 #signin-sidebar #login{background-color:#fdfdfd;padding:55px 50px 20px;color:#000;font-size:20px;font-weight:800}
 #signin-sidebar #login .heading{border-bottom:2px solid #ccc;margin-bottom:10px;padding-bottom:10px;font-weight:700}
 #signin-sidebar #login .forget{color:#929292;font-weight:100;font-size:12px;text-decoration:underline;margin-top:5%;font-family:'Source Sans Pro'}
-#signin-sidebar #login .password-style:after,#signin-sidebar #login .password-style:before{top:148px}
 #signin-sidebar #login .submit{margin-top:10px;border:1px solid #000;width:100%;color:#000;padding:3px 8px;background-color:#fff;font-size:14px;font-weight:700;text-align:center;transition:all .5s ease}
 #signin-sidebar #login .submit:hover{background-color:#000;color:#fff}
 #signin-sidebar #login label{color:#929292;font-size:12px;font-weight:100}
 #signin-sidebar #login label input{margin-top:15px;font-family:'Source Sans Pro'}
+#signin-sidebar #resetPassword{background-color:#fdfdfd;padding:0 50px 5px;color:#000;font-size:20px;font-weight:800}
+#signin-sidebar #resetPassword .heading{border-bottom:2px solid #ccc;margin-bottom:10px;padding-bottom:10px;font-weight:700}
+#signin-sidebar #resetPassword .submit{margin-top:14px;border:1px solid #000;color:#000;padding:3px 8px;background-color:#fff;font-size:14px;font-weight:700;text-align:center;transition:all .5s ease}
+#signin-sidebar #resetPassword .submit:hover{background-color:#000;color:#fff}
+#signin-sidebar #resetPassword label{color:#929292;font-size:12px;font-weight:100}
+#signin-sidebar #resetPassword label input{margin-top:15px;font-family:'Source Sans Pro'}
 #signin-sidebar #register{background-color:#3e3e3e;color:#fff;padding:15px 35px 35px}
 #signin-sidebar #register .heading{font-size:18px;font-weight:700;letter-spacing:1px}
 #signin-sidebar #register .form{border-top:2px solid #626262;padding-top:15px;padding-bottom:10px;margin-top:10px;margin-bottom:10px}

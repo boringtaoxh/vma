@@ -71,5 +71,5 @@ alt.factory 'user', ($rootScope, FIREBASE_URL, $firebaseArray, $firebaseObject, 
 
           usersRef.child(user.$id).set userInfo, ->
       return
-      
+
   return output

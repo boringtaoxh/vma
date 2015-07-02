@@ -447,7 +447,7 @@ alt.controller('searchCtrl', function($scope, $routeParams, $location, $timeout,
   return $scope.query = $location.search().target;
 });
 
-alt.controller('userCtrl', function($scope, $route, $location, $routeParams, $rootScope, auth, products, user) {
+alt.controller('userCtrl', function($scope, $route, $location, $routeParams, $rootScope, auth, products, user, toaster) {
   var currentRoute, getInfo, userID;
   $scope.dataURL = $rootScope.dataURL;
   currentRoute = $location.path().split('/');
@@ -518,8 +518,55 @@ alt.controller('userCtrl', function($scope, $route, $location, $routeParams, $ro
     user.updateUserInfo($scope.user);
     return $route.reload();
   };
-  return $scope.resetPassword = function() {
-    return console.log('resetPassword');
+  return $scope.changePassword = function() {
+    return user.getUser(userID).then(function(data) {
+      return auth.changePassword(data.email, data.password, $scope.user.password).then(function(data) {
+        $route.reload();
+        return toaster.pop('success', 'Password changed successfully!');
+      });
+    });
+  };
+});
+
+alt.filter('charactersRemove', function() {
+  return function(value) {
+    if (!value) {
+      return '';
+    } else {
+      return value.replace(/[^\w]/g, '');
+    }
+  };
+});
+
+alt.filter('colourFilter', function($location) {
+  return function(products, scope) {
+    if (scope.colourIncludes.length > 0 && products) {
+      return products = products.filter(function(product) {
+        return _.intersection(product.color, scope.colourIncludes).length > 0;
+      });
+    } else {
+      return products;
+    }
+  };
+});
+
+alt.filter('trustedDomain', function($sce) {
+  return function(url) {
+    return $sce.trustAsResourceUrl(url);
+  };
+});
+
+alt.filter('wordsTrunc', function() {
+  return function(value, max) {
+    if (!value) {
+      return '';
+    }
+    max = parseInt(max, 20);
+    if (!max || value.length <= max) {
+      return value;
+    } else {
+      return value.substr(0, max) + ' …';
+    }
   };
 });
 
@@ -846,48 +893,6 @@ alt.directive('wrapProducts', function($location, $rootScope, products, toaster,
   };
 });
 
-alt.filter('charactersRemove', function() {
-  return function(value) {
-    if (!value) {
-      return '';
-    } else {
-      return value.replace(/[^\w]/g, '');
-    }
-  };
-});
-
-alt.filter('colourFilter', function($location) {
-  return function(products, scope) {
-    if (scope.colourIncludes.length > 0 && products) {
-      return products = products.filter(function(product) {
-        return _.intersection(product.color, scope.colourIncludes).length > 0;
-      });
-    } else {
-      return products;
-    }
-  };
-});
-
-alt.filter('trustedDomain', function($sce) {
-  return function(url) {
-    return $sce.trustAsResourceUrl(url);
-  };
-});
-
-alt.filter('wordsTrunc', function() {
-  return function(value, max) {
-    if (!value) {
-      return '';
-    }
-    max = parseInt(max, 20);
-    if (!max || value.length <= max) {
-      return value;
-    } else {
-      return value.substr(0, max) + ' …';
-    }
-  };
-});
-
 alt.factory('auth', function($rootScope, FIREBASE_URL, $firebaseAuth, $firebaseObject) {
   var authRef, output, rootRef;
   rootRef = new Firebase(FIREBASE_URL);
@@ -921,6 +926,17 @@ alt.factory('auth', function($rootScope, FIREBASE_URL, $firebaseAuth, $firebaseO
     resetPassword: function(userEmail) {
       return authRef.$resetPassword({
         email: userEmail
+      });
+    },
+    changePassword: function(email, oldPassword, newPassword) {
+      return authRef.$changePassword({
+        email: email,
+        oldPassword: oldPassword,
+        newPassword: newPassword
+      }).then(function() {
+        return console.log('Password changed successfully!');
+      })["catch"](function(error) {
+        return console.error('Error: ', error);
       });
     },
     storeUserInfo: function(userObj, regUser) {

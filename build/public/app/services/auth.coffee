@@ -27,6 +27,16 @@ alt.factory 'auth', ($rootScope, FIREBASE_URL, $firebaseAuth, $firebaseObject) -
     resetPassword: (userEmail) ->
       authRef.$resetPassword {email: userEmail}
 
+    changePassword: (email, oldPassword, newPassword) ->
+      authRef.$changePassword(
+        email: email
+        oldPassword: oldPassword
+        newPassword: newPassword
+      ).then(->
+        console.log 'Password changed successfully!'
+      ).catch (error) ->
+        console.error 'Error: ', error
+
     storeUserInfo: (userObj, regUser) ->
       usersRef = new Firebase FIREBASE_URL + '/users'
 

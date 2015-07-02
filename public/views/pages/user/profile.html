@@ -44,10 +44,10 @@
     <button ng-model="showEdit" ng-click="showEdit=true" ng-show="userID == currentUser.$id" class="btn">Edit my profile</button>
   </div>
   <div id="edit-form" ng-if="showReset || showEdit">
-    <form name="resetpass" ng-submit="resetPassword()" novalidate="" ng-if="showReset">
+    <form name="resetpass" ng-submit="changePassword()" novalidate="" ng-if="showReset">
       <h5>New password</h5>
       <div style="margin-top: 4px" class="col-xs-9">
-        <input type="text" placeholder="{{user.password}}" ng-model="user.password" class="col-xs-11"/>
+        <input type="text" placeholder="" ng-model="user.password" class="col-xs-11"/>
       </div>
       <div class="edit-submit text-center">
         <button type="submit" class="btn">Save</button>

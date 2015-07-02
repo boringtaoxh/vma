@@ -1,4 +1,4 @@
-alt.controller 'userCtrl', ($scope, $route, $location, $routeParams, $rootScope, auth, products, user) ->
+alt.controller 'userCtrl', ($scope, $route, $location, $routeParams, $rootScope, auth, products, user, toaster) ->
   $scope.dataURL = $rootScope.dataURL
 
   currentRoute = $location.path().split('/')
@@ -38,6 +38,9 @@ alt.controller 'userCtrl', ($scope, $route, $location, $routeParams, $rootScope,
   $scope.userInfoUpdate = ->
     user.updateUserInfo $scope.user
     $route.reload()
-    
-  $scope.resetPassword = ->
-    console.log 'resetPassword'
+
+  $scope.changePassword = ->
+    user.getUser(userID).then (data) ->
+      auth.changePassword(data.email, data.password, $scope.user.password).then (data) ->
+        $route.reload()
+        toaster.pop 'success', 'Password changed successfully!'

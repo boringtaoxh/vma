@@ -40,10 +40,10 @@
     button.btn(ng-model='showReset' ng-click='showReset=true' ng-show='userID == currentUser.$id') Reset password 
     button.btn(ng-model='showEdit' ng-click='showEdit=true' ng-show='userID == currentUser.$id') Edit my profile
   #edit-form(ng-if="showReset || showEdit")
-    form(name='resetpass' ng-submit='resetPassword()' novalidate='' ng-if="showReset")
+    form(name='resetpass' ng-submit='changePassword()' novalidate='' ng-if="showReset")
       h5 New password
       .col-xs-9(style='margin-top: 4px')
-        input.col-xs-11(type='text' placeholder='{{user.password}}' ng-model='user.password')
+        input.col-xs-11(type='text' placeholder='' ng-model='user.password')
       .edit-submit.text-center
         button.btn(type='submit') Save
     form(name='userInfo' ng-submit='userInfoUpdate()' novalidate='' ng-if="showEdit")

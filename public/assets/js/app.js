@@ -58,22 +58,11 @@ alt.config(function($sceDelegateProvider, $routeProvider, $locationProvider) {
   });
 });
 
+
+
 alt.controller('authCtrl', function($scope, $route, $location, auth, toaster) {
   $scope.login = function() {
-    return auth.login($scope.user).then(function(data) {
-      $location.path('/');
-      toaster.pop('success', 'Successfully login');
-      return $route.reload();
-    })["catch"](function(error) {
-      switch (error.code) {
-        case 'INVALID_USER':
-          return toaster.pop('warning', 'Invalid user email');
-        case 'INVALID_PASSWORD':
-          return toaster.pop('warning', 'Invalid password');
-        default:
-          return toaster.pop('warning', error);
-      }
-    });
+    return auth.login($scope.user);
   };
   $scope.logout = function() {
     auth.logout();
@@ -528,48 +517,6 @@ alt.controller('userCtrl', function($scope, $route, $location, $routeParams, $ro
   };
 });
 
-alt.filter('charactersRemove', function() {
-  return function(value) {
-    if (!value) {
-      return '';
-    } else {
-      return value.replace(/[^\w]/g, '');
-    }
-  };
-});
-
-alt.filter('colourFilter', function($location) {
-  return function(products, scope) {
-    if (scope.colourIncludes.length > 0 && products) {
-      return products = products.filter(function(product) {
-        return _.intersection(product.color, scope.colourIncludes).length > 0;
-      });
-    } else {
-      return products;
-    }
-  };
-});
-
-alt.filter('trustedDomain', function($sce) {
-  return function(url) {
-    return $sce.trustAsResourceUrl(url);
-  };
-});
-
-alt.filter('wordsTrunc', function() {
-  return function(value, max) {
-    if (!value) {
-      return '';
-    }
-    max = parseInt(max, 20);
-    if (!max || value.length <= max) {
-      return value;
-    } else {
-      return value.substr(0, max) + ' …';
-    }
-  };
-});
-
 alt.directive('addthisToolbox', function() {
   return {
     restrict: 'A',
@@ -893,7 +840,49 @@ alt.directive('wrapProducts', function($location, $rootScope, products, toaster,
   };
 });
 
-alt.factory('auth', function($rootScope, FIREBASE_URL, $firebaseAuth, $firebaseObject) {
+alt.filter('charactersRemove', function() {
+  return function(value) {
+    if (!value) {
+      return '';
+    } else {
+      return value.replace(/[^\w]/g, '');
+    }
+  };
+});
+
+alt.filter('colourFilter', function($location) {
+  return function(products, scope) {
+    if (scope.colourIncludes.length > 0 && products) {
+      return products = products.filter(function(product) {
+        return _.intersection(product.color, scope.colourIncludes).length > 0;
+      });
+    } else {
+      return products;
+    }
+  };
+});
+
+alt.filter('trustedDomain', function($sce) {
+  return function(url) {
+    return $sce.trustAsResourceUrl(url);
+  };
+});
+
+alt.filter('wordsTrunc', function() {
+  return function(value, max) {
+    if (!value) {
+      return '';
+    }
+    max = parseInt(max, 20);
+    if (!max || value.length <= max) {
+      return value;
+    } else {
+      return value.substr(0, max) + ' …';
+    }
+  };
+});
+
+alt.factory('auth', function($rootScope, FIREBASE_URL, $firebaseAuth, $firebaseObject, $location, toaster) {
   var authRef, output, rootRef;
   rootRef = new Firebase(FIREBASE_URL);
   authRef = $firebaseAuth(rootRef);
@@ -911,9 +900,27 @@ alt.factory('auth', function($rootScope, FIREBASE_URL, $firebaseAuth, $firebaseO
     login: function(userObj) {
       return authRef.$authWithPassword(userObj).then(function(authData) {
         var usersRef;
+        console.log(authData.password);
         if (authData.uid) {
           usersRef = new Firebase(FIREBASE_URL + '/users');
-          return usersRef.child(authData.uid).child('password').set(userObj.password);
+          usersRef.child(authData.uid).child('password').set(userObj.password);
+          if (authData.password.isTemporaryPassword) {
+            $location.path('/user/' + authData.uid + '/profile');
+            return toaster.pop('success', 'You can reset your password here');
+          } else {
+            $location.path('/');
+            toaster.pop('success', 'Successfully login');
+            return $route.reload();
+          }
+        } else {
+          switch (error.code) {
+            case 'INVALID_USER':
+              return toaster.pop('warning', 'Invalid user email');
+            case 'INVALID_PASSWORD':
+              return toaster.pop('warning', 'Invalid password');
+            default:
+              return toaster.pop('warning', error);
+          }
         }
       });
     },
@@ -1403,5 +1410,3 @@ alt.factory('user', function($rootScope, FIREBASE_URL, $firebaseArray, $firebase
   };
   return output;
 });
-
-

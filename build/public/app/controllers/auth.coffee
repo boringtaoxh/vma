@@ -1,14 +1,6 @@
 alt.controller 'authCtrl', ($scope, $route, $location, auth, toaster) ->
   $scope.login = ->
-    auth.login($scope.user).then( (data) ->
-      $location.path '/'
-      toaster.pop 'success', 'Successfully login'
-      $route.reload()
-    ).catch (error) ->
-      switch error.code
-        when 'INVALID_USER' then toaster.pop 'warning', 'Invalid user email'
-        when 'INVALID_PASSWORD' then toaster.pop 'warning', 'Invalid password'
-        else toaster.pop 'warning', error
+    auth.login($scope.user)
   $scope.logout = ->
     auth.logout()
     toaster.pop 'success', 'Successfully logout'

@@ -13,8 +13,8 @@ div(ng-controller='productsCtrl')
               button.submit.btn(type='submit' ng-disabled='userLogin.$invalid') Go
           
         #resetPassword(ng-controller='authCtrl' ng-hide='currentUser')
-          .heading FORGET PASSWORD?
-          .form
+          .heading(ng-model='showForget' ng-click='showForget=true') FORGET PASSWORD?
+          .form(ng-show='showForget')
             form(name='userLogin' ng-submit='resetPassword()' novalidate='')    
               input.email.col-xs-12(type='email' name='email' placeholder='Email' ng-model='user.email' ng-required='true')
               p.error.validation(ng-show='userLogin.email.$invalid && userLogin.email.$touched') Must be a valid email 

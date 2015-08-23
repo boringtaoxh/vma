@@ -16,8 +16,8 @@
           </div>
         </div>
         <div id="resetPassword" ng-controller="authCtrl" ng-hide="currentUser">
-          <div class="heading">FORGET PASSWORD?</div>
-          <div class="form">
+          <div ng-model="showForget" ng-click="showForget=true" class="heading">FORGET PASSWORD?</div>
+          <div ng-show="showForget" class="form">
             <form name="userLogin" ng-submit="resetPassword()" novalidate="">   
               <input type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true" class="email col-xs-12"/>
               <p ng-show="userLogin.email.$invalid &amp;&amp; userLogin.email.$touched" class="error validation">Must be a valid email </p>

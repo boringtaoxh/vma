@@ -1,4 +1,4 @@
-alt.factory 'auth', ($rootScope, FIREBASE_URL, $firebaseAuth, $firebaseObject) ->
+alt.factory 'auth', ($rootScope, FIREBASE_URL, $firebaseAuth, $firebaseObject, $location, toaster) ->
   rootRef = new Firebase FIREBASE_URL
   authRef = $firebaseAuth rootRef
 
@@ -14,9 +14,22 @@ alt.factory 'auth', ($rootScope, FIREBASE_URL, $firebaseAuth, $firebaseObject) -
     login: (userObj) ->
       authRef.$authWithPassword( userObj
       ).then (authData) ->
+        console.log authData.password
         if authData.uid
           usersRef = new Firebase FIREBASE_URL + '/users'
           usersRef.child(authData.uid).child('password').set userObj.password
+          if authData.password.isTemporaryPassword
+            $location.path '/user/' + authData.uid + '/profile'
+            toaster.pop 'success', 'You can reset your password here'
+          else
+            $location.path '/'
+            toaster.pop 'success', 'Successfully login'
+            $route.reload()
+        else
+          switch error.code
+            when 'INVALID_USER' then toaster.pop 'warning', 'Invalid user email'
+            when 'INVALID_PASSWORD' then toaster.pop 'warning', 'Invalid password'
+            else toaster.pop 'warning', error
 
     logout: ->
       authRef.$unauth()

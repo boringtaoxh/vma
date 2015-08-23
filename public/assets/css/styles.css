@@ -1828,8 +1828,8 @@ li{list-style:none}
 #signin-sidebar #login .submit:hover{background-color:#000;color:#fff}
 #signin-sidebar #login label{color:#929292;font-size:12px;font-weight:100}
 #signin-sidebar #login label input{margin-top:15px;font-family:'Source Sans Pro'}
-#signin-sidebar #resetPassword{background-color:#fdfdfd;padding:0 50px 5px;color:#000;font-size:20px;font-weight:800}
-#signin-sidebar #resetPassword .heading{border-bottom:2px solid #ccc;margin-bottom:10px;padding-bottom:10px;font-weight:700}
+#signin-sidebar #resetPassword{background-color:#fdfdfd;padding:0 50px 5px;color:#000;font-size:14px;font-weight:800}
+#signin-sidebar #resetPassword .heading{margin-bottom:10px;padding-bottom:10px;font-weight:700}
 #signin-sidebar #resetPassword .submit{margin-top:14px;border:1px solid #000;color:#000;padding:3px 8px;background-color:#fff;font-size:14px;font-weight:700;text-align:center;transition:all .5s ease}
 #signin-sidebar #resetPassword .submit:hover{background-color:#000;color:#fff}
 #signin-sidebar #resetPassword label{color:#929292;font-size:12px;font-weight:100}

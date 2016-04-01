@@ -2,593 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a309a89-8faf-4fb0-bf2a-0f3aae565ace" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/app.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/controllers/auth.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/controllers/brand.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/controllers/explore.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/controllers/filter.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/controllers/flags.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/controllers/index.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/controllers/info.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/controllers/password.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/controllers/products.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/controllers/search.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/controllers/user.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/addthis.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/fancybox.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/filter-products.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/list-items.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/list-items.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/list-products.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/list-products.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/masonry.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/masonry.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/preload.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/preload.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/scroll-trigger.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/search-results.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/search-results.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/video-player.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/video-player.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/wrap-big-products.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/wrap-big-products.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/wrap-products.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/directives/wrap-products.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/filters/character-remove.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/filters/colour-filter.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/filters/trusted-domain.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/filters/word-trunc.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/services/auth.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/services/brand.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/services/info.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/services/products.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/app/services/user.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/account/account-top.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/account/account-top.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/account/love-brand.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/account/love-brand.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/account/profile.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/account/profile.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/brand/brand-chapter.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/brand/brand-chapter.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/brand/brand-sidebar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/brand/brand-sidebar.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/css/products.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/css/profile.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/css/search.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/explore/explore-products.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/explore/explore-products.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/explore/explore-sidebar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/explore/explore-sidebar.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/general/bottom-nav.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/general/bottom-nav.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/general/follow.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/general/follow.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/general/fonts.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/general/normalize.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/general/normalize.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/general/product.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/general/products.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/general/products.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/general/signup.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/general/top-nav.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/general/top-nav.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/info/info-top.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/info/info-top.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/info/info.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/info/info.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/masonry.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/search/search.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/search/search.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/signup/signin-sidebar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/signup/signin-sidebar.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/styles.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/css/toaster.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/assets/js/scripts.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/index.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/scripts.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/navs/nav-bottom-mobile.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/navs/nav-bottom.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/navs/nav-top.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/admin/products.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/brand/brand-sidebar.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/brand/brand.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/brand/inspirations.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/brand/products.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/brand/traces.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/explore/explore.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/explore/filter.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/index.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/info/about.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/info/care.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/info/info-topbar.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/info/info.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/info/legal.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/info/mobile/info.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/product/product.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/search/search-section.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/search/search.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/user/follows.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/user/login.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/user/loves.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/user/profile.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/user/reserves.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/user/signup.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/public/views/pages/user/user-topbar.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/server/config/express.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/server/config/route.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/css/jquery.fancybox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/css/styles.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/css/videogular.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fonts/PTS55F.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fonts/PTS55F.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fonts/PTS55F.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fonts/PTS55F.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fonts/PTS55F.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fonts/videogular.dev.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fonts/videogular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fonts/videogular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fonts/videogular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fonts/videogular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/CFE.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/Metallic.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/QRcode.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/Reflective.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/archive.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/clear.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/email-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/facebook.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/fancybox_overlay.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/fb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/follow_cross.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/follow_input.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/googleplus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/goup.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/icon-qzone.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/icon-weibo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/icon-weixin.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/icons-100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/instagram.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/love-it.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/lovely_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/mobile_facebook.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/mobile_pinterest.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/mobile_twitter.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/mobile_weibo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/multi-colour.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/navi_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/navi_dot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/nice.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/pattern.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/pinterest.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/play-btn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/pull-left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/pull-right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/pull-tab.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/qzone.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/refresh-btn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/reply.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/shape-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/shape-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/shape.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/share_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/signup_divider1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/signup_divider2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/signup_facebook.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/signup_pinterest.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/signup_twitter.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/signup_weibo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/sina-weibo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/skip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/speechbubble-small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/speechbubble.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/speechbubble_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/spinner.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/square-brackets-left.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/square-brackets-right.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/tengxunweibo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/thumblr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/trash.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/twitter.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/twitter_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/vimeo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/wechat.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/img/ui/weixinqr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/js/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/firebase.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/scripts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-animate/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-animate/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-animate/angular-animate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-animate/angular-animate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-animate/angular-animate.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-animate/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-animate/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-animate/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-masonry/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-masonry/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-masonry/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-masonry/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-masonry/angular-masonry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-masonry/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-mocks/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-mocks/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-mocks/angular-mocks.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-mocks/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-mocks/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-resource/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-resource/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-resource/angular-resource.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-resource/angular-resource.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-resource/angular-resource.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-resource/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-resource/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-route/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-route/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-route/angular-route.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-route/angular-route.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-route/angular-route.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-route/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-route/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-sanitize/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-sanitize/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-sanitize/angular-sanitize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-sanitize/angular-sanitize.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-sanitize/angular-sanitize.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-sanitize/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-sanitize/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-sanitize/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-ui-utils/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-ui-utils/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-ui-utils/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-ui-utils/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-ui-utils/ui-utils-ieshiv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-ui-utils/ui-utils-ieshiv.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-ui-utils/ui-utils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular-ui-utils/ui-utils.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular/angular-csp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular/angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular/angular.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular/angular.min.js.gzip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular/angular.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angular/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularfire/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularfire/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularfire/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularfire/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularfire/dist/angularfire.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularfire/dist/angularfire.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularfire/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularjs-toaster/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularjs-toaster/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularjs-toaster/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularjs-toaster/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularjs-toaster/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularjs-toaster/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularjs-toaster/toaster.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularjs-toaster/toaster.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularjs-toaster/toaster.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularjs-toaster/toaster.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/angularjs-toaster/toaster.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/animate-on-scroll/AnimOnScroll.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/animate-on-scroll/classie.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/animate-on-scroll/modernizr.custom.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/doc-ready/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/doc-ready/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/doc-ready/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/doc-ready/doc-ready.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/eventEmitter/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/eventEmitter/EventEmitter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/eventEmitter/EventEmitter.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/eventEmitter/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/eventEmitter/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/eventEmitter/component.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/eventie/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/eventie/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/eventie/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/eventie/eventie.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/eventie/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/demo/1_b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/demo/1_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/demo/2_b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/demo/2_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/demo/3_b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/demo/3_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/demo/4_b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/demo/4_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/demo/5_b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/demo/5_s.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/demo/ajax.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/demo/iframe.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/demo/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/lib/jquery-1.10.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/lib/jquery-1.9.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/lib/jquery.mousewheel-3.0.6.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/source/blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/source/fancybox_loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/source/fancybox_loading@2x.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/source/fancybox_overlay.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/source/fancybox_sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/source/fancybox_sprite@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/source/helpers/fancybox_buttons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/source/helpers/jquery.fancybox-buttons.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/source/helpers/jquery.fancybox-buttons.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/source/helpers/jquery.fancybox-media.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/source/helpers/jquery.fancybox-thumbs.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/source/helpers/jquery.fancybox-thumbs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/source/jquery.fancybox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/source/jquery.fancybox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/source/jquery.fancybox.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fancybox/sprite.psd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/firebase/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/firebase/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/firebase/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/firebase/firebase-debug.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/firebase/firebase.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fizzy-ui-utils/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fizzy-ui-utils/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fizzy-ui-utils/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/fizzy-ui-utils/utils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/get-size/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/get-size/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/get-size/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/get-size/get-size.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/get-size/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/get-style-property/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/get-style-property/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/get-style-property/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/get-style-property/component.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/get-style-property/get-style-property.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/get-style-property/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/imagesloaded/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/imagesloaded/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/imagesloaded/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/imagesloaded/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/imagesloaded/imagesloaded.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/imagesloaded/imagesloaded.pkgd.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/imagesloaded/imagesloaded.pkgd.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery-easing/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery-easing/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery-easing/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery-easing/component.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery-easing/jquery.easing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery-easing/jquery.easing.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/MIT-LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/dist/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/dist/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/dist/jquery.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/ajax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/ajax/jsonp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/ajax/load.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/ajax/parseJSON.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/ajax/parseXML.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/ajax/script.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/ajax/var/nonce.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/ajax/var/rquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/ajax/xhr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/attributes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/attributes/attr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/attributes/classes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/attributes/prop.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/attributes/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/attributes/val.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/callbacks.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/core/access.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/core/init.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/core/parseHTML.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/core/ready.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/core/var/rsingleTag.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/css.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/css/addGetHookIf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/css/curCSS.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/css/defaultDisplay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/css/hiddenVisibleSelectors.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/css/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/css/swap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/css/var/cssExpand.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/css/var/getStyles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/css/var/isHidden.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/css/var/rmargin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/css/var/rnumnonpx.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/data.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/data/Data.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/data/accepts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/data/var/data_priv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/data/var/data_user.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/deferred.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/deprecated.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/dimensions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/effects.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/effects/Tween.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/effects/animatedSelector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/event.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/event/ajax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/event/alias.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/event/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/exports/amd.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/exports/global.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/intro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/manipulation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/manipulation/_evalUrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/manipulation/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/manipulation/var/rcheckableType.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/offset.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/outro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/queue.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/queue/delay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/selector-native.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/selector-sizzle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/selector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/serialize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/sizzle/dist/sizzle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/sizzle/dist/sizzle.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/sizzle/dist/sizzle.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/traversing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/traversing/findFilter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/traversing/var/rneedsContext.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/var/arr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/var/class2type.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/var/concat.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/var/hasOwn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/var/indexOf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/var/pnum.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/var/push.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/var/rnotwhite.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/var/slice.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/var/strundefined.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/var/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/var/toString.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/jquery/src/wrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/lodash/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/lodash/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/lodash/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/lodash/lodash.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/lodash/lodash.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/masonry/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/masonry/README.mdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/masonry/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/masonry/dist/masonry.pkgd.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/masonry/dist/masonry.pkgd.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/masonry/masonry.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/matches-selector/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/matches-selector/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/matches-selector/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/matches-selector/matches-selector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/ng-device-detector/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/ng-device-detector/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/ng-device-detector/changelog.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/ng-device-detector/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/ng-device-detector/karma.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/ng-device-detector/license.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/ng-device-detector/ng-device-detector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/ng-device-detector/ng-device-detector.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/ng-device-detector/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/ng-device-detector/readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/outlayer/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/outlayer/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/outlayer/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/outlayer/item.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/outlayer/outlayer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/re-tree/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/re-tree/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/re-tree/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/re-tree/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/re-tree/karma.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/re-tree/license.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/re-tree/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/re-tree/re-tree.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/re-tree/re-tree.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/re-tree/readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/toastr/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/toastr/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/toastr/toastr.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/toastr/toastr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/toastr/toastr.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/toastr/toastr.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/toastr/toastr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/toastr/toastr.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/toastr/toastr.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-controls/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-controls/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-controls/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-controls/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-controls/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-controls/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-controls/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-controls/vg-controls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-controls/vg-controls.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-poster/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-poster/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-poster/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-poster/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-poster/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-poster/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-poster/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-poster/vg-poster.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular-poster/vg-poster.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular/videogular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor/videogular/videogular.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/directives/company-about.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/directives/company-info.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/directives/flag-product.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/directives/list-inspirations.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/directives/list-items.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/directives/list-products.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/directives/list-traces.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/directives/masonry.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/directives/preload.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/directives/read-info.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/directives/search-results.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/directives/signin-products.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/directives/video-player.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/directives/wrap-big-products.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/directives/wrap-products copy.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/directives/wrap-products.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/navs/nav-bottom-mobile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/navs/nav-bottom.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/navs/nav-top.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/admin/products.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/brand/brand-sidebar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/brand/brand.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/brand/inspirations.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/brand/products.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/brand/traces.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/explore.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/explore/explore.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/explore/filter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/explore/relate.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/follow.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/info/Join.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/info/about.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/info/care.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/info/customer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/info/info-topbar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/info/info.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/info/legal.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/info/mobile/info.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/product.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/product/product.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/search/search-section.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/search/search.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/user/follows.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/user/login.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/user/loves.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/user/profile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/user/register.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/user/reserves.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/user/signup.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/views/pages/user/user-topbar.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/app-init.js" afterPath="$PROJECT_DIR$/test/app-init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/css/vendor.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/assets/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/assets/fonts/glyphicons-halflings-regular.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/karma.conf.js" afterPath="$PROJECT_DIR$/karma.conf.js" />
     </list>
     <ignored path="alt-en.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -629,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.857142">
-              <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.41409692">
+              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -651,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/app/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6307054">
+            <state vertical-scroll-proportion="0.0">
               <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
               <folding />
             </state>
@@ -689,8 +109,8 @@
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/public/assets/js/controller.js" />
         <option value="$PROJECT_DIR$/build/public/index.jade" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/app/app.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -798,28 +218,6 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alt-en" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vma" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -840,46 +238,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alt-en" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vma" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alt-en" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vma" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1149,16 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.857142">
-          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/controllers/allianceController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1169,9 +517,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6307054">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41409692">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

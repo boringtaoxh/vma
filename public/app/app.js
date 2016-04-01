@@ -1,12 +1,14 @@
 'use strict';
 
-// Declare app level module which depends on views, and components
 angular.module('hshs', [
   'ngRoute',
   'ngSanitize',
   'toaster',
   'ui.mask'
 ]).
+constant(
+  'baseUrl', 'http://222.240.208.174:8083/vma/api/'
+).
 config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $routeProvider
@@ -14,12 +16,12 @@ config(['$routeProvider', '$locationProvider', function($routeProvider, $locatio
       .when('/alliances', { templateUrl: 'views/pages/alliances.html' })
       .when('/alliance/:allianceId', { templateUrl: 'views/pages/alliance.html' })
       .when('/club/:clubId', { templateUrl: 'views/pages/club.html' })
-      .otherwise({ redirectTo: '/'});
+      .otherwise({ redirectTo: '/' });
 }]).run([
     '$rootScope',
     '$location',
     'userService',
     function ($rootScope, $location, userService) {
     }
-  ]);
+]);
 

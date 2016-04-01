@@ -86,7 +86,7 @@
             });
             return promise;
           }
-        }
+        };
 
       return output;
   }]);

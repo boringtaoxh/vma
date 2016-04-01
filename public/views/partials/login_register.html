@@ -1,0 +1,87 @@
+<div id="ModalLogin" tabindex="-1" role="dialog" class="modal signUpContent fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+      <div id="login-form" ng-controller="loginController">
+        <h2>登录</h2>
+        <form name="userLogin" novalidate="">
+          <div><i class="glyphicon glyphicon-user"></i>
+            <input type="text" placeholder="用户名或手机号" name="loginAccount" ng-model="user.account" ng-required="true"/>
+          </div>
+          <p class="error validation" ng-show="userLogin.loginAccount.$invalid && userLogin.loginAccount.$touched">
+            请输入用户名或手机号
+          </p>
+          <div><i class="glyphicon glyphicon-lock"></i>
+            <input type="password" placeholder="密码" name="loginPassword" ng-model="user.password" ng-required="true"/>
+          </div>
+          <p class="error validation" ng-show="userLogin.loginPassword.$invalid && userLogin.loginPassword.$touched">
+            请输入密码
+          </p>
+          <input type="button" value="登录" ng-click="login()" class="login btn btn-dark" ng-disabled="userLogin.$invalid"/>
+          <a href="#" data-dismiss="modal" aria-label="Close">
+            <input type="button" value="取消" style="margin-top:10px;" class="login btn btn-grey"/>
+          </a>
+        </form>
+        <div class="clearfix addon">
+          <a href="" class="pull-left">忘记密码</a>
+          <a href="#" data-toggle="modal" data-target="#ModalSignup" data-dismiss="modal" aria-label="Close" class="pull-right">还没有账号？
+            <button type="button" class="btn btn-transparent">免费注册</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="ModalSignup" tabindex="-1" role="dialog" class="modal signUpContent fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+      <div id="register-form" ng-controller="registerController">
+        <div class="form-wrapper"><img src="assets/images/u486.png" class="img-responsive"/>
+          <h3>注册<span class="pull-right grey">已有账号, <a href="#" data-toggle="modal" data-target="#ModalLogin" data-dismiss="modal" aria-label="Close">登录</a></span></h3>
+          <form name="userRegister" id="userRegister">
+            <div>
+              <input type="text" name="userName" placeholder="请输入用户名" ng-model="user.name" ng-required="true"/>
+            </div>
+            <p class="error validation" ng-show="userRegister.userName.$invalid && userRegister.userName.$touched">
+              用户名不能为空
+            </p>
+            <div>
+              <input type="text" placeholder="请输入手机号码" name="userPhone" ng-model="user.phone" ng-required="true"/>
+            </div>
+            <p class="error validation" ng-show="userRegister.userPhone.$invalid && userRegister.userPhone.$touched">
+              手机号码不能为空
+            </p>
+            <div class="verify">
+              <input type="text" name="userCaptcha" placeholder="请输入短信验证码" ng-model="user.captcha" ng-required="true"/>
+              <button type="button" class="btn btn-transparent" ng-click="getCaptcha()">获取验证码</button>
+            </div>
+            <p class="error validation" ng-show="userRegister.userCaptcha.$invalid && userRegister.userCaptcha.$touched">
+              验证码不能为空
+            </p>
+            <div>
+              <input type="password" name="userPassword" id="userPassword" placeholder="请输入密码" ng-model="user.password" ng-required="true"/>
+            </div>
+            <p class="error validation" ng-show="userRegister.userPassword.$invalid && userRegister.userPassword.$touched">
+              密码不能为空
+            </p>
+            <div>
+              <input type="password" name="userRePassword" id="confirmPassword" placeholder="请重复输入您的密码" ng-model="user.repassword" ng-required="true" password-check="userPassword"/>
+            </div>
+            <p class="error validation" ng-show="userRegister.userRePassword.$invalid && userRegister.userRePassword.$touched">
+              重输密码不能为空
+            </p>
+            <p class="error validation" ng-show="!passwordMatch">
+              密码不吻合
+            </p>
+            <input type="button" ng-click="register()" value="注册" class="register btn btn-dark" ng-disabled="userRegister.$invalid"/>
+            <a href="#" data-dismiss="modal" aria-label="Close">
+              <input type="button" value="取消" style="margin-top:10px;" class="register btn btn-grey"/>
+            </a>
+          </form>
+        </div>
+        <button title="Close (Esc)" type="button" class="mfp-close">&times;</button>
+      </div>
+    </div>
+  </div>
+</div>

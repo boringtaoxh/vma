@@ -1,7 +1,0 @@
-div(ng-controller='brandCtrl')
-  preload
-    #brandProducts(ng-show='ready' ng-cloak)
-      .col-xs-3
-        include brand-sidebar
-      #products.col-xs-9(ng-controller='productsCtrl')
-        wrap-big-products(products='brandProducts')

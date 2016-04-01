@@ -1,50 +1,46 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="hshs" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="hshs" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="hshs" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="hshs" class="no-js">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/vendor.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel="stylesheet" href="/lib/angularjs-toaster/toaster.min.css">
+    <base href="/">
+</head>
+<body>
+    <toaster-container toaster-options="{'time-out': 2000, 'close-button':false, 'position-class': 'toast-bottom-right'}"></toaster-container>
+    <div>
+        <header ng-include="'views/partials/header.html'"></header>
+        <div ng-include="'views/partials/login_register.html'"></div>
 
-<html ng-app="alt">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width user-scalable=no"/>
-    <link rel="stylesheet" href="/assets/css/jquery.fancybox.css"/>
-    <link rel="stylesheet" href="/assets/css/styles.css"/>
-    <base href="/"/>
-  </head>
-  <body ng-controller="indexCtrl">
-    <toaster-container toaster-options="{'time-out': 5000, 'close-button':true}"></toaster-container>
-    <header>
-      <div id="nav-top"><a href="/" target="_self"><img src="/assets/img/ui/logo.png"/></a></div>
-    </header>
-    <section ng-cloak="ng-cloak">
-      <div ng-view="ng-view"></div>
-    </section>
-    <script src="/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="/vendor/angular/angular.js"></script>
-    <script src="/vendor/firebase/firebase.js"></script>
-    <script src="/vendor/angularfire/dist/angularfire.js"></script>
-    <script src="/vendor/angular-resource/angular-resource.js"></script>
-    <script src="/vendor/angular-route/angular-route.js"></script>
-    <script src="/vendor/get-style-property/get-style-property.js"></script>
-    <script src="/vendor/get-size/get-size.js"></script>
-    <script src="/vendor/eventEmitter/EventEmitter.js"></script>
-    <script src="/vendor/eventie/eventie.js"></script>
-    <script src="/vendor/doc-ready/doc-ready.js"></script>
-    <script src="/vendor/matches-selector/matches-selector.js"></script>
-    <script src="/vendor/fizzy-ui-utils/utils.js"></script>
-    <script src="/vendor/outlayer/item.js"></script>
-    <script src="/vendor/outlayer/outlayer.js"></script>
-    <script src="/vendor/masonry/dist/masonry.pkgd.min.js"></script>
-    <script src="/vendor/imagesloaded/imagesloaded.js"></script>
-    <script src="/vendor/angular-masonry/angular-masonry.js"></script>
-    <script src="/vendor/angular-sanitize/angular-sanitize.js"></script>
-    <script src="/vendor/videogular/videogular.js"></script>
-    <script src="/vendor/videogular-controls/vg-controls.js"></script>
-    <script src="/vendor/videogular-poster/vg-poster.js"></script>
-    <script src="/vendor/angularjs-toaster/toaster.js"></script>
-    <script src="/vendor/angular-animate/angular-animate.js"></script>
-    <script src="/vendor/lodash/lodash.js"></script>
-    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="/vendor/fancybox/source/jquery.fancybox.js"></script>
-    <script src="/vendor/re-tree/re-tree.js"></script>
-    <script src="/vendor/ng-device-detector/ng-device-detector.js"></script>
-    <script src="/assets/js/app.js"></script>
-    <script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5566edc765f4f256" async="async"></script>
-  </body>
+    </div>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div ng-view style="margin-top: 50px"></div>
+    <script src="/lib/angular/angular.js"></script>
+    <script src="/assets/js/jquery-1.10.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/lib/angular-ui-utils/ui-utils.min.js"></script>
+    <script src="/lib/angular-route/angular-route.min.js"></script>
+    <script src="/lib/angularjs-toaster/toaster.min.js"></script>
+    <script src="/lib/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="/app/app.js"></script>
+    <script src="/app/services/userService.js"></script>
+    <script src="/app/controllers/loginController.js"></script>
+    <script src="/app/controllers/registerController.js"></script>
+    <script src="/app/controllers/allianceController.js"></script>
+    <script src="/app/services/allianceService.js"></script>
+    <script src="/app/services/clubService.js"></script>
+    <script src="/app/directives/passwordCheck.js"></script>
+</body>
 </html>

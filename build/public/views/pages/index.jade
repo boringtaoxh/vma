@@ -1,6 +1,0 @@
-div(ng-controller='productsCtrl')
-  preload
-    #home
-      #products(ng-show='ready')
-        wrap-products(products='randomProducts' ng-if='!currentUser')
-        wrap-products(products='preferProducts' ng-if='currentUser')

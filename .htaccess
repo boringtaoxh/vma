@@ -8,5 +8,5 @@ RewriteEngine On
   RewriteRule ^ /index.html
 
   RewriteCond %{HTTP_REFERER} !^$
-	RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)? [NC]
-	RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
+  RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)? [NC]
+  RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]

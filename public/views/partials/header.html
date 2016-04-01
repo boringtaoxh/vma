@@ -1,0 +1,41 @@
+<nav role="navigation" class="navbar-tshop navbar-fixed-top megamenu">
+    <div class="navbar-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4">
+                    <div class="pull-left">
+                        <ul class="userMenu">
+                            <li><a href="#"><span class="hidden-xs">电话</span><i class="glyphicon glyphicon-info-sign hide visible-xs"></i></a></li>
+                            <li class="phone-number"><a href="callto:+88016000000"><span><i style="margin-top:6px;margin-right:5px" class="glyphicon glyphicon-phone-alt"></i></span><span class="hidden-xs">88 01680 53 1352</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 no-margin no-padding">
+                    <ul class="userMenu">
+                        <li>
+                            <a href="home">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="alliances">
+                                Alliance
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 no-margin no-padding">
+                    <div class="pull-right" ng-controller="loginController">
+                        <ul class="userMenu">
+                            <li><a href="account-1.html"><span class="hidden-xs"> 我的账户</span><i class="glyphicon glyphicon-user hide visible-xs"></i></a></li>
+                            <li ng-show="!currentUser"><a href="#" data-toggle="modal" data-target="#ModalSignup" class="pop-up"><span class="hidden-xs">注册</span><i class="glyphicon glyphicon-log-in hide visible-xs"></i></a></li>
+                            <li ng-show="!currentUser" class="hidden-xs"><a href="#" data-toggle="modal" data-target="#ModalLogin" class="pop-up">登录</a></li>
+                            <li ng-show="currentUser"><a href="#" ng-click="logout()"><span>登出</span></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

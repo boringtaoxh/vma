@@ -143,14 +143,6 @@ gulp.task('karma', function() {
 
 /* livereload */
 gulp.task('livereload', function() {
-  gulp.watch(build.htmls, ['htmls']);
-  gulp.watch(build.directives, ['directives']);
-  gulp.watch(build.styles, ['styles']);
-  gulp.watch(build.public, ['public']);
-  /*gulp.watch(build.server, ['server']);
-  gulp.watch(build.test, ['test']);
-  gulp.watch(paths.mocha, ['mocha']);
-  gulp.watch(paths.karma, ['karma']);*/
   gulp.watch(paths.client, function(e) {
     server.changed(e.path);
   });

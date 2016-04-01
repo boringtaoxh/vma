@@ -10,7 +10,8 @@ angular
                     url: baseUrl + 'club/list',
                     params: { pageSize: 9999, pageNo: 1, allianceId: allianceId },
                 }).success(function (response) {
-                    console.log(response);
+                    console.log("clubs:");
+                    console.log(response.result);
                     return response.result;
                 }).error(function (data, status) {
                     console.log('error');
@@ -23,6 +24,8 @@ angular
                     url: baseUrl + 'club/detail',
                     params: { id: clubId },
                 }).success(function (response) {
+                    console.log("club:");
+                    console.log(response);
                     return response;
                 }).error(function (data, status) {
                     console.log('error');

@@ -3,6 +3,7 @@
 angular.module('hshs', [
   'ngRoute',
   'ngSanitize',
+  'ngStorage',
   'toaster',
   'ui.mask'
 ]).

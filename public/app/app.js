@@ -15,8 +15,8 @@ config(['$routeProvider', '$locationProvider', function($routeProvider, $locatio
     $routeProvider
       .when('/', { templateUrl: 'views/pages/home.html' })
       .when('/alliances', { templateUrl: 'views/pages/alliances.html' })
-      .when('/alliance/:allianceId', { templateUrl: 'views/pages/alliance.html' })
-      .when('/club/:clubId', { templateUrl: 'views/pages/club.html' })
+      .when('/alliances/:allianceId/clubs', { templateUrl: 'views/pages/clubs.html' })
+      .when('/alliances/:allianceId/clubs/:clubId', { templateUrl: 'views/pages/club.html' })
       .otherwise({ redirectTo: '/' });
 }]).run([
     '$rootScope',

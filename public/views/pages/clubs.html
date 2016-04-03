@@ -1,0 +1,7 @@
+<header ng-include="'views/partials/header.html'"></header>
+<div ng-controller="allianceController">
+    <h4>{{cityName}}</h4>
+    <div ng-repeat="club in clubs">
+        <h4><a href="/alliances/{{allianceId}}/clubs/{{club.id}}">{{club.name}}</a></h4>
+    </div>
+</div>

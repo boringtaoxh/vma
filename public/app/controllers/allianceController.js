@@ -11,6 +11,7 @@ angular
     /* clubs */
     if ($routeParams.allianceId) {
       allianceId = $routeParams.allianceId;
+      $scope.allianceId = allianceId;
 
       cityService.get(allianceId).then(function(data) {
         if (!_.isEmpty(data.data)) {
@@ -31,9 +32,8 @@ angular
         $scope.clubDetail = data.data;
         $scope.clubDescription = $sce.trustAsHtml(data.data.description);
 
-        if ($localStorage.vmaCity === null) {
+        if ($localStorage.vmaCity === undefined) {
           cityService.getAll().then(function(data) {
-            cities = data.data;
             $scope.cityName = cityService.getName(cities);
           });
         } else {

@@ -18,11 +18,6 @@
 </head>
 <body>
     <toaster-container toaster-options="{'time-out': 2000, 'close-button':false, 'position-class': 'toast-bottom-right'}"></toaster-container>
-    <div>
-        <header ng-include="'views/partials/header.html'"></header>
-        <div ng-include="'views/partials/login_register.html'"></div>
-
-    </div>
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -40,6 +35,7 @@
     <script src="/app/services/userService.js"></script>
     <script src="/app/controllers/loginController.js"></script>
     <script src="/app/controllers/registerController.js"></script>
+    <script src="/app/controllers/headerController.js"></script>
     <script src="/app/controllers/allianceController.js"></script>
     <script src="/app/services/allianceService.js"></script>
     <script src="/app/services/clubService.js"></script>

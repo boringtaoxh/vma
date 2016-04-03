@@ -9,7 +9,6 @@ angular
                   url: baseUrl + 'club/list',
                   params: { allianceId: allianceId }
               }).success(function (response) {
-                  console.log(response);
                   return response.result;
               }).error(function (data, status) {
                   console.log(status);

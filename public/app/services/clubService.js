@@ -3,7 +3,7 @@ angular
       var promise = {};
 
       output = {
-          get: function (allianceId) {
+          getAll: function (allianceId) {
               promise = $http({
                   method: 'GET',
                   url: baseUrl + 'club/list',

@@ -1,6 +1,6 @@
 <header ng-include="'views/partials/header.html'"></header>
-<section ng-controller="allianceController">
-    <h5><a href="/">首页</a> / <a href="/alliances">垂直联盟</a> / <a href="/alliances/{{allianceId}}">{{allianceName}}</a></h5>
+<section ng-controller="clubsController">
+    <h5><a href="/">首页</a> / <a href="/alliances">垂直联盟</a> / <a href="/alliances/{{allianceId}}/clubs">{{allianceName}}</a></h5>
     <h4><input ng-model="query.name"></h4>
     <div>
         <h4>{{cityName}}</h4>

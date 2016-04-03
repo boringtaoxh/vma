@@ -3,7 +3,6 @@ angular
     var currentRoute = $location.path().split('/');
 
     $scope.setActive = function(menuItem) {
-      console.log(menuItem);
       return menuItem == currentRoute[1] ? "active" : "";
     }
 

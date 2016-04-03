@@ -1,7 +1,11 @@
 <header ng-include="'views/partials/header.html'"></header>
-<div ng-controller="allianceController">
-    <h4>{{cityName}}</h4>
-    <div ng-repeat="club in clubs">
-        <h4><a href="/alliances/{{allianceId}}/clubs/{{club.id}}">{{club.name}}</a></h4>
+<section ng-controller="allianceController">
+    <h5><a href="/">首页</a> / <a href="/alliances">垂直联盟</a> / <a href="/alliances/{{allianceId}}">{{allianceName}}</a></h5>
+    <h4><input ng-model="query.name"></h4>
+    <div>
+        <h4>{{cityName}}</h4>
+        <div ng-repeat="club in clubs | filter: query">
+            <h4><a href="/alliances/{{allianceId}}/clubs/{{club.id}}">{{club.name}}</a></h4>
+        </div>
     </div>
-</div>
+</section>

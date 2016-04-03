@@ -3,7 +3,7 @@ angular
     var promise = {};
 
     output = {
-      get: function () {
+      getAll: function () {
         promise = $http({
           method: 'GET',
           url: baseUrl + 'alliance/list',
@@ -14,6 +14,10 @@ angular
           console.log(status);
         });
         return promise;
+      },
+      getName: function (alliances, allianceId) {
+        var alliance = _.find(alliances, {"id": allianceId});
+        return alliance.name;
       }
     };
 

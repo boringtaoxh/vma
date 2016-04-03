@@ -8,6 +8,7 @@ angular
     if ($routeParams.clubId) {
       clubId = $routeParams.clubId;
 
+      $scope.ready = false;
       clubService.getDetail(clubId).then(function(data) {
         $scope.allianceName = $localStorage.vmaAllianceName;
         $scope.clubDetail = data.data;
@@ -20,6 +21,7 @@ angular
           cities = $localStorage.vmaCity;
           $scope.cityName = cityService.getName(cities, data.data.cityId);
         }
+        $scope.ready = true;
       });
     }
 

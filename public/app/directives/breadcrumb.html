@@ -1,4 +1,4 @@
-<div>
+<div ng-show="ready">
     <a href="/">首页</a> / <a href="/alliances">垂直联盟 </a>
     <a href="{{route.link}}" ng-repeat="route in breadcrumb">
         {{' / ' + route.name}}

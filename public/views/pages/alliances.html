@@ -1,5 +1,5 @@
 <header ng-include="'views/partials/header.html'"></header>
-<section ng-controller="allianceController">
+<section ng-controller="allianceController" ng-show="ready">
     <breadcrumb></breadcrumb>
     <h4><input ng-model="query.name"></h4>
     <div>

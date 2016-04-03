@@ -5,7 +5,6 @@ angular
       templateUrl: "/app/directives/breadcrumb.html",
       controller: function($scope, $location, allianceService, clubService) {
         var currentRoutes = $location.path().match(/\w+/g);
-        console.log(currentRoutes);
         $scope.breadcrumb = [];
         if (currentRoutes[0] == 'alliances' && currentRoutes[1] != undefined) {
           var allianceId = parseInt(currentRoutes[1]);

@@ -5,6 +5,7 @@ angular.module('hshs', [
   'ngSanitize',
   'ngStorage',
   'toaster',
+  'angularUtils.directives.dirPagination',
   'ui.mask'
 ]).
 constant(

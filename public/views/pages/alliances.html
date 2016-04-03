@@ -1,8 +1,12 @@
 <header ng-include="'views/partials/header.html'"></header>
-<breadcrumb></breadcrumb>
-<h4><input ng-model="query.name"></h4>
-<div ng-controller="allianceController">
-    <div ng-repeat="alliance in alliances | filter: query">
-        <h4><a href="/alliances/{{alliance.id}}/clubs">{{alliance.name}}</a></h4>
+<section ng-controller="allianceController">
+    <breadcrumb></breadcrumb>
+    <h4><input ng-model="query.name"></h4>
+    <div>
+        <div dir-paginate="alliance in alliances | filter: query | itemsPerPage: 5">
+            <h4><a href="/alliances/{{alliance.id}}/clubs">{{alliance.name}}</a></h4>
+        </div>
+        <dir-pagination-controls  template-url="/lib/angularUtils-pagination/dirPagination.tpl.html">
+        </dir-pagination-controls>
     </div>
-</div>
+</section>

@@ -3,10 +3,12 @@ angular
 
     var allianceId, clubId, cities;
 
+    /* alliance */
     allianceService.get().then(function(data) {
       $scope.alliances = data.data.result;
     });
 
+    /* clubs */
     if ($routeParams.allianceId) {
       allianceId = $routeParams.allianceId;
 
@@ -21,6 +23,7 @@ angular
       });
     }
 
+    /* club */
     if ($routeParams.clubId) {
       clubId = $routeParams.clubId;
 

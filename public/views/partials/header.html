@@ -11,14 +11,14 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 no-margin no-padding">
-                    <ul class="userMenu">
+                    <ul class="userMenu" ng-controller="headerController">
                         <li>
-                            <a href="home">
+                            <a href="home" ng-class="setActive()">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="alliances">
+                            <a href="alliances" ng-class="setActive()">
                                 Alliance
                             </a>
                         </li>

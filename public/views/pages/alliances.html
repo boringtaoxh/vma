@@ -1,5 +1,5 @@
 <header ng-include="'views/partials/header.html'"></header>
-<h5><a href="/">首页</a> / <a href="/alliances">垂直联盟</a></h5>
+<breadcrumb></breadcrumb>
 <h4><input ng-model="query.name"></h4>
 <div ng-controller="allianceController">
     <div ng-repeat="alliance in alliances | filter: query">

@@ -1,0 +1,27 @@
+<header ng-include="'views/partials/header.html'"></header>
+<section ng-controller="matchesController" ng-show="ready">
+    <div>
+        <form name="matchSearchForm">
+            <select name="status" ng-model="matchSearchSelected.status">
+                <option value="">选择状态</option>
+                <option value="0">过去的</option>
+                <option value="1">现在的</option>
+                <option value="2">未来的</option>
+            </select>
+            <select name="city" ng-model="matchSearchSelected.city">
+                <option value="">选择城市</option>
+                <option value="2232">深圳市</option>
+                <option value="893">上海市</option>
+            </select>
+            <button ng-click="matchSearch()">确定</button><br>
+        </form>
+    </div>
+    <br><br>
+    <div>
+        <div dir-paginate="match in matches | itemsPerPage: 5">
+            <h4><a href="#s">{{match.name}}</a></h4>
+        </div>
+        <dir-pagination-controls  template-url="/lib/angularUtils-pagination/dirPagination.tpl.html">
+        </dir-pagination-controls>
+    </div>
+</section>

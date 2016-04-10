@@ -19,7 +19,7 @@ angular
         promise = $http({
           method: 'GET',
           url: baseUrl + 'regions/list',
-          params: { },
+          params: { hasEvent: 1 },
         }).success(function (response) {
           $localStorage.vmaCity = response;
           return response;

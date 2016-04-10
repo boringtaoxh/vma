@@ -3,11 +3,11 @@ angular
     var promise = {};
 
     output = {
-      getAll: function () {
+      getAll: function (status, city) {
         promise = $http({
           method: 'GET',
           url: baseUrl + 'event/list',
-          params: { /*status: 0, cityId: 2232*/ },
+          params: { status: status, cityId: city },
         }).success(function (response) {
           return response;
         }).error(function (data, status) {

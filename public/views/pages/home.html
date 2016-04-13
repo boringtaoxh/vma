@@ -1,4 +1,17 @@
 <header ng-include="'views/partials/header.html'"></header>
-<div>
-    Home
-</div>
+<section ng-controller="allianceController" ng-show="ready">
+    <h4>Home</h4>
+    <div>
+        <div carousel data-options="{singleItem : true}">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div ng-carousel>
+            <div ng-carousel-item ng-repeat="alliance in alliances">
+                <h4><a href="/alliances/{{alliance.id}}/clubs">{{alliance.name}}</a></h4>
+            </div>
+        </div>
+    </div>
+</section>
